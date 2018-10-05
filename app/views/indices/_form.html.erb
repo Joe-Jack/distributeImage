@@ -1,0 +1,29 @@
+<%= form_for(@index, maitipart: true) do |f| %>
+  <% if @index.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@index.errors.count, "error") %> prohibited this index from being saved:</h2>
+
+      <ul>
+      <% @index.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :num %><br>
+    <%= f.number_field :num %>
+  </div>
+  <!--<div class="field">-->
+  <!--  <%= f.label :pictures_count %><br>-->
+  <!--  <%= f.number_field :pictures_count %>-->
+  <!--</div>-->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
