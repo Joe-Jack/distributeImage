@@ -1,0 +1,45 @@
+// Place all the styles related to the Indices controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.t-1 {
+    height: 25px;
+    width: 50px;
+    text-align: center;
+    border: solid thin; 
+    border-color: black;
+}
+
+.t-2 {
+    height: 25px;
+    width: 80px;
+    text-align: center;
+    border: solid thin; 
+    border-color: black;
+}
+
+.t-3 {
+    height: 25px;
+    width: 50px;
+    text-align: center;
+    border: solid thin; 
+    border-color: black;
+}
+
+.t-4 {
+    height: 25px;
+    width: 406px;
+    text-align: center;
+    border: solid thin; 
+    border-color: black;
+}
+
+.image {
+    float: left;
+    padding: 0 2px 0 0;
+}
