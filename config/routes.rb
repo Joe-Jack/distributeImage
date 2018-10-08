@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   resources :indices do
     
     resources :pictures, only: [:create, :new]
-    
+      post 'canvasurl' => 'pictures#canvasurl', on: :member
       get 'downloads' => 'indices#downloads', on: :collection
       get 'download' => 'indices#download', on: :member
+      
   end
   
   # The priority is based upon order of creation: first created -> highest priority.

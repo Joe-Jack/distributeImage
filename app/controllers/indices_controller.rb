@@ -33,17 +33,20 @@ class IndicesController < ApplicationController
   def download
     # binding.pry
     @index = params['id']
+    # @picture = 
+    # @indexname = @picture.index.name
     directory_to_zip = "#{Rails.root}/public/downloads/name_no#{@index}"
-    output_file = "#{Rails.root}/public/downloads/name_no#{@index}.zip"
+    output_file = "#{Rails.root}/public/zips/name_no#{@index}.zip"
     zip_file_generator = ZipFileGenerator.new(directory_to_zip, output_file)
     zip_file_generator.write
-    # if FileTest.directory?(zip_file_generator)
+    if Dir.exist?(directory_to_zip)
       send_file(output_file, filename: "name_no#{@index}.zip", disposition: 'attachment', stream: true)
-    # else
-    #   alert(画像がありません)
-    # end
+    else
+      return
+      
+    end
   end
-
+  
   # GET /indices/new
   def new
     @index = Index.new

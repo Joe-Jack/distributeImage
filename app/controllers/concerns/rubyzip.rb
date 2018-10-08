@@ -1,4 +1,5 @@
 require 'zip'
+require 'nkf'
 
 # This is a simple example which uses rubyzip to
 # recursively generate a zip file from the contents of
@@ -22,15 +23,20 @@ class ZipFileGenerator
   def write()
     if File.directory?(@inputDir)
       entries = Dir.entries(@inputDir); entries.delete("."); entries.delete("..")
-    # elsif Filetest.file?(@inputDir)
+    # elsif File.file?(@inputDir)
     #   alert("画像がない")
+    #   return
     else
-      alert("画像がない")
+      # alert("画像がない")
+      return
     end
     io = Zip::File.open(@outputFile, Zip::File::CREATE);
     writeEntries(entries, "", io)
     io.close();
   end
+
+   
+  
 
   # A helper method to make the recursion work.
   private
@@ -47,7 +53,7 @@ class ZipFileGenerator
         subdir =Dir.entries(diskFilePath); subdir.delete("."); subdir.delete("..")
         writeEntries(subdir, zipFilePath, io)
       else
-        io.get_output_stream(zipFilePath) { |f| f.puts(File.open(diskFilePath, "rb").read())}
+        io.get_output_stream(NKF::nkf("-s", zipFilePath)) { |f| f.puts(File.open(diskFilePath, "rb").read())}
       end
     }
   end

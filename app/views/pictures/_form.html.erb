@@ -12,7 +12,9 @@
   	<button id="start", class="btn btn-default">start</button>
   	<h2>写真(canvas)</h2>
   	<canvas id="canvas"></canvas>
-  
+    <h2>img</h2>
+    <!--<h2>Img</h2>-->
+	  <img id="img">
     <%= form_for(@picture, url: index_pictures_path, remote: true) do |f| %>
       <% if @picture.errors.any? %>
         <div id="error_explanation">
@@ -30,7 +32,7 @@
         <%= f.hidden_field :pic, :value => "" %>
       </div>
       <div class="field">
-        <%= f.hidden_field :index_id, :value => @index %>
+        <%= f.hidden_field :index_id, :value => @index, id: "indexid" %>
       </div>
       <!--<div class="actions">-->
       <!--  <%= f.submit '送信' %>-->

@@ -37,7 +37,7 @@
               <%= image_tag ip.pic.to_s, class:"image" %>
             <% end %>
           </td>
-          <td><%= link_to 'download', download_index_path(index.id), download: "",  class:"btn btn-default" %></td>
+          <td><%= link_to 'download', download_index_path(index.id), download:"",  class:"btn btn-default" %></td>
           <td><%= link_to 'Edit', edit_index_path(index), class:"btn btn-default" %></td>
           <td><%= link_to 'Destroy', index, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default" %></td>
         </tr>

@@ -74,16 +74,29 @@ $(function() {
 	});
 	$('#save-button').click(function(){
 		var canvas = document.getElementById('canvas');
-		
-		var url = canvas.toDataURL('image/jpeg');
-	    
+		var url = canvas.toDataURL('image/png');
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(url);
-		$("#new_picture").submit();
+		// $("#new_picture").submit();
+		$.ajax({
+		    url: "../canvasurl",
+		    type: "post",
+		    data: {content: url
+		    },
+		    datatype: "text",
+		    success: function(data){
+		      alert('success');
+		    },
+		    error: function(jqXHR, textStatus, errorThrown){
+    		  alert(textStatus);
+    		  alert(errorThrown.message)
+    		  alert(jqXHR.status)
+    		  alert(jqXHR.responseText)
+    		},
+		});
 	});
 });
 
-		
 
 // Base64データをBlobデータに変換
 function Base64toBlob(base64)
