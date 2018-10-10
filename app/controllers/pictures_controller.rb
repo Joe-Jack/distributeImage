@@ -1,7 +1,6 @@
 class PicturesController < ApplicationController
+  require 'aws-sdk'
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
-  # AWS.config(access_key_id: 'AKIAJH2RRSVL76J7QU4Q', secret_access_key: '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', region: 'ap-northeast-1')
-
   # GET /pictures
   # GET /pictures.json
   def index
@@ -66,22 +65,41 @@ class PicturesController < ApplicationController
   end
 
   def canvasurl
-    @picture = params[:id]
+    # aws.configが効かないcredentialsでエラー
+    # Aws.config.update({
+    #   region: 'ap-northeast-1',
+    #   credentials: Aws::Credentials.new('AKIAJBJL2CFKYHIWD2PA', 'WMgZcSVdK7n0iVpodLJQuIAM9ga8y4doxom3Iwo+')
+    # })
+    @index = params[:index_id]
     @canvasurl = params[:content]
-    # @canvasindexid = @index.pictures.id
+    @time = Time.now.strftime("%Y-%m-%d %H:%M:%S")
     # binding.pry
-    # データベースpicを要らない文字列を除外してデコード
+    # ajaxで渡されたデータを要らない文字列を除外してデコード
     image_data = Base64.decode64(@canvasurl['data:image/png;base64,'.length .. -1])
     # ダウンロード
-    if Dir::exist?("#{Rails.root}/tmp/downloads/name_no#{@picture}")
-      File.open("#{Rails.root}/tmp/downloads/name_no#{@picture}/#{@picture}.png", 'wb') do |f|
+    if Dir::exist?("#{Rails.root}/tmp/downloads/name_no#{@index}")
+      File.open("#{Rails.root}/tmp/downloads/name_no#{@index}/#{@index}.png", 'wb') do |f|
         f.write(image_data)
       end
     else
-      Dir::mkdir("#{Rails.root}/tmp/downloads/name_no#{@picture}")
-      File.open("#{Rails.root}/tmp/downloads/name_no#{@picture}/#{@picture}.png", 'wb') do |f|
+      Dir::mkdir("#{Rails.root}/tmp/downloads/name_no#{@index}")
+      File.open("#{Rails.root}/tmp/downloads/name_no#{@index}/#{@index}.png", 'wb') do |f|
         f.write(image_data)
       end
+    end
+    s3 = Aws::S3::Resource.new(
+      :region => 'ap-northeast-1',
+      :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
+      :secret_access_key => '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'
+      )
+    myBacket = 'ueyamamasashi-bucket1'
+    myKey = "name_no#{@index}"
+    obj = s3.bucket(myBacket).object(myKey)
+    unless obj.exists?
+      obj.upload_file("#{Rails.root}/tmp/downloads/name_no#{@index}/#{@index}.png")
+    # else
+    #   s3.buckets.create(myKey)
+    #   obj.upload_file("#{Rails.root}/tmp/downloads/name_no#{@index}/#{@index}_#{@time}.png")
     end
     render nothing: true
   end

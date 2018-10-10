@@ -1,5 +1,6 @@
 class IndicesController < ApplicationController
   require 'rubyzip.rb'
+  require 'aws-sdk'
   before_action :set_index, only: [:show, :edit, :update, :destroy]
 
   # GET /indices
@@ -31,20 +32,27 @@ class IndicesController < ApplicationController
   end
   
   def download
-    # binding.pry
     @index = params['id']
-    # @picture = 
-    # @indexname = @picture.index.name
-    directory_to_zip = "#{Rails.root}/public/downloads/name_no#{@index}"
-    output_file = "#{Rails.root}/public/zips/name_no#{@index}.zip"
-    zip_file_generator = ZipFileGenerator.new(directory_to_zip, output_file)
-    zip_file_generator.write
-    if Dir.exist?(directory_to_zip)
-      send_file(output_file, filename: "name_no#{@index}.zip", disposition: 'attachment', stream: true)
-    else
+    myBacket = 'ueyamamasashi-bucket1'
+    bucket = Aws::S3::Resource.new(
+             :region => 'ap-northeast-1',
+              :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
+              :secret_access_key => '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'
+             ).bucket(myBacket)
+    bucket.objects(:prefix => "name_no#{@index}",:max_keys => 10).each do |object|
+      # data = open(URI.encode(object.public_url))
+      send_file(object.public_url, filename: "name_no#{@index}.png", disposition: 'attachment', stream: true)
+    end
+    # directory_to_zip = "#{Rails.root}/public/downloads/name_no#{@index}"
+    # output_file = "#{Rails.root}/public/zips/name_no#{@index}.zip"
+    # zip_file_generator = ZipFileGenerator.new(directory_to_zip, output_file)
+    # zip_file_generator.write
+    # if Dir.exist?(directory_to_zip)
+    #   send_file(output_file, filename: "name_no#{@index}.zip", disposition: 'attachment', stream: true)
+    # else
       return
       
-    end
+    
   end
   
   # GET /indices/new

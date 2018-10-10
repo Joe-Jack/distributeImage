@@ -75,11 +75,12 @@ $(function() {
 	$('#save-button').click(function(){
 		var canvas = document.getElementById('canvas');
 		var url = canvas.toDataURL('image/png');
+		var urlToThumb = canvas.toDataURL('image/jpeg');
 		$("#picture_pic").val(""); 
-		$("#picture_pic").val(url);
-		// $("#new_picture").submit();
+		$("#picture_pic").val(urlToThumb);
+		$("#new_picture").submit();
 		$.ajax({
-		    url: "../canvasurl",
+		    url: "canvasurl",
 		    type: "post",
 		    data: {content: url
 		    },
