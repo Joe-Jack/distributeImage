@@ -78,7 +78,7 @@ $(function() {
 		var urlToThumb = canvas.toDataURL('image/jpeg');
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
-		$("#new_picture").submit();
+		// $("#new_picture").submit();
 		$.ajax({
 		    url: "canvasurl",
 		    type: "post",

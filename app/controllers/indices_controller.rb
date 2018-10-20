@@ -1,6 +1,10 @@
 class IndicesController < ApplicationController
   require 'rubyzip.rb'
   require 'aws-sdk'
+  require 'open-uri'
+  require 'zipline'
+  include ActionController::Streaming
+  include Zipline
   before_action :set_index, only: [:show, :edit, :update, :destroy]
 
   # GET /indices
@@ -22,27 +26,36 @@ class IndicesController < ApplicationController
 			
   #   end
   #   }
-    directory_to_zip = "#{Rails.root}/public/downloads"
-    output_file = "#{Rails.root}/lib/downloads.zip"
-    zip_file_generator = ZipFileGenerator.new(directory_to_zip, output_file)
-    # binding.pry
-    zip_file_generator.write
-    send_file(output_file, filename: 'image.zip', disposition: 'attachment', stream: true)
-    
+    # directory_to_zip = "#{Rails.root}/public/downloads"
+    # output_file = "#{Rails.root}/lib/downloads.zip"
+    # zip_file_generator = ZipFileGenerator.new(directory_to_zip, output_file)
+    # # binding.pry
+    # zip_file_generator.write
+    # send_file(output_file, filename: 'image.zip', disposition: 'attachment', stream: true)
+    zipline(s3all, "all.zip")
   end
   
   def download
     @index = params['id']
     myBacket = 'ueyamamasashi-bucket1'
-    bucket = Aws::S3::Resource.new(
+    bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
               :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
               :secret_access_key => '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'
-             ).bucket(myBacket)
-    bucket.objects(:prefix => "name_no#{@index}",:max_keys => 10).each do |object|
-      # data = open(URI.encode(object.public_url))
-      send_file(object.public_url, filename: "name_no#{@index}.png", disposition: 'attachment', stream: true)
-    end
+             )
+    # get_objectメソッドはlist_objectsのobjectに効かない(object.get_object x)
+    # bucket.list_objects(:bucket => myBacket, :prefix => "name_no#{@index}",:max_keys => 10).contents.each do |object|
+    # data = object.get_object()
+    # bucket.list_objects(:prefix => "name_no#{@index}",:max_keys => 10).each do |object|
+      
+    # data = Net::HTTP.get(URI.parse(object.public_url))
+    # data = open(URI.encode(object.public_url))
+    # name = %r(/^name_no#{@index}/)
+      # data = bucket.get_object(:bucket => myBacket, :key => object.key)
+    
+    # puts data.key
+    # send_data(data.body.read, filename: "name_no#{@index}.png", disposition: 'attachment', stream: true)
+    # end
     # directory_to_zip = "#{Rails.root}/public/downloads/name_no#{@index}"
     # output_file = "#{Rails.root}/public/zips/name_no#{@index}.zip"
     # zip_file_generator = ZipFileGenerator.new(directory_to_zip, output_file)
@@ -50,6 +63,8 @@ class IndicesController < ApplicationController
     # if Dir.exist?(directory_to_zip)
     #   send_file(output_file, filename: "name_no#{@index}.zip", disposition: 'attachment', stream: true)
     # else
+   
+    zipline(s3lists, "name_no#{@index}.zip")
       return
       
     
@@ -113,5 +128,42 @@ class IndicesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def index_params
       params.require(:index).permit(:name, :num, :pictures_count)
+    end
+    
+    def s3lists
+      @index = params[:id]
+      myBacket = 'ueyamamasashi-bucket1'
+      bucket = Aws::S3::Client.new(
+             :region => 'ap-northeast-1',
+              :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
+              :secret_access_key => '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'
+             )
+      lists = []
+      bucket.list_objects(:bucket => myBacket, :prefix => "name_no#{@index}").contents.each do |b|
+        lists.push(b)
+      end
+      lists.lazy.map do |list|
+        logger.debug "get file from s3 : #{list}"
+        s3_object = bucket.get_object(bucket: myBacket, key: list.key)
+        [s3_object.body, list.key+".png"]
+      end
+    end
+    
+    def s3all
+      myBacket = 'ueyamamasashi-bucket1'
+      bucket = Aws::S3::Client.new(
+             :region => 'ap-northeast-1',
+              :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
+              :secret_access_key => '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'
+             )
+      lists = []
+      bucket.list_objects(:bucket => myBacket, :prefix => "name_no").contents.each do |b|
+        lists.push(b)
+      end
+      lists.lazy.map do |list|
+        logger.debug "get file from s3 : #{list}"
+        s3_object = bucket.get_object(bucket: myBacket, key: list.key)
+        [s3_object.body, list.key+".png"]
+      end
     end
 end

@@ -13,13 +13,14 @@
         <th class="t-1">総数</th>
         <th class="t-3">撮影</th>
         <th class="t-4">画像</th>
+        <th class="t-1">dd</th>
         <th colspan="5"></th>
       </tr>
     </thead>
   
     <tbody>
       <% @indices.each do |index| %>
-        <tr>
+        <tr id="d&d">
           <td class="t-1"><%= index.id %></td>
           <td class="t-2"><%= index.name.to_s %></td>
           
@@ -34,8 +35,14 @@
           <td class="t-3"><%= link_to '撮影', new_index_picture_path(index),data: {"turbolinks" => false} %></td>
           <td class="t-4">
             <% index.pictures.each do |ip| %>
-              <%= image_tag ip.pic.to_s, class:"image" %>
+              <div draggable="true" class:"images" id="<%=index.id%>-<%= ip.id %>">
+              <%= image_tag ip.pic.to_s, class:"image", draggable:"true" %>
+              </div>
             <% end %>
+          <td class="t-1">
+            <div id="dropbox<%= index.id %>">
+            </div>  
+          </td>
           </td>
           <td><%= link_to 'download', download_index_path(index.id), download:"",  class:"btn btn-default" %></td>
           <td><%= link_to 'Edit', edit_index_path(index), class:"btn btn-default" %></td>
