@@ -20,7 +20,7 @@
   
     <tbody>
       <% @indices.each do |index| %>
-        <tr id="d&d">
+        <tr>
           <td class="t-1"><%= index.id %></td>
           <td class="t-2"><%= index.name.to_s %></td>
           
@@ -35,14 +35,11 @@
           <td class="t-3"><%= link_to '撮影', new_index_picture_path(index),data: {"turbolinks" => false} %></td>
           <td class="t-4">
             <% index.pictures.each do |ip| %>
-              <div draggable="true" class:"images" id="<%=index.id%>-<%= ip.id %>">
-              <%= image_tag ip.pic.to_s, class:"image", draggable:"true" %>
-              </div>
+            <!--画像にidを付けてajaxで飛ばす-->
+              <%= image_tag ip.pic.to_s, class:"draganddrop", title: "name_no"+index.id.to_s, draggable:"true" %>
             <% end %>
-          <td class="t-1">
-            <div id="dropbox<%= index.id %>">
-            </div>  
           </td>
+          <td class="t-1 dropbox" id="dp<%=index.id %>">
           </td>
           <td><%= link_to 'download', download_index_path(index.id), download:"",  class:"btn btn-default" %></td>
           <td><%= link_to 'Edit', edit_index_path(index), class:"btn btn-default" %></td>

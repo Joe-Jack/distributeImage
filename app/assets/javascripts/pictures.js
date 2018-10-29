@@ -90,9 +90,9 @@ $(function() {
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
     		  alert(textStatus);
-    		  alert(errorThrown.message)
-    		  alert(jqXHR.status)
-    		  alert(jqXHR.responseText)
+    		  alert(errorThrown.message);
+    		  alert(jqXHR.status);
+    		  alert(jqXHR.responseText);
     		},
 		});
 	});

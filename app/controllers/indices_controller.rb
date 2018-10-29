@@ -40,8 +40,8 @@ class IndicesController < ApplicationController
     myBacket = 'ueyamamasashi-bucket1'
     bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
-              :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
-              :secret_access_key => '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'
+              :access_key_id => '',
+              :secret_access_key => ''
              )
     # get_objectメソッドはlist_objectsのobjectに効かない(object.get_object x)
     # bucket.list_objects(:bucket => myBacket, :prefix => "name_no#{@index}",:max_keys => 10).contents.each do |object|
@@ -135,8 +135,8 @@ class IndicesController < ApplicationController
       myBacket = 'ueyamamasashi-bucket1'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
-              :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
-              :secret_access_key => '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'
+              :access_key_id => '',
+              :secret_access_key => ''
              )
       lists = []
       bucket.list_objects(:bucket => myBacket, :prefix => "name_no#{@index}").contents.each do |b|
@@ -153,8 +153,8 @@ class IndicesController < ApplicationController
       myBacket = 'ueyamamasashi-bucket1'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
-              :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
-              :secret_access_key => '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'
+              :access_key_id => '',
+              :secret_access_key => ''
              )
       lists = []
       bucket.list_objects(:bucket => myBacket, :prefix => "name_no").contents.each do |b|

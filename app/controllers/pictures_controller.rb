@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   require 'aws-sdk'
+  require 'tempfile'
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   # GET /pictures
   # GET /pictures.json
@@ -53,22 +54,26 @@ class PicturesController < ApplicationController
     image_data = Base64.decode64(@picture.pic['data:image/png;base64,'.length .. -1])
     # ダウンロード
     if Dir::exist?("#{Rails.root}/public/downloads/name_no#{@picture.index_id}")
-      File.open("#{Rails.root}/public/downloads/name_no#{@picture.index_id}/#{@indexname}_#{@picture.id}.png", 'wb') do |f|
+      tf = Tempfile.open("#{Rails.root}/public/downloads/name_no#{@picture.index_id}/#{@indexname}_#{@picture.id}.png", 'wb') do |f|
         f.write(image_data)
       end
+      tf.close! 
+      # これが効くかどうか？20181026
     else
       Dir::mkdir("#{Rails.root}/public/downloads/name_no#{@picture.index_id}")
-      File.open("#{Rails.root}/public/downloads/name_no#{@picture.index_id}/#{@indexname}_#{@picture.id}.png", 'wb') do |f|
+      tf = Tempfile.open("#{Rails.root}/public/downloads/name_no#{@picture.index_id}/#{@indexname}_#{@picture.id}.png", 'wb') do |f|
         f.write(image_data)
       end
+      tf.close!
     end
+    
   end
 
   def canvasurl
     # aws.configが効かないcredentialsでエラー
     # Aws.config.update({
     #   region: 'ap-northeast-1',
-    #   credentials: Aws::Credentials.new('AKIAJBJL2CFKYHIWD2PA', 'WMgZcSVdK7n0iVpodLJQuIAM9ga8y4doxom3Iwo+')
+    #   credentials: Aws::Credentials.new()
     # })
     @index = params[:index_id]
     @canvasurl = params[:content]
@@ -89,8 +94,8 @@ class PicturesController < ApplicationController
     end
     s3 = Aws::S3::Resource.new(
       :region => 'ap-northeast-1',
-      :access_key_id => 'AKIAJBJL2CFKYHIWD2PA',
-      :secret_access_key => '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'
+      :access_key_id => '',
+      :secret_access_key => ''
       )
     myBacket = 'ueyamamasashi-bucket1'
     myKey = "name_no#{@index}_#{@time}"
@@ -101,7 +106,7 @@ class PicturesController < ApplicationController
     #   s3.buckets.create(myKey)
     #   obj.upload_file("#{Rails.root}/tmp/downloads/name_no#{@index}/#{@index}_#{@time}.png")
     end
-    render nothing: true
+    # render nothing: true
   end
   
   

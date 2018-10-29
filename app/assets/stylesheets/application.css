@@ -13,4 +13,10 @@
  
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
+
+.container {
+    width: 1000px;
+    padding: 0px;
+}

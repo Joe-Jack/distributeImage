@@ -1,120 +1,125 @@
-// $(function () {
+$(function(){
+	// var elm = document.getElementsByClassName('draganddrop');
+	var elm = document.getElementsByTagName("img");
+	
+	for ( var i=0 ; i < elm.length ; i++ )
+	    {
+	      elm[i].addEventListener("dragstart", function(evt){
+	      	console.log("start");
+	        evt.dataTransfer.setData("text/plain",evt.target.src);
+	        evt.stopPropagation();
+	      },false);
+	    }
+	    
+	var droparea = document.getElementsByClassName("dropbox");
 
-//     // dropzoneの表示テキストを初期化
-//     initDropzone();
+	for ( var i=0; i < droparea.length ; i++ ){
+	    droparea[i].addEventListener("drop", function(evt){
+	    	// console.log(evt)
+		    var data = evt.dataTransfer.getData( "text/plain" );
+		    var obj = document.getElementById(evt.target.id);
+		    id = obj.id.slice(2);
+		    console.log(id);
+		 
+		    // セレクターを作成
+		    var newselecter = document.createElement("img");
+		    // 新たに作ったセレクターに属性（src,class）を付ける
+		    newselecter.setAttribute("src", data);
+		    newselecter.classList.add("droppedimages");
+			// console.log(newselecter);
+		    if(data){
+				var result = confirm('本当にコピペしますか？');
+				if(result) {
+					obj.appendChild(newselecter);
+					$.ajax({
+					    url: "indices/" + id + "/pictures/canvasurl",
+					    type: "post",
+					    data: {
+					    	content: data,
+					    	index_id: id
+					    },
+					    datatype: "text",
+					    success: function(data){
+					      alert('success');
+					    },
+					    error: function(jqXHR, textStatus, errorThrown){
+			  			　alert(textStatus);
+			    		  alert(errorThrown.message);
+			    		  alert(jqXHR.status);
+			    		  alert(jqXHR.responseText);
+			    		},
+					});
+				} 
+		    }
+		    $(this).css({
+	    		"border": "solid thin",
+	    		"background-color": "white"
+	    	});
+	    	evt.preventDefault();
+    	},false);
+	    
+	    droparea[i].addEventListener("dragenter" , function(evt){
+	    	$(this).css({
+	    		"background-color": "#efe",
+	    		"border": "outset"
+	    	});
+	    	evt.preventDefault();
+	    }, false);
+	    droparea[i].addEventListener("dragover" , function(evt){
+	    	$(this).css({
+	    		"background-color": "efe",
+	    		"border": "outset"
+	    	});
+	    	evt.preventDefault();
+	    }, false);
+	    
+	    droparea[i].addEventListener("dragleave" , function(evt){
+	    	$(this).css({
+	    		"border": "solid thin",
+	    		"background-color": "white"
+	    	});
+	    	evt.preventDefault();
+	    }, false);
+	}  
+});
 
-//     // listテーブルのitem行が操作された時のリスナーを設定
-//     // items = document.getElementById('d&d').getElementsByClassName('images');
 
-//     Array.prototype.forEach.call(items, function (item) {
-//         $(item).on('dragstart', onDragStart);
-//         $(item).on('dragend', onDragEnd);
-//     });
-//     // dropzoneのリスナーを設定
-//     var $dropbox = $("[id^=dropbox]")
-//         .on('dragover', onDragOver)
-//         .on('dragenter', onDragEnter)
-//         .on('dragleave', onDragLeave)
-//         .on('drop', onDrop);
-        
-//     // dropzoneの表示テキストを指定
-//     var dropbox = "[id^=dropbox]"
-//     function initDropzone() {
-//         $(dropbox).text("ここにドロップできます。");
-//     }
-
-//     function startDropzone() {
-//         $(dropbox).text("ドラッグ中。");
-//     }
-
-//     function endDropzone(name) {
-//     $(dropbox).text(name + "をドロップしました。");
-//     }
-    
-//     //  ドロップ時の処理
-//     // (1) ドロップされた行のidをPOSTする
-//     // (2) 成功したらリダイレクトする
-//     // (3) 失敗したらダイアログを表示する
-//     // function doAction(id) {
-//     //     $.ajax({
-//     //         url: "<%=  sample_add_path  %>",
-//     //         type: "POST",
-//     //         data: {
-//     //             id: id
-//     //         },
-//     //         dataType: "html",
-//     //         success: function (data) {
-//     //             //alert("success");
-
-//     //             // dataにドラッグ＆ドロップした
-//     //             // Userのid, nameがjson形式で
-//     //             // 渡される
-//     //             // console.log(data);
-//     //             // {"id":1,"name":"Yamada Taro"}
-
-//     //             // 暫定的にページを再読込
-//     //             location.href = "<%= sample_index_path %>"
-//     //         },
-//     //         error: function (data) {
-//     //             alert("errror");
-//     //         }
-//     //     });
-//     // }
-
-//     // ドラッグ＆ドロップ操作
-//     function onDragStart(e) {
-//         var id = e.originalEvent.target.id;
-//         var name = e.originalEvent.target.cells[1].innerHTML;
-//         e.originalEvent.dataTransfer.setData('id', id);
-//         e.originalEvent.dataTransfer.setData('name', name);
-//         addDraggingEffect();
-//         startDropzone();
-//     }
-
-//     function onDragEnter(e) {
-//         addEnterEffect();
-//     }
-
-//     function onDragLeave(e) {
-//         removeEnterEffect();
-//     }
-
-//     function onDragOver(e) {
-//         e.preventDefault();
-//     }
-
-//     function onDragEnd(e) {
-//         resetAllEffect();
-//     }
-
-//     function onDrop(e) {
-//         e.preventDefault();
-//         var id = e.originalEvent.dataTransfer.getData('id');
-//         var name = e.originalEvent.dataTransfer.getData('name');
-//         endDropzone(name);
-//         doAction(id);
-//     }
-
-//     function addDraggingEffect() {
-//         $dropzone.addClass('dragging');
-//     }
-
-//     function removeDraggingEffect() {
-//         $dropzone.removeClass('dragging');
-//         initDropzone();
-//     }
-
-//     function addEnterEffect() {
-//         $dropzone.addClass('dragenter');
-//     }
-
-//     function removeEnterEffect() {
-//         $dropzone.removeClass('dragenter');
-//     }
-
-//     function resetAllEffect(e) {
-//         removeDraggingEffect();
-//         removeEnterEffect();
-//     }
+// $(function() {
+// 	$(document).on('dblclick','.draganddrop',function(){
+//     $(this).after($(this).clone());
+// 	});
+//     $('.draganddrop').draggable( {
+//     	"opacity": 0.5,
+// 	    start : function (event , ui){
+// 			console.log("start event start" );
+// 			console.log(event , ui);
+// 		},
+// 		// ドラッグ中に呼ばれる
+// 		drag : function (event , ui) {
+// 			console.log("drag event start" );
+// 			console.log(event , ui);
+			
+				
+// 		},
+// 		// ドラッグ終了時に呼ばれる
+// 		stop : function (event , ui){
+// 			console.log("stop event start" );
+// 			console.log(event , ui);
+// 			$(this).clone()
+// 				.css({opacity: 1});
+		
+// 		}
+// 	});
+	
+// 	$('td.t-4').droppable({
+// 	    accept: '.draganddrop',
+// 	    drop: function(event, ui) {
+// 	        ui.draggable.appendTo('td.t-4');
+// 	        ui.draggable.css({
+// 	        	position:"absolute",
+// 	        	opacity: 1
+// 	        });
+// 	    },
+// });
 // });
 
