@@ -6,7 +6,8 @@ Rails.application.routes.draw do
       post 'pictures/canvasurl' => 'pictures#canvasurl'
       get 'downloads' => 'indices#downloads', on: :collection
       get 'download' => 'indices#download', on: :member
-      
+
+
   end
   
   # The priority is based upon order of creation: first created -> highest priority.

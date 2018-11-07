@@ -1,52 +1,55 @@
+
 $(function() {
-	//videoタグを取得
-	var video = document.getElementById('camera');
-	//カメラが起動できたかのフラグ
-	var localMediaStream = null;
-	//カメラ使えるかチェック
-	var hasGetUserMedia = function() {
-		return (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-	};
+	navigator.mediaDevices = navigator.mediaDevices || ((navigator.mozGetUserMedia || navigator.webkitGetUserMedia) ? {
+   getUserMedia: function(c) {
+     return new Promise(function(y, n) {
+       (navigator.mozGetUserMedia ||
+        navigator.webkitGetUserMedia).call(navigator, c, y, n);
+     });
+	}
+	} : null);
 
-	//エラー
-	var onFailSoHard = function(e) {
-		console.log('エラー!', e);
-	};
-
-	if(!hasGetUserMedia()) {
-		alert("未対応ブラウザです。");
-	} else {
-		window.URL = window.URL || window.webkitURL;
-		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-		navigator.getUserMedia({video: true}, function(stream) {
-			video.src = window.URL.createObjectURL(stream);
-			localMediaStream = stream;
-			video.width = 400;
-			video.height = 300;
-		}, onFailSoHard);
+	if (!navigator.mediaDevices) {
+	  console.log("getUserMedia() not supported.");
+	  return;
 	}
 
+	// Prefer camera resolution nearest to 1280x720.
+
+	var constraints = { audio: false, video: { width: 400, height: 300 } };
+
+	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+	  video = document.getElementById('camera');
+	  //var video = document.querySelector('video');
+	  //video.src = window.URL.createObjectURL(stream);
+	  video.srcObject = stream;
+	  localMediaStream = stream;
+	  //console.log(video);
+	}).catch(function(err) {
+	  console.log(err.name + ": " + err.message);
+	});
+	
 	$("#start").click(function() {
 		if (localMediaStream) {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2sに
 			var ctx = canvas.getContext('2d');
-			var img = document.getElementById('img');
+			// var img = document.getElementById('img');
 
 			//videoの縦幅横幅を取得
-			video.width = 400
-			var w = video.width;
-			video.height = 300
-			var h = video.height;
+			// video.width = 400;
+			// var w = video.width;
+			// video.height = 300;
+			// var h = video.height;
 
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", w);
-			canvas.setAttribute("height", h);
-
+			canvas.setAttribute("width", 400);
+			canvas.setAttribute("height", 300);
+			// console.log(video);
 			//canvasにコピー
-			ctx.drawImage(video, 0, 0, w, h);
+			ctx.drawImage(video, 0, 0, 400, 300);
 			//imgにpng形式で書き出し
-			img.src = canvas.toDataURL('image/jpeg');
+			// img.src = canvas.toDataURL('image/jpeg');
 			
 		}
 	});
@@ -55,7 +58,7 @@ $(function() {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2sに
 			var ctx = canvas.getContext('2d');
-			var img = document.getElementById('img');
+			// var img = document.getElementById('img');
 
 			//videoの縦幅横幅を取得
 			var w = video.offsetWidth;
@@ -68,17 +71,21 @@ $(function() {
 			//canvasにコピー
 			ctx.drawImage(video, 0, 0, w, h);
 			//imgにpng形式で書き出し
-			img.src = canvas.toDataURL('image/png');
+			// img.src = canvas.toDataURL('image/png');
 			
 		}
 	});
 	$('#save-button').click(function(){
+		// var ctx = canvas.getContext('2d');
 		var canvas = document.getElementById('canvas');
 		var url = canvas.toDataURL('image/png');
 		var urlToThumb = canvas.toDataURL('image/jpeg');
+		// var blob1 = Base64toBlob(url);
+		// var blob2 = window.URL.createObjectURL(blob1);
+		// console.log(blob2);
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
-		// $("#new_picture").submit();
+		$("#new_picture").submit();
 		$.ajax({
 		    url: "canvasurl",
 		    type: "post",
@@ -95,7 +102,9 @@ $(function() {
     		  alert(jqXHR.responseText);
     		},
 		});
+		// ctx.clearRect(0, 0, 800, 600);
 	});
+	
 });
 
 
@@ -120,15 +129,45 @@ function Base64toBlob(base64)
 	    return blob;
 }		
 
-function dataURLtoBlob(dataURL) {
-	  // Decode the dataURL
-	  var binary = atob(dataURL.split(',')[1]);
-	  // Create 8-bit unsigned array
-	  var array = [];
-	  for(var i = 0; i < binary.length; i++) {
-	      array.push(binary.charCodeAt(i));
-	  }
-	  // Return our Blob object
-	  blob = new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
-	  return blob;
-	}
+// function dataURLtoBlob(dataURL) {
+// 	  // Decode the dataURL
+// 	  var binary = atob(dataURL.split(',')[1]);
+// 	  // Create 8-bit unsigned array
+// 	  var array = [];
+// 	  for(var i = 0; i < binary.length; i++) {
+// 	      array.push(binary.charCodeAt(i));
+// 	  }
+// 	  // Return our Blob object
+// 	  blob = new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
+// 	  return blob;
+// 	}
+
+
+// //videoタグを取得
+// 	var video = document.getElementById('camera');
+// 	//カメラが起動できたかのフラグ
+// 	var localMediaStream = null;
+// 	//カメラ使えるかチェック
+// 	var hasGetUserMedia = function() {
+// 		return (navigator.mediaDevices || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+// 	};
+
+// 	//エラー
+// 	var onFailSoHard = function(e) {
+// 		console.log('エラー!', e);
+// 	};
+
+// 	if(!hasGetUserMedia()) {
+// 		alert("未対応ブラウザです。")
+// 		;
+// 	} else {
+// 		window.URL = window.URL || window.webkitURL;
+// 		navigator.mediaDevices  = navigator.mediaDevices || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+// 		navigator.mediaDevices.getUserMedia({video: true}, function(stream) {
+// 			video.src = window.URL.createObjectURL(stream);
+// 			// video.srcObject = stream;
+// 			localMediaStream = stream;
+// 			video.width = 400;
+// 			video.height = 300;
+// 		}, onFailSoHard);
+// 	}
