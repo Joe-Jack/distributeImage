@@ -1,5 +1,6 @@
 class Index < ActiveRecord::Base
     has_many :pictures
+    belongs_to :user
     
     def self.import(file)
         spreadsheet = open_spreadsheet(file)

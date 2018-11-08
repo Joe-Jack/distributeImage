@@ -61,4 +61,4 @@ gem 'aws-sdk'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'zipline'
 gem 'jquery-ui-rails'
-
+gem 'devise'

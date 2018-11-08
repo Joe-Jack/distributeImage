@@ -3,7 +3,7 @@
   <!--<p><%= notice %></p>-->
   
   <h1>画像撮影一覧</h1>
-  <!--<button class='btn btn-default'><%= link_to '名前の追加', new_index_path %></button>-->
+  <!--<button class='btn btn-default'><%= link_to '名前の追加', user_indices_path(:user_id) %></button>-->
   
   <table>
     <thead>
@@ -32,7 +32,7 @@
             <% end %>
           </td>
           <!--今turbolink停止中-->
-          <td class="t-3"><%= link_to '撮影', new_index_picture_path(index),data: {"turbolinks" => false} %></td>
+          <td class="t-3"><%= link_to '撮影', new_user_index_picture_path(index, :user_id),data: {"turbolinks" => false} %></td>
           <td class="t-4">
             <% index.pictures.each do |ip| %>
             <!--画像にidを付けてajaxで飛ばす-->

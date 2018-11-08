@@ -21,6 +21,7 @@ class IndicesController < ApplicationController
   
   # GET /indices/download
   def downloads
+    @user = params[:usr_id]
     # downloadsのサブディレクトリだけを取り出し
   #   Dir.glob("#{Rails.root}/public/downloads/**").each{ |name|
 		# if FileTest.directory?(name)
@@ -132,7 +133,6 @@ class IndicesController < ApplicationController
     end
     
     def s3lists
-      @index = params[:id]
       myBacket = 'ueyamamasashi-bucket1'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
@@ -151,6 +151,7 @@ class IndicesController < ApplicationController
     end
     
     def s3all
+      @user = params[:user_id]
       myBacket = 'ueyamamasashi-bucket1'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',

@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   
-  resources :indices do
-    
-    resources :pictures, only: [:create, :new]
+
+  
+  devise_for :users
+  resources :users do
+    resources :indices do
       post 'pictures/canvasurl' => 'pictures#canvasurl'
       get 'downloads' => 'indices#downloads', on: :collection
       get 'download' => 'indices#download', on: :member
-
-
+      resources :pictures, only: [:create, :new]
+  end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
