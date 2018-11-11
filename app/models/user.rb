@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :timeoutable
+         
+  has_many :indices, dependent: :delete_all
+  has_many :pictures, through: :indices
 end

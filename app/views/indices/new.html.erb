@@ -2,8 +2,38 @@
 
     <h1>入力してください</h1>
     
-    <%= render 'form' %>
     
-    <%= link_to 'Back', indices_path %>
+  <%= form_for(@index, :url => {:action => :create},  maitipart: true) do |f| %>
+      <% if @index.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@index.errors.count, "error") %> prohibited this index from being saved:</h2>
+    
+          <ul>
+          <% @index.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :user_id, :value => @user %>
+      </div>
+      <!--<div class="field">-->
+      <!--  <%= f.label :pictures_count %><br>-->
+      <!--  <%= f.number_field :pictures_count %>-->
+      <!--</div>-->
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  <% end %>
+
+
+    
+    <%= link_to 'Back', user_indices_path %>
 
 </div>

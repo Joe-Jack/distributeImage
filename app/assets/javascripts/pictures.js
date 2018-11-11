@@ -32,7 +32,7 @@ $(function() {
 	$("#start").click(function() {
 		if (localMediaStream) {
 			var canvas = document.getElementById('canvas');
-			//canvasの描画モードを2sに
+			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
 			// var img = document.getElementById('img');
 
@@ -48,6 +48,7 @@ $(function() {
 			// console.log(video);
 			//canvasにコピー
 			ctx.drawImage(video, 0, 0, 400, 300);
+			
 			//imgにpng形式で書き出し
 			// img.src = canvas.toDataURL('image/jpeg');
 			
@@ -61,15 +62,15 @@ $(function() {
 			// var img = document.getElementById('img');
 
 			//videoの縦幅横幅を取得
-			var w = video.offsetWidth;
-			var h = video.offsetHeight;
+			// var w = video.offsetWidth;
+			// var h = video.offsetHeight;
 
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", w);
-			canvas.setAttribute("height", h);
+			canvas.setAttribute("width", 100);
+			canvas.setAttribute("height", 100);
 
 			//canvasにコピー
-			ctx.drawImage(video, 0, 0, w, h);
+			ctx.drawImage(video, 0, 0, 100, 100);
 			//imgにpng形式で書き出し
 			// img.src = canvas.toDataURL('image/png');
 			
@@ -79,7 +80,9 @@ $(function() {
 		// var ctx = canvas.getContext('2d');
 		var canvas = document.getElementById('canvas');
 		var url = canvas.toDataURL('image/png');
-		var urlToThumb = canvas.toDataURL('image/jpeg');
+		// console.log(url.length)
+		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
+		// console.log(urlToThumb.length)
 		// var blob1 = Base64toBlob(url);
 		// var blob2 = window.URL.createObjectURL(blob1);
 		// console.log(blob2);

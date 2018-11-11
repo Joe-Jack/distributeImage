@@ -11,17 +11,23 @@ class IndicesController < ApplicationController
   # GET /indices
   # GET /indices.json
   def index
+    @user = params[:user_id]
     @indices = Index.includes(:pictures).all
+    # binding.pry
   end
 
   # GET /indices/1
   # GET /indices/1.json
   def show
+    @user = params[:user_id]
   end
   
   # GET /indices/download
   def downloads
-    @user = params[:usr_id]
+    @user = params[:user_id]
+    @user_account = User.find(@user)
+    @email = @user_account.email
+    # binding.pry
     # downloadsのサブディレクトリだけを取り出し
   #   Dir.glob("#{Rails.root}/public/downloads/**").each{ |name|
 		# if FileTest.directory?(name)
@@ -34,11 +40,13 @@ class IndicesController < ApplicationController
     # # binding.pry
     # zip_file_generator.write
     # send_file(output_file, filename: 'image.zip', disposition: 'attachment', stream: true)
-    zipline(s3all, "all.zip")
+    zipline(s3all, "user#{@user}_#{@email}.zip")
   end
   
   def download
     @index = params['id']
+    @user = params['user_id']
+    # binding.pry
     myBacket = 'ueyamamasashi-bucket1'
     bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
@@ -66,7 +74,7 @@ class IndicesController < ApplicationController
     #   send_file(output_file, filename: "name_no#{@index}.zip", disposition: 'attachment', stream: true)
     # else
    
-    zipline(s3lists, "name_no#{@index}.zip")
+    zipline(s3lists, "user#{@user}_namenum#{@index}.zip")
       return
       
     
@@ -75,20 +83,24 @@ class IndicesController < ApplicationController
   # GET /indices/new
   def new
     @index = Index.new
+    @user = params[:user_id]
   end
 
   # GET /indices/1/edit
   def edit
+    @user = params[:user_id]
+    @index_id = params[:id]
   end
 
   # POST /indices
   # POST /indices.json
   def create
     @index = Index.new(index_params)
-
+    # @index.save
     respond_to do |format|
+      
       if @index.save
-        format.html { redirect_to @index, notice: 'Index was successfully created.' }
+        format.html { redirect_to controller: :indices, action: :index, notice: 'Index was successfully created.' }
         format.json { render :show, status: :created, location: @index }
       else
         format.html { render :new }
@@ -102,7 +114,7 @@ class IndicesController < ApplicationController
   def update
     respond_to do |format|
       if @index.update(index_params)
-        format.html { redirect_to @index, notice: 'Index was successfully updated.' }
+        format.html { redirect_to controller: :indices, action: :index, notice: 'Index was successfully updated.' }
         format.json { render :show, status: :ok, location: @index }
       else
         format.html { render :edit }
@@ -114,9 +126,12 @@ class IndicesController < ApplicationController
   # DELETE /indices/1
   # DELETE /indices/1.json
   def destroy
+    @user = params[:user_id]
+    @id = params[:id]
+    # binding.pry
     @index.destroy
     respond_to do |format|
-      format.html { redirect_to indices_url, notice: 'Index was successfully destroyed.' }
+      format.html { redirect_to user_indices_path(@user), notice: 'Index was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -129,10 +144,13 @@ class IndicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def index_params
-      params.require(:index).permit(:name, :num, :pictures_count)
+      params.require(:index).permit(:name, :num, :pictures_count, :user_id)
     end
     
     def s3lists
+      # @user = params[:user_id]
+      # @index = params[:id]
+      # binding.pry
       myBacket = 'ueyamamasashi-bucket1'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
@@ -140,7 +158,7 @@ class IndicesController < ApplicationController
              :secret_access_key => Rails.application.secrets.aws_secret_key
              )
       lists = []
-      bucket.list_objects(:bucket => myBacket, :prefix => "name_no#{@index}").contents.each do |b|
+      bucket.list_objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@index}").contents.each do |b|
         lists.push(b)
       end
       lists.lazy.map do |list|
@@ -151,7 +169,8 @@ class IndicesController < ApplicationController
     end
     
     def s3all
-      @user = params[:user_id]
+      # @user = params[:user_id]
+      # binding.pry
       myBacket = 'ueyamamasashi-bucket1'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
@@ -159,7 +178,7 @@ class IndicesController < ApplicationController
              :secret_access_key => Rails.application.secrets.aws_secret_key
              )
       lists = []
-      bucket.list_objects(:bucket => myBacket, :prefix => "name_no").contents.each do |b|
+      bucket.list_objects(:bucket => myBacket, :prefix => "user#{@user}").contents.each do |b|
         lists.push(b)
       end
       lists.lazy.map do |list|

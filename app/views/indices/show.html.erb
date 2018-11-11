@@ -15,5 +15,5 @@
   <%= @index.pictures_count %>
 </p>
 
-<%= link_to 'Edit', edit_index_path(@index) %> |
-<%= link_to 'Back', indices_path %>
+<%= link_to 'Edit', edit_user_index_path(@user, @index.id) %> |
+<%= link_to 'Back', user_indices_path(@user) %>
