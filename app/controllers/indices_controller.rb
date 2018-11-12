@@ -6,8 +6,9 @@ class IndicesController < ApplicationController
   
   include ActionController::Streaming
   include Zipline
-  before_action :set_index, only: [:show, :edit, :update, :destroy]
-
+  # before_action :set_index, only: [:show, :edit, :update, :destroy]
+  before_action :user_signed_in
+  
   # GET /indices
   # GET /indices.json
   def index
@@ -20,6 +21,8 @@ class IndicesController < ApplicationController
   # GET /indices/1.json
   def show
     @user = params[:user_id]
+    @id = params[:id]
+    @index = Index.find_by(params[:id])
   end
   
   # GET /indices/download
@@ -90,6 +93,9 @@ class IndicesController < ApplicationController
   def edit
     @user = params[:user_id]
     @index_id = params[:id]
+    @index = Index.find_by("id": @index_id)
+    
+    # binding.pry
   end
 
   # POST /indices
@@ -128,6 +134,7 @@ class IndicesController < ApplicationController
   def destroy
     @user = params[:user_id]
     @id = params[:id]
+    @index = Index.find_by("id": @id)
     # binding.pry
     @index.destroy
     respond_to do |format|
@@ -140,6 +147,9 @@ class IndicesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_index
       @index = Index.find(params[:id])
+      unless logged_in?
+        redirect_to new_user_session_path
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -185,6 +195,19 @@ class IndicesController < ApplicationController
         logger.debug "get file from s3 : #{list}"
         s3_object = bucket.get_object(bucket: myBacket, key: list.key)
         [s3_object.body, list.key+".png"]
+      end
+    end
+    
+    # 他ユーザーに勝手に入り込まさない（手動でパスを変更して(/users/1/indices=>/users/6/indices)遷移させない）
+    def user_signed_in
+      @user = params[:user_id]
+      # binding.pry
+      if current_user.id == @user.to_i
+        return
+      end
+      if current_user.id != @user.to_i
+        # ログインしているので遷移しないが万が一のときのため＊未確認
+        redirect_to new_user_registration_path
       end
     end
 end

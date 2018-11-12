@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   
   devise_for :users
+  # root :to => 'sessions#new'
   resources :users do
-    root :to => 'devise/sessions#new'
     resources :indices do
       post 'pictures/canvasurl' => 'pictures#canvasurl'
       get 'downloads' => 'indices#downloads', on: :collection
