@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   
 
-  
+  # devise_scope :user do
+  #   get '/users/sign_in' => 'devise/sessions#new'
+  # end
   devise_for :users
-  # root :to => 'sessions#new'
+  # root :to => 'devise/sessions#new'
   resources :users do
     resources :indices do
       post 'pictures/canvasurl' => 'pictures#canvasurl'
