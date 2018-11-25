@@ -1,52 +1,53 @@
 <div class="container">
   
-  <!--<p><%= notice %></p>-->
+  <!--<%= notice %>-->
   
   <h1>画像撮影一覧</h1>
-  <!--<button class='btn btn-default'><%= link_to '名前の追加', user_indices_path(:user_id) %></button>-->
   
-  <table>
+  <table class="table-responsive">
     <thead>
       <tr>
-        <th class="t-1">番号</th>
-        <th class="t-2">名前・項目</th>
-        <th class="t-1">総数</th>
-        <th class="t-3">撮影</th>
-        <th class="t-4">画像</th>
-        <th class="t-1">dd</th>
-        <th colspan="5"></th>
+        <th class="t-1" scope="col">番号</th>
+        <th class="t-2" scope="col">名前・項目</th>
+        <th class="t-1" scope="col">総数</th>
+        <th class="t-3" scope="col">撮影</th>
+        <th class="t-4" scope="col">画像</th>
+        <!--<th class="t-4" scope="col">アクション</th>-->
       </tr>
     </thead>
   
     <tbody>
-      <% @indices.each do |index| %>
-       <% if index.user_id === @user.to_i %>
+      <% @indices.each_with_index do |index, id| %>
+      
         <tr>
-          <td class="t-1"><%= index.id %></td>
+          <td class="t-1"><%= id+1 %></td>
           <td class="t-2"><%= index.name.to_s %></td>
           
           <td class="t-1">
-            <% if index.pictures_count %>
-              <%= index.pictures_count %>
+            <% if index.pictures.count != 0 %>
+              <%= index.pictures.count %>
             <% else %>
-              <span>0</span>
+              <%= "0" %>
             <% end %>
           </td>
           <!--今turbolink停止中-->
           <td class="t-3"><%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %></td>
-          <td class="t-4">
-            <% index.pictures.each do |ip| %>
-            <!--画像にidを付けてajaxで飛ばす-->
-              <%= image_tag ip.pic.to_s, class:"draganddrop", title: "name_no"+index.id.to_s, draggable:"true" %>
-            <% end %>
+          <td class="t-4 dropbox" id="dp<%=index.id%>">
+            
+            <details>
+              <summary>個別サムネイル（解析度は落ちています。）</summary>
+              <% index.pictures.reverse_order.each_with_index do |ip, inx| %>
+                <%= image_tag ip.pic.to_s, class:"draganddrop", title: inx.to_s, draggable:"true" %>
+              <% end %>
+            </details>
           </td>
-          <td class="t-1 dropbox" id="dp<%=index.id %>">
-          </td>
-          <td><%= link_to 'download', download_user_index_path(@user, index.id), download:"",  class:"btn btn-default" %></td>
-          <td><%= link_to 'Edit',  edit_user_index_path(@user, index.id), class:"btn btn-default" %></td>
-          <td><%= link_to 'Destroy', user_index_path(@user, index.id), method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default" %></td>
+          
+          
+          <td><%= link_to 'download', download_user_index_path(@user, index.id), download:"",  class:"btn btn-default waku1" %></td>
+          <td><%= link_to '編集',  edit_user_index_path(@user, index.id), class:"btn btn-default waku" %></td>
+          <td><%= link_to '削除', user_index_path(@user, index.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class:"btn btn-default waku" %></td>
         </tr>
-      <% end %>
+      
       <% end %>
       
     </tbody>
@@ -54,6 +55,33 @@
   
   <br>
   
-  <%= link_to '名前の追加', new_user_index_path(@user), class:"btn btn-default" %>
+  <%= link_to '名前・項目の追加', new_user_index_path(@user), class:"btn btn-default" %>
+  
+  
 
+
+<!--<%= form_for(@picture, :url => {:action => 'index'}, remote: true) do |f| %>-->
+<!--      <% if @picture.errors.any? %>-->
+<!--        <div id="error_explanation">-->
+<!--          <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>-->
+<!--          <ul>-->
+<!--          <% @picture.errors.full_messages.each do |message| %>-->
+<!--            <li><%= message %></li>-->
+<!--          <% end %>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      <% end %>-->
+    
+<!--      <div class="field">-->
+<!--        <%= f.hidden_field :pic, :value => "" %>-->
+<!--      </div>-->
+      
+<!--      <div class="field">-->
+<!--        <%= f.hidden_field :index_id, :value => "" %>-->
+<!--      </div>-->
+      
+<!--    <% end %>-->
+<!--    <button id="new_picture", class="btn btn-default">保存</button>-->
+    
+    
 </div>

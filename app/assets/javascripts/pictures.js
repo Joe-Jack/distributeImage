@@ -86,6 +86,7 @@ $(function() {
 		// var blob1 = Base64toBlob(url);
 		// var blob2 = window.URL.createObjectURL(blob1);
 		// console.log(blob2);
+		// console.log(urlToThumb.length)
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
 		$("#new_picture").submit();
@@ -96,7 +97,7 @@ $(function() {
 		    },
 		    datatype: "text",
 		    success: function(data){
-		      alert('success');
+		      //alert('success');
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
     		  alert(textStatus);
@@ -122,7 +123,7 @@ function Base64toBlob(base64)
     var data = atob(tmp[1]);
     // tmp[0]の文字列（data:image/png;base64）からコンテンツタイプ（image/png）部分を取得
 		var mime = tmp[0].split(':')[1].split(';')[0];
-	    //  1文字ごとにUTF-16コードを表す 0から65535 の整数を取得
+	    //  1文字ごとにUTF-16コードを表す 0から65535 の整数���取得
 		var buf = new Uint8Array(data.length);
 		for (var i = 0; i < data.length; i++) {
 	        buf[i] = data.charCodeAt(i);
@@ -132,45 +133,3 @@ function Base64toBlob(base64)
 	    return blob;
 }		
 
-// function dataURLtoBlob(dataURL) {
-// 	  // Decode the dataURL
-// 	  var binary = atob(dataURL.split(',')[1]);
-// 	  // Create 8-bit unsigned array
-// 	  var array = [];
-// 	  for(var i = 0; i < binary.length; i++) {
-// 	      array.push(binary.charCodeAt(i));
-// 	  }
-// 	  // Return our Blob object
-// 	  blob = new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
-// 	  return blob;
-// 	}
-
-
-// //videoタグを取得
-// 	var video = document.getElementById('camera');
-// 	//カメラが起動できたかのフラグ
-// 	var localMediaStream = null;
-// 	//カメラ使えるかチェック
-// 	var hasGetUserMedia = function() {
-// 		return (navigator.mediaDevices || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-// 	};
-
-// 	//エラー
-// 	var onFailSoHard = function(e) {
-// 		console.log('エラー!', e);
-// 	};
-
-// 	if(!hasGetUserMedia()) {
-// 		alert("未対応ブラウザです。")
-// 		;
-// 	} else {
-// 		window.URL = window.URL || window.webkitURL;
-// 		navigator.mediaDevices  = navigator.mediaDevices || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-// 		navigator.mediaDevices.getUserMedia({video: true}, function(stream) {
-// 			video.src = window.URL.createObjectURL(stream);
-// 			// video.srcObject = stream;
-// 			localMediaStream = stream;
-// 			video.width = 400;
-// 			video.height = 300;
-// 		}, onFailSoHard);
-// 	}

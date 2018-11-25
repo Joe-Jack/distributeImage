@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label "名前・項目", class:"name" %><br>
+    <%= f.text_field :name, class:"form-control"%>
   </div>
   <!--<div class="field">-->
   <!--  <%= f.label :num %><br>-->
@@ -24,6 +24,6 @@
   <!--  <%= f.number_field :pictures_count %>-->
   <!--</div>-->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "編集する", class:"btn btn-default" %>
   </div>
 <% end %>

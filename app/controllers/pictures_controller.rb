@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
   require 'aws-sdk'
   require 'tempfile'
+  require 'mysql2.rb'
+  require 'mysql2'
  
   
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
@@ -18,7 +20,9 @@ class PicturesController < ApplicationController
   def new
     @picture = Picture.new
     @index = params[:index_id]
+    @data = params[:content]
     @user = params[:user_id]
+    
   end
 
   # GET /pictures/1/edit
@@ -84,10 +88,11 @@ class PicturesController < ApplicationController
     @user = params[:user_id]
     @index = params[:index_id]
     @canvasurl = params[:content]
-    @time = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    @time = Time.now.strftime("%Y-%m-%d:%H:%M:%S")
     # binding.pry
     # ajaxで渡されたデータを要らない文字列を除外してデコード
     image_data = Base64.decode64(@canvasurl['data:image/png;base64,'.length .. -1])
+    p image_data.slice(1..10)
     # ダウンロード
     if Dir::exist?("#{Rails.root}/tmp/downloads/user#{@user}")
       File.open("#{Rails.root}/tmp/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png", 'wb') do |f|
@@ -118,6 +123,28 @@ class PicturesController < ApplicationController
     render nothing: true
   end
   
+  def imagecopy
+    @user = params[:user_id]
+    @index = params[:index_id]
+    @origin_id = params[:origin_id]
+    @image_number = params[:image_number]
+    @time = Time.now.strftime("%Y-%m-%d:%H:%M:%S")
+    s3 = Aws::S3::Client.new(
+      :region => 'ap-northeast-1',
+      :access_key_id => Rails.application.secrets.aws_access_key_id,
+      :secret_access_key => Rails.application.secrets.aws_secret_key
+      )
+    myBacket = 'ueyamamasashi-bucket1'
+    
+    lists = s3.list_objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@origin_id}").contents.to_a.reverse
+    list = lists[@image_number.to_i].key
+    s3.copy_object(
+      copy_source: "/"+myBacket+"/"+list,
+      bucket: myBacket,
+      key: "user#{@user}_namenum#{@index}_#{@time}"
+      )
+    render nothing: true
+  end
   
   # PATCH/PUT /pictures/1
   # PATCH/PUT /pictures/1.json
@@ -142,7 +169,20 @@ class PicturesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def dropnew
+    @content = params[:content]
+    @index = params[:index_id]
+    @user = params[:user_id]
+    binding.pry
+    # @picture = Picture.new
+    # droppedToMysql(@content, @index)
+    client = Mysql2::Client.new(:host => 'localhost', :username => 'root', :database => 'distributeImage_development', :socket => "/var/lib/mysql/mysql.sock")
+    statement = client.prepare('INSERT INTO pictures (pic, index_id) VALUES(?,?)')
+    statement.execute(@content, 2)
+    render nothing: true
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_picture

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -51,7 +51,7 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "一括ダウンロード", downloads_user_indices_path(@user), download: "" %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, :method=>'delete' %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "退会", '/users', :method=>'delete', data: {confirm: "すべての映像がなくなります。本当に削除しますか？"} %></li>
           </ul>
         </div>
       </div>
@@ -98,7 +98,7 @@
       
 
       <footer>
-        <p>&copy; Company 2018</p>
+        <p>&copy; distributeImage 2018</p>
       </footer>
 
     </div> <!-- /container -->

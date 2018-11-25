@@ -3,6 +3,7 @@ class IndicesController < ApplicationController
   require 'aws-sdk'
   require 'open-uri'
   require 'zipline'
+  require 'mysql2'
   
   include ActionController::Streaming
   include Zipline
@@ -13,7 +14,27 @@ class IndicesController < ApplicationController
   # GET /indices.json
   def index
     @user = params[:user_id]
-    @indices = Index.includes(:pictures).all
+    @indices = Index.includes(user: :pictures).where("user_id=?", @user.to_i)
+    # data = params[:content]
+    # index_id = params[:id]
+    @picture = Picture.new
+    # if data && index_id != nil
+    #   @picture.pic == data
+    #   @picture.index_id == index_id
+    #   @picture.save
+    # end
+    
+    # @index_new = User.find(@user.to_i, {:include => [{:indices => :pictures}]})
+    # @picture.save
+    # respond_to do |format|
+    #   if @picture.save
+    #     format.html { redirect_to controller: :indices, action: :index, notice: '作成しました。' }
+    #     format.json { render :show, status: :created, location: @picture }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @picture.errors, status: :unprocessable_entity }
+    #   end
+    # end
     # binding.pry
   end
 
@@ -101,26 +122,33 @@ class IndicesController < ApplicationController
   # POST /indices
   # POST /indices.json
   def create
+    # @picture = Picture.new
+    # @picture.save
     @index = Index.new(index_params)
-    # @index.save
+    @index.save
     respond_to do |format|
       
       if @index.save
-        format.html { redirect_to controller: :indices, action: :index, notice: 'Index was successfully created.' }
+        format.html { redirect_to controller: :indices, action: :index, notice: '作成しました。' }
         format.json { render :show, status: :created, location: @index }
       else
         format.html { render :new }
         format.json { render json: @index.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /indices/1
   # PATCH/PUT /indices/1.json
   def update
+    @user = params[:user_id]
+    @id = params[:id]
+    @index = Index.find_by("id": @id)
+    @index.update(index_params)
     respond_to do |format|
       if @index.update(index_params)
-        format.html { redirect_to controller: :indices, action: :index, notice: 'Index was successfully updated.' }
+        format.html { redirect_to controller: :indices, action: :index, notice: '編集しました。' }
         format.json { render :show, status: :ok, location: @index }
       else
         format.html { render :edit }
@@ -138,7 +166,7 @@ class IndicesController < ApplicationController
     # binding.pry
     @index.destroy
     respond_to do |format|
-      format.html { redirect_to user_indices_path(@user), notice: 'Index was successfully destroyed.' }
+      format.html { redirect_to user_indices_path(@user), notice: '削除しました。' }
       format.json { head :no_content }
     end
   end
@@ -209,5 +237,21 @@ class IndicesController < ApplicationController
         # ログインしているので遷移しないが万が一のときのため＊未確認
         redirect_to new_user_registration_path
       end
+    end
+    
+    def refer_to_s3
+      myBacket = 'ueyamamasashi-bucket1'
+      bucket = Aws::S3::Client.new(
+             :region => 'ap-northeast-1',
+             :access_key_id => Rails.application.secrets.aws_access_key_id,
+             :secret_access_key => Rails.application.secrets.aws_secret_key
+             )
+      # bucket.objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@index}", :max_key => 1).each do |object|
+      # bucket.get_object(:bucket => myBacket, :key => "").body.read
+      # pic_base = Base64.strict_encode64(b.body.read)
+      # pic = "data:image/png;base64,"+pic_base
+      # bucket.list_objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@index}", :max_keys => 1).each do |b|
+        
+      # end
     end
 end

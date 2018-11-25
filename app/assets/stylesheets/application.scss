@@ -14,10 +14,20 @@
  *= require_tree .
  *= require_self
  *= require jquery-ui
- 
+ @import "bootstrap";
  */
-// @import "bootstrap";
+
 .container {
     width: 1000px;
     padding: 0px;
+    background-color: #fff;
+}
+
+body {
+    width: 870px;
+    margin: auto;
+}
+
+.navbar-brand {
+    padding-left: 30px;
 }

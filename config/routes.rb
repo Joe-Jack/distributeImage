@@ -5,13 +5,23 @@ Rails.application.routes.draw do
   #   get '/users/sign_in' => 'devise/sessions#new'
   # end
   devise_for :users
-  # root :to => 'devise/sessions#new'
+  devise_scope :user do
+  authenticated :user do
+    root 'indices#index', as: :authenticated_root
+  end
+
+  unauthenticated do
+    root 'devise/sessions#new', as: :unauthenticated_root
+  end
+  end
   resources :users do
-    resources :indices do
+    resources :indices, except: [:show] do
       post 'pictures/canvasurl' => 'pictures#canvasurl'
+      post 'pictures/imagecopy' => 'pictures#imagecopy'
       get 'downloads' => 'indices#downloads', on: :collection
       get 'download' => 'indices#download', on: :member
       resources :pictures, only: [:create, :new]
+      post 'dropnew' => 'pictures#dropnew'
   end
   
   end
