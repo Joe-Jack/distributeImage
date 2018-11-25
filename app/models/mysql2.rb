@@ -1,10 +1,10 @@
 require 'mysql2'
 
-# def droppedToMysql(image, index_id)
+def droppedToMysql(image, index_id)
   client = Mysql2::Client.new(:host => 'localhost', :username => 'root', :database => 'distributeImage_development', :socket => "/var/lib/mysql/mysql.sock")
   statement = client.prepare('INSERT INTO pictures (pic, index_id) VALUES(?,?)')
   statement.execute("image", "index_id")
-# end
+end
   # query = %Q{insert into pictures (pic, index_id) values ( ?, ? ) 'sample', 29 }
   # results = client.query(query)
   

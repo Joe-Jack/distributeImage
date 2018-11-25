@@ -170,16 +170,19 @@ class PicturesController < ApplicationController
     end
   end
   
+  # drag&dropで元indexからindex先へmysql内でコピペ
   def dropnew
     @content = params[:content]
     @index = params[:index_id]
     @user = params[:user_id]
-    binding.pry
+    # binding.pry
     # @picture = Picture.new
     # droppedToMysql(@content, @index)
+    @time = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    # mysqlを最新版にしてprepare statementが効いた
     client = Mysql2::Client.new(:host => 'localhost', :username => 'root', :database => 'distributeImage_development', :socket => "/var/lib/mysql/mysql.sock")
-    statement = client.prepare('INSERT INTO pictures (pic, index_id) VALUES(?,?)')
-    statement.execute(@content, 2)
+    statement = client.prepare('INSERT INTO pictures (pic, index_id, created_at, updated_at) VALUES(?,?,?,?)')
+    statement.execute(@content, @index, @time, @time)
     render nothing: true
   end
   

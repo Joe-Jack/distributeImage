@@ -33,25 +33,25 @@ $(function(){
 				var result = confirm('本当にコピペしますか？');
 				if(result) {
 					obj.appendChild(newselecter);
-				// 	$.ajax({
-				// 	    url: "indices/" + id + "/pictures/imagecopy",
-				// 	    type: "post",
-				// 	    data: {
-				// 	    	index_id: id,
-				// 	    	origin_id: origin_id,
-				// 	    	image_number: image_number
-				// 	    },
-				// 	    datatype: "text",
-				// 	    success: function(data){
-				// 	      alert('success');
-				// 	    },
-				// 	    error: function(jqXHR, textStatus, errorThrown){
-			 // 			　alert(textStatus);
-			 //   		  alert(errorThrown.message);
-			 //   		  alert(jqXHR.status);
-			 //   		  alert(jqXHR.responseText);
-			 //   		},
-					// });
+					$.ajax({
+					    url: "indices/" + id + "/pictures/imagecopy",
+					    type: "post",
+					    data: {
+					    	index_id: id,
+					    	origin_id: origin_id,
+					    	image_number: image_number
+					    },
+					    datatype: "text",
+					    success: function(data){
+					      //alert('success');
+					    },
+					    error: function(jqXHR, textStatus, errorThrown){
+			  			　alert(textStatus);
+			    		  alert(errorThrown.message);
+			    		  alert(jqXHR.status);
+			    		  alert(jqXHR.responseText);
+			    		},
+					});
 					$.ajax({
 					    url: "indices/" + id + "/dropnew",
 					    type: "post",
@@ -61,7 +61,7 @@ $(function(){
 					    },
 					    datatype: "text",
 					    success: function(data){
-					      alert('success');
+					      //alert('success');
 					    },
 					    error: function(jqXHR, textStatus, errorThrown){
 					  	　alert(textStatus);
