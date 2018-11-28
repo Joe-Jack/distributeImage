@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: MyString1
   num: 1
   pictures_count: 1
+  user_id: 1
 
 two:
-  name: MyString
-  num: 1
-  pictures_count: 1
+  name: MyString2
+  num: 2
+  pictures_count: 2
+  user_id: 2

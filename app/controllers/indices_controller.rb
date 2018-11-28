@@ -51,6 +51,7 @@ class IndicesController < ApplicationController
     @user = params[:user_id]
     @user_account = User.find(@user)
     @email = @user_account.email
+    @user_name = @user_account.username
     # binding.pry
     # downloadsのサブディレクトリだけを取り出し
   #   Dir.glob("#{Rails.root}/public/downloads/**").each{ |name|
@@ -64,13 +65,18 @@ class IndicesController < ApplicationController
     # # binding.pry
     # zip_file_generator.write
     # send_file(output_file, filename: 'image.zip', disposition: 'attachment', stream: true)
-    zipline(s3all, "user#{@user}_#{@email}.zip")
+    if @user_name
+      zipline(s3all, "user_#{@user_name}.zip")
+    else
+      zipline(s3all, "user#{@user}_#{@email}.zip")
+    end
   end
   
   def download
     @index = params['id']
     @user = params['user_id']
-    # binding.pry
+    @user_account = User.find(@user)
+    @user_name = @user_account.username
     myBacket = 'ueyamamasashi-bucket1'
     bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
@@ -97,8 +103,11 @@ class IndicesController < ApplicationController
     # if Dir.exist?(directory_to_zip)
     #   send_file(output_file, filename: "name_no#{@index}.zip", disposition: 'attachment', stream: true)
     # else
-   
-    zipline(s3lists, "user#{@user}_namenum#{@index}.zip")
+    if @user_name
+      zipline(s3lists, "user_#{@user_name}_namenum#{@index}.zip")
+    else
+      zipline(s3lists, "user#{@user}_namenum#{@index}.zip")
+    end
       return
       
     

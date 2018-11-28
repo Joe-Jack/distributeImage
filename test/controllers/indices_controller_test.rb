@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class IndicesControllerTest < ActionController::TestCase
+  
+  
+  include Devise::Test::ControllerHelpers
+  def setup
+    @user = users( :john )
+    sign_in(@user)
+  end
+
   setup do
     @index = indices(:one)
   end
@@ -18,10 +26,10 @@ class IndicesControllerTest < ActionController::TestCase
 
   test "should create index" do
     assert_difference('Index.count') do
-      post :create, index: { name: @index.name, num: @index.num, pictures_count: @index.pictures_count }
+      post :create, index: { name: @index.name, num: @index.num, pictures_count: @index.pictures_count, user_id: @index.user_id }
     end
 
-    assert_redirected_to index_path(assigns(:index))
+    assert_redirected_to user_index_path(assigns(:index))
   end
 
   test "should show index" do
@@ -35,8 +43,8 @@ class IndicesControllerTest < ActionController::TestCase
   end
 
   test "should update index" do
-    patch :update, id: @index, index: { name: @index.name, num: @index.num, pictures_count: @index.pictures_count }
-    assert_redirected_to index_path(assigns(:index))
+    patch :update, id: @index.id, user_id: @index.user_id, index: { name: @index.name, num: @index.num, pictures_count: @index.pictures_count, user_id: @index.user_id }
+    assert_redirected_to user_index_path(assigns(@index.id))
   end
 
   test "should destroy index" do
