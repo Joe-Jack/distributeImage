@@ -177,7 +177,7 @@ GEM
     aws-sdk-costandusagereportservice (1.6.0)
       aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-costexplorer (1.14.0)
+    aws-sdk-costexplorer (1.15.0)
       aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
     aws-sdk-databasemigrationservice (1.15.0)
@@ -378,7 +378,7 @@ GEM
     aws-sdk-mediastoredata (1.8.0)
       aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-mediatailor (1.8.0)
+    aws-sdk-mediatailor (1.9.0)
       aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
     aws-sdk-migrationhub (1.8.0)
@@ -387,7 +387,7 @@ GEM
     aws-sdk-mobile (1.6.0)
       aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-mq (1.8.0)
+    aws-sdk-mq (1.9.0)
       aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
     aws-sdk-mturk (1.9.0)
@@ -939,7 +939,7 @@ DEPENDENCIES
   zipline
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.17.1

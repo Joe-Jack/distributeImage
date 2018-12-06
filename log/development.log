@@ -544,3 +544,1301 @@ Processing by Devise::RegistrationsController#new as HTML
   Rendered devise/shared/_links.html.erb (0.6ms)
   Rendered devise/registrations/new.html.erb within layouts/application (3.9ms)
 Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 61.245.214.147 at 2018-12-06 08:31:16 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (184.7ms)
+Completed 200 OK in 1032ms (Views: 1016.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides-594a4d0ff8345d216858cdac32cb1c8c.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:17 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/indices-a66b836d95f0e7f97e1a7985c80bf467.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pictures-539b1b2d248fcacaf845c897cae976a6.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds-8f0d8cf177b34d0dce9f4d59c404b312.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/theme-66f7b1da28df56f2afe607b42b8a3d3f.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/core-2e3c23ec47dd4990362924235dd05415.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/accordion-283f6066268dfb97dd6487c8ce6cd723.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/autocomplete-4912b460774db8091cad6fa12c53d064.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/button-f1e555f715785f892c34f3a7406a1396.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/checkboxradio-abdde1134098e5edc85dd1c8e63874a4.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/controlgroup-4b24bf0d5a48a2dd0615d61882a236da.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/datepicker-d37a2a07bdbe037c1e2915855796ce6a.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/draggable-c1b35fa7d015b4139165af8aa9a4d0fc.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/dialog-379c69850c48c72fec5c908f66a88ef3.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/progressbar-304b1614fc5f0427bc4de2dc2168f3ff.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/menu-4117f6723c7238d95e5f786bf6cf5068.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/resizable-a18d112087fc9083d87507e22ecc7a80.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/selectable-747056711a02e43a7e2138315a2c873f.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/selectmenu-a6900a08312971c8f605b628ec5d08b1.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/slider-3cc7c2a67ac63949098f7888dfa973cd.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/spinner-bfca363b54275c95d4d8308f6f01f035.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/sortable-6c51b59a16b577b25b43ade628a2fa0a.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tabs-d823446fb3255ce9269faeeda677e3b6.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tooltip-6e7788d5ed200c4766672296e734a2bf.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/base-54da48578b2918672b730151cc717040.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/all-6412efa40463fb63ac80d22562dd49b2.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-24e9e31ece1989ef3791bcd53ea38cab.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui-6412efa40463fb63ac80d22562dd49b2.css?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs-e9c99e4aa7db66a7f23b948d7d043bd8.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition-5e5603d19c7c58a11a261978aea40d65.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert-9099afc3af20c1fbd0fb0728891f4f35.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal-e4d69caf358211e35e544832d710fe0e.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown-a0ebeec7eff01b4550c724082e6eab0e.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy-a99944d8b77f06dcdb5c7c1bb74aba54.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab-dbf946c459e9b04b4d078f5818c49b39.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip-3a98b895c8dc2105ef8831ffc706f5af.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button-5d42eea38322262cbc7c3d31e21e2bbc.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover-4e84f196e1d78eee627de8895006193e.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse-1697d0d5abc21e59402b7c610fd591a1.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel-03c4bf9ff43072c5487639287f73f1da.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix-364a7452e9f961663d50ce1493dcf08b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap-dfb73c81ed7f10d8d3d137a34aedc3ff.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/version-0ac12f42a45beeeaa925c31aaf6f0c6c.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/data-d1b4d032a3c60256e6edc1ae691f8281.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/disable-selection-ba5ca217aaae21832a20b7f10c116c5b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:19 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/focusable-2ac1893a44b45bcf3341361ba0cf6d17.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/form-0d967bf688e493073ded9c71a023f22b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/keycode-21c38f0d17be63acd38c79a57fd72644.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/ie-8d8eb1d0bdbd16e10f937972c0a76911.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/escape-selector-ea0b7614ded6da21a84e144a4d0ffada.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/labels-3794926f578324774fda28dd887958d4.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/jquery-1-7-c31bf2599ebd009c82d73b191ac58374.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/plugin-286ba8e9b3122d166ac941afc275cc7e.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/safe-active-element-b7411998ee08f0f4e2226b865c2e2dcc.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/safe-blur-b80f94f2c8b22c348a175107fe8f20a1.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/scroll-parent-748527bba306f16cc8b874cfe9f9ac9a.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tabbable-409dcb72ada6dbe179a2b6429d889cfd.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/unique-id-2f1f1c97b4adf0268253f467e9c103d4.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effect-0109eb44ba6a14eae05ec4fa36bd127a.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/core-97a4eeabfaaa49aad70befe52aa8ddbf.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/form-reset-mixin-4f507c55e339856d35502b3c6e6f6d6b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/position-1a8927a0bd177ebb6747ab22594100af.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widget-b48b07f7f0ead1e7253b13400e9c36b9.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-blind-9bbeb99222382ce2d3cc1f72713d83f9.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-bounce-44518a8adc48a55df30b2dd8f5168543.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-clip-58942c97a24f154666fe2904493cd43a.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-drop-e1143fcf500da747ab0ab058efc5d1b4.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-explode-c076f415d955dea21db260cfd58104da.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-fade-1fa0a549e37521283edcc6e7f7fb214e.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-fold-4be6d5ddb455ff849ec8b00f1102636e.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-highlight-d1b7e2d7e582604abd713fa9f48bc827.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-size-99fd35175bfbe47ae9a7ad9fae216b80.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-scale-b73fb846e3aaa505f9468e0f6ebd3d25.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-puff-32934a409854511bfdc64a9834c69b64.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-shake-9432e5dd982d364923c0b6a7f629f70b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-pulsate-8b44dd3e26778ce83f164bc395830ae5.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-slide-0e9db87d32e6a5b6b75ab726b9fba31b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-transfer-852d6c6588688415188eb65d2779edd3.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/accordion-a3730f5e0dfadc356f27405dc7b885c4.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/menu-3b0c026456f6fa5cbf3f1fb6ea15d4e4.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/autocomplete-8b7276939ff01576527ce76c2608ef65.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/controlgroup-c6b1bb9d173ea7d07a4d9be3b0e2c97b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/checkboxradio-2607147cafd8aaab1735666c863a99b8.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/button-93adddba7da20d1c14c405508d799099.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/datepicker-2dc033e4895915d77a972bd4f9357c75.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/mouse-1b11838eb2d568ab1584f67205be8749.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/draggable-50f0f18d2b6887c3503decb5778e306c.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/dialog-3917389a5fdd6b17953ce14ac70a6da3.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/resizable-2b8df67fc2538cf70f5122e1f0bcf24f.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/droppable-5ec0393e828a56dd1e09ac9f172da4df.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/progressbar-60e472a93963798961fcd3d57d020c1c.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/selectable-37cf87155f0e39387e873848293fb7a3.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/selectmenu-5e638cd20eb16867b1bfffcad5fd2033.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/slider-deb2540a067ea0a967cb5266e351f00b.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/sortable-c05ef04265e61d1fe42c7e0248da3acd.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/spinner-6827eec0ba6fd65704ddeaddb4b074e1.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/tabs-a8ec30df46a739b57a2b3ab50cafbff5.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/tooltip-00f513b786f598587fe56c9c7693a9af.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui-4181df2ad845cdd5c56a35980eacfba2.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks-196df15d152615a6be5cffafd523cab3.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-60186bd8bafe590733d2ef1913de0221.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:22 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/indices-5cc63ba59ca823b1f4d71cd6950547b3.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:22 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pictures-1e5436f4e6c181b7bed2018341abfa1f.js?body=1" for 61.245.214.147 at 2018-12-06 08:31:22 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 61.245.214.147 at 2018-12-06 08:31:31 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O/7jaT2/ZbegrtfbvwnoO1oZhHds6gXytq4ZyDVXAf91L+LcdRKBuRwKmUSsyoU68EolKQN7bZD5tEteLF5pbA==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/46/indices
+Completed 302 Found in 174ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/46/indices" for 61.245.214.147 at 2018-12-06 08:31:31 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndicesController#index as HTML
+  Parameters: {"user_id"=>"46"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 46  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mIndex Load (0.8ms)[0m  SELECT `indices`.* FROM `indices` WHERE (user_id=46)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (46)[0m
+  [1m[35mIndex Load (0.2ms)[0m  SELECT `indices`.* FROM `indices` WHERE `indices`.`user_id` IN (46)
+  [1m[36mPicture Load (4.2ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` IN (39, 40, 41, 42, 44, 45, 46)[0m
+  [1m[35m (3.1ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 39
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 39[0m  [["index_id", 39]]
+  [1m[35mPicture Load (0.4ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 39  ORDER BY `pictures`.`id` DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 40[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 40  [["index_id", 40]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 40  ORDER BY `pictures`.`id` DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 41
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 41[0m  [["index_id", 41]]
+  [1m[35mPicture Load (0.3ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 41  ORDER BY `pictures`.`id` DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 42[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 42  [["index_id", 42]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 42  ORDER BY `pictures`.`id` DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 44
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 44  ORDER BY `pictures`.`id` DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 45
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 45[0m  [["index_id", 45]]
+  [1m[35mPicture Load (0.3ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 45  ORDER BY `pictures`.`id` DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 46[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 46  [["index_id", 46]]
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 46  ORDER BY `pictures`.`id` DESC[0m
+  Rendered indices/index.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 153ms (Views: 125.6ms | ActiveRecord: 14.3ms)
+
+
+Started DELETE "/users/sign_out" for 61.245.214.147 at 2018-12-06 08:31:38 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JgGoe5J9yI4FYEC40pMDgaP+6uxXH6lUxlREDfmAittZMs0xni3JjgGtQEtPVQoRTgS+chHdzQib0vgbdptoug=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 46  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/sign_in
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 08:31:38 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 61.245.214.147 at 2018-12-06 08:31:50 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jpGfHDuhjC4pjs1E0Dk/jqc7vwQ7QT2omGeDrLJZsZRrMLb3zFANLpVbhTXKo3JL90hn3EUVRwdpnrdHmhzJ+g==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/46/indices
+Completed 302 Found in 147ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/46/indices" for 61.245.214.147 at 2018-12-06 08:31:50 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndicesController#index as HTML
+  Parameters: {"user_id"=>"46"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 46  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mIndex Load (0.2ms)[0m  [1mSELECT `indices`.* FROM `indices` WHERE (user_id=46)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (46)
+  [1m[36mIndex Load (0.2ms)[0m  [1mSELECT `indices`.* FROM `indices` WHERE `indices`.`user_id` IN (46)[0m
+  [1m[35mPicture Load (0.4ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` IN (39, 40, 41, 42, 44, 45, 46)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 39[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 39  [["index_id", 39]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 39  ORDER BY `pictures`.`id` DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 40
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 40[0m  [["index_id", 40]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 40  ORDER BY `pictures`.`id` DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 41[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 41  [["index_id", 41]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 41  ORDER BY `pictures`.`id` DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 42
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 42[0m  [["index_id", 42]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 42  ORDER BY `pictures`.`id` DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 44[0m
+  [1m[35mPicture Load (0.2ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 44  ORDER BY `pictures`.`id` DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 45[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 45  [["index_id", 45]]
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 45  ORDER BY `pictures`.`id` DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 46
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `pictures` WHERE `pictures`.`index_id` = 46[0m  [["index_id", 46]]
+  [1m[35mPicture Load (0.2ms)[0m  SELECT `pictures`.* FROM `pictures` WHERE `pictures`.`index_id` = 46  ORDER BY `pictures`.`id` DESC
+  Rendered indices/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 78ms (Views: 71.2ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/users" for 61.245.214.147 at 2018-12-06 08:31:55 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZJv+O7U7sMkmwYGNROQNH3RaZlQEFDYnpz+5gmgaPYNm0W+nQmYT3cPIxPCGmY20C0Kwm5NklUHYabid+P1trQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 46  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `indices` WHERE `indices`.`user_id` = 46[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 46
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/sign_in
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 08:31:55 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 61.245.214.147 at 2018-12-06 08:31:58 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 61.245.214.147 at 2018-12-06 08:32:02 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"85Ad8h6S7e/YwqZIxASOI7AxTxXrLAfi790VIAguUas5u0Fk08wVOTHALIJWemAOpeJs4roFONzI98ke7CG8xA==", "user"=>{"username"=>"masa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 56ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 61.245.214.147 at 2018-12-06 08:32:15 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0HiREOqgZt4gaR3UYkuj2En5p8CxLby6swOZWdZ8gAoaU82GJ/6eCMlrlx7wNU31XCqEN+AEg4SUKUVnMnNtZQ==", "user"=>{"username"=>"山雅士", "email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ueyamaza@mctv.ne.jp' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `username`, `created_at`, `updated_at`, `confirmation_token`, `confirmation_sent_at`) VALUES ('ueyamaza@mctv.ne.jp', '$2a$11$pOgkiDDuIf./wVZ.yicxRebAoY8OrrZZ9LD.Zkh6SpN0BxoSyVGSm', '山雅士', '2018-12-06 08:32:15', '2018-12-06 08:32:15', 'NsQFCy6K22zEANFUgzv6', '2018-12-06 08:32:15')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-i18n-1.7.0/app/views/devise/mailer/confirmation_instructions.html.erb (0.9ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 287.4ms
+
+Sent mail to ueyamaza@mctv.ne.jp (2335.3ms)
+Date: Thu, 06 Dec 2018 08:32:16 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ueyamaza@mctv.ne.jp
+Message-ID: <5c08de9049dc5_1a7a2af9b6c8197a@ip-172-31-11-171.mail>
+Subject: =?UTF-8?Q?=E3=82=A2=E3=82=AB=E3=82=A6=E3=83=B3=E3=83=88=E3=81=AE=E6=9C=89=E5=8A=B9=E5=8C=96=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+dWV5YW1hemFAbWN0di5uZS5qcOanmDwvcD4NCg0KPHA+5Lul5LiL44Gu
+44Oq44Oz44Kv44KS44Kv44Oq44OD44Kv44GX44CB44Oh44O844Or44Ki44OJ
+44Os44K544Gu56K66KqN5omL57aa44KS5a6M5LqG44GV44Gb44Gm44GP44Gg
+44GV44GE44CCPC9wPg0KDQo8cD48YSBocmVmPSJodHRwczovLzZjNzVhMTUz
+YzA4OTQxYzRhZTY5OTUxYmE2ZWM3ZjMyLnZmcy5jbG91ZDkudXMtZWFzdC0y
+LmFtYXpvbmF3cy5jb206ODA4MC91c2Vycy9jb25maXJtYXRpb24/Y29uZmly
+bWF0aW9uX3Rva2VuPU5zUUZDeTZLMjJ6RUFORlVnenY2Ij7jg6Hjg7zjg6vj
+gqLjg4njg6zjgrnjga7norroqo08L2E+PC9wPg0K
+
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 2799ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 61.245.214.147 at 2018-12-06 08:32:18 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation/new" for 61.245.214.147 at 2018-12-06 08:33:02 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 61.245.214.147 at 2018-12-06 08:33:07 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XqVI3G7IH1KecCUkzIosECv5E7mndSkyW5b//BE4tYqUjhRKo5bnhHdyr+5e9MI9PiowTvZcFgx8vCPC9TdY5Q==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp"}, "commit"=>"アカウント確認メール再送"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`unconfirmed_email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-i18n-1.7.0/app/views/devise/mailer/confirmation_instructions.html.erb (0.4ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 12.1ms
+
+Sent mail to ueyamaza@mctv.ne.jp (1509.2ms)
+Date: Thu, 06 Dec 2018 08:33:07 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ueyamaza@mctv.ne.jp
+Message-ID: <5c08dec394ab6_1a7a27057e082066@ip-172-31-11-171.mail>
+Subject: =?UTF-8?Q?=E3=82=A2=E3=82=AB=E3=82=A6=E3=83=B3=E3=83=88=E3=81=AE=E6=9C=89=E5=8A=B9=E5=8C=96=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+dWV5YW1hemFAbWN0di5uZS5qcOanmDwvcD4NCg0KPHA+5Lul5LiL44Gu
+44Oq44Oz44Kv44KS44Kv44Oq44OD44Kv44GX44CB44Oh44O844Or44Ki44OJ
+44Os44K544Gu56K66KqN5omL57aa44KS5a6M5LqG44GV44Gb44Gm44GP44Gg
+44GV44GE44CCPC9wPg0KDQo8cD48YSBocmVmPSJodHRwczovLzZjNzVhMTUz
+YzA4OTQxYzRhZTY5OTUxYmE2ZWM3ZjMyLnZmcy5jbG91ZDkudXMtZWFzdC0y
+LmFtYXpvbmF3cy5jb206ODA4MC91c2Vycy9jb25maXJtYXRpb24/Y29uZmly
+bWF0aW9uX3Rva2VuPU5zUUZDeTZLMjJ6RUFORlVnenY2Ij7jg6Hjg7zjg6vj
+gqLjg4njg6zjgrnjga7norroqo08L2E+PC9wPg0K
+
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/sign_in
+Completed 302 Found in 1534ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 08:33:09 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=NsQFCy6K22zEANFUgzv6" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"NsQFCy6K22zEANFUgzv6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'NsQFCy6K22zEANFUgzv6'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `confirmed_at` = '2018-12-06 08:33:20', `updated_at` = '2018-12-06 08:33:20' WHERE `users`.`id` = 52
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com:8080/users/sign_in
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides-594a4d0ff8345d216858cdac32cb1c8c.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/indices-a66b836d95f0e7f97e1a7985c80bf467.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pictures-539b1b2d248fcacaf845c897cae976a6.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds-8f0d8cf177b34d0dce9f4d59c404b312.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/theme-66f7b1da28df56f2afe607b42b8a3d3f.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/core-2e3c23ec47dd4990362924235dd05415.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/accordion-283f6066268dfb97dd6487c8ce6cd723.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/checkboxradio-abdde1134098e5edc85dd1c8e63874a4.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/controlgroup-4b24bf0d5a48a2dd0615d61882a236da.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/button-f1e555f715785f892c34f3a7406a1396.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/autocomplete-4912b460774db8091cad6fa12c53d064.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/datepicker-d37a2a07bdbe037c1e2915855796ce6a.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/dialog-379c69850c48c72fec5c908f66a88ef3.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/draggable-c1b35fa7d015b4139165af8aa9a4d0fc.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/menu-4117f6723c7238d95e5f786bf6cf5068.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/progressbar-304b1614fc5f0427bc4de2dc2168f3ff.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:20 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/base-54da48578b2918672b730151cc717040.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/selectable-747056711a02e43a7e2138315a2c873f.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/focusable-2ac1893a44b45bcf3341361ba0cf6d17.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip-3a98b895c8dc2105ef8831ffc706f5af.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix-364a7452e9f961663d50ce1493dcf08b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/scroll-parent-748527bba306f16cc8b874cfe9f9ac9a.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy-a99944d8b77f06dcdb5c7c1bb74aba54.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/all-6412efa40463fb63ac80d22562dd49b2.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/ie-8d8eb1d0bdbd16e10f937972c0a76911.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/data-d1b4d032a3c60256e6edc1ae691f8281.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse-1697d0d5abc21e59402b7c610fd591a1.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/selectmenu-a6900a08312971c8f605b628ec5d08b1.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tabs-d823446fb3255ce9269faeeda677e3b6.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert-9099afc3af20c1fbd0fb0728891f4f35.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/safe-active-element-b7411998ee08f0f4e2226b865c2e2dcc.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover-4e84f196e1d78eee627de8895006193e.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/form-0d967bf688e493073ded9c71a023f22b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal-e4d69caf358211e35e544832d710fe0e.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/safe-blur-b80f94f2c8b22c348a175107fe8f20a1.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/keycode-21c38f0d17be63acd38c79a57fd72644.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/slider-3cc7c2a67ac63949098f7888dfa973cd.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/resizable-a18d112087fc9083d87507e22ecc7a80.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown-a0ebeec7eff01b4550c724082e6eab0e.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/jquery-1-7-c31bf2599ebd009c82d73b191ac58374.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tooltip-6e7788d5ed200c4766672296e734a2bf.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui-6412efa40463fb63ac80d22562dd49b2.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button-5d42eea38322262cbc7c3d31e21e2bbc.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/sortable-6c51b59a16b577b25b43ade628a2fa0a.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/disable-selection-ba5ca217aaae21832a20b7f10c116c5b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/plugin-286ba8e9b3122d166ac941afc275cc7e.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/spinner-bfca363b54275c95d4d8308f6f01f035.css?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap-dfb73c81ed7f10d8d3d137a34aedc3ff.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/labels-3794926f578324774fda28dd887958d4.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel-03c4bf9ff43072c5487639287f73f1da.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/escape-selector-ea0b7614ded6da21a84e144a4d0ffada.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition-5e5603d19c7c58a11a261978aea40d65.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/version-0ac12f42a45beeeaa925c31aaf6f0c6c.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab-dbf946c459e9b04b4d078f5818c49b39.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-explode-c076f415d955dea21db260cfd58104da.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-blind-9bbeb99222382ce2d3cc1f72713d83f9.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-drop-e1143fcf500da747ab0ab058efc5d1b4.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-bounce-44518a8adc48a55df30b2dd8f5168543.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-fade-1fa0a549e37521283edcc6e7f7fb214e.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widget-b48b07f7f0ead1e7253b13400e9c36b9.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/position-1a8927a0bd177ebb6747ab22594100af.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effect-0109eb44ba6a14eae05ec4fa36bd127a.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-clip-58942c97a24f154666fe2904493cd43a.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/form-reset-mixin-4f507c55e339856d35502b3c6e6f6d6b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/core-97a4eeabfaaa49aad70befe52aa8ddbf.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/selectable-37cf87155f0e39387e873848293fb7a3.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/controlgroup-c6b1bb9d173ea7d07a4d9be3b0e2c97b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/draggable-50f0f18d2b6887c3503decb5778e306c.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-24e9e31ece1989ef3791bcd53ea38cab.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/progressbar-60e472a93963798961fcd3d57d020c1c.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/menu-3b0c026456f6fa5cbf3f1fb6ea15d4e4.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/unique-id-2f1f1c97b4adf0268253f467e9c103d4.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-pulsate-8b44dd3e26778ce83f164bc395830ae5.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/checkboxradio-2607147cafd8aaab1735666c863a99b8.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-highlight-d1b7e2d7e582604abd713fa9f48bc827.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tabbable-409dcb72ada6dbe179a2b6429d889cfd.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-scale-b73fb846e3aaa505f9468e0f6ebd3d25.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/button-93adddba7da20d1c14c405508d799099.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/autocomplete-8b7276939ff01576527ce76c2608ef65.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/datepicker-2dc033e4895915d77a972bd4f9357c75.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs-e9c99e4aa7db66a7f23b948d7d043bd8.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/accordion-a3730f5e0dfadc356f27405dc7b885c4.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-shake-9432e5dd982d364923c0b6a7f629f70b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/selectmenu-5e638cd20eb16867b1bfffcad5fd2033.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/dialog-3917389a5fdd6b17953ce14ac70a6da3.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/spinner-6827eec0ba6fd65704ddeaddb4b074e1.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-puff-32934a409854511bfdc64a9834c69b64.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-fold-4be6d5ddb455ff849ec8b00f1102636e.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-slide-0e9db87d32e6a5b6b75ab726b9fba31b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/droppable-5ec0393e828a56dd1e09ac9f172da4df.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/slider-deb2540a067ea0a967cb5266e351f00b.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/resizable-2b8df67fc2538cf70f5122e1f0bcf24f.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/mouse-1b11838eb2d568ab1584f67205be8749.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-size-99fd35175bfbe47ae9a7ad9fae216b80.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-transfer-852d6c6588688415188eb65d2779edd3.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pictures-1e5436f4e6c181b7bed2018341abfa1f.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-60186bd8bafe590733d2ef1913de0221.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks-196df15d152615a6be5cffafd523cab3.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/indices-5cc63ba59ca823b1f4d71cd6950547b3.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui-4181df2ad845cdd5c56a35980eacfba2.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/tooltip-00f513b786f598587fe56c9c7693a9af.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/tabs-a8ec30df46a739b57a2b3ab50cafbff5.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/sortable-c05ef04265e61d1fe42c7e0248da3acd.js?body=1" for 61.245.214.147 at 2018-12-06 08:33:21 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 61.245.214.147 at 2018-12-06 09:53:52 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (143.7ms)
+Completed 200 OK in 832ms (Views: 817.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/confirmation/new" for 61.245.214.147 at 2018-12-06 09:54:03 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 61.245.214.147 at 2018-12-06 09:54:07 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fq4hC4kiNCet4pU1ruNJzmB3AWJmJdjipgs/v80UebrchX2dRHzM8UTgH/88nafjdaQilTcM59yBIeOBKRuU1Q==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp"}, "commit"=>"アカウント確認メール再送"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`unconfirmed_email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 66ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 09:54:15 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 61.245.214.147 at 2018-12-06 09:54:23 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Ks/AH+5wtKVLC4x+XRrcRBDijBQr66x0/QSBzhjCtMygGOWsuc6BHwupPtrCoVcBZCpxwGGkY/03s453GznvA==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/52/indices
+Completed 302 Found in 157ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/52/indices" for 61.245.214.147 at 2018-12-06 09:54:23 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndicesController#index as HTML
+  Parameters: {"user_id"=>"52"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 52  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mIndex Load (0.2ms)[0m  SELECT `indices`.* FROM `indices` WHERE (user_id=52)
+  Rendered indices/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 64ms (Views: 50.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users" for 61.245.214.147 at 2018-12-06 09:54:30 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ixpo8yVRpKbW36dG9zjC8Sf3nIuiajFP78Yr5M7IgUW3LywhXqjVKZeuAMS20NdQdr8frLEI7d9ekHDlJ58f4A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 52  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `indices` WHERE `indices`.`user_id` = 52[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 52
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/sign_in
+Completed 302 Found in 22ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 09:54:30 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 61.245.214.147 at 2018-12-06 09:54:35 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 61.245.214.147 at 2018-12-06 09:54:35 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 61.245.214.147 at 2018-12-06 09:54:38 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pnMyxYQ15CrnZo1kIa6SceaCOZYg12+eygHAYyV4mjeI9a4Jnajj2BFs6lGtzRX2e55aq/fLpc3Ice2f8hLBdg==", "user"=>{"username"=>"masa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 56ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 61.245.214.147 at 2018-12-06 09:54:50 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w2mRPKE7Uv6nQITU6oKSDlqKBts8iUiMPjPixkXK07vt7w3wuKZVDFFK4+Fm4RWJx5Zl5uuVgt88Q886kqCI+g==", "user"=>{"username"=>"山雅士", "email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ueyamaza@mctv.ne.jp' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `username`, `created_at`, `updated_at`, `confirmation_token`, `confirmation_sent_at`) VALUES ('ueyamaza@mctv.ne.jp', '$2a$11$btmzdvf/ONR/SqzLSbBOcOi8vg2Q0lKlDfcolPh0SUmz0T5I.tr1O', '山雅士', '2018-12-06 09:54:51', '2018-12-06 09:54:51', '3R_yEDRgv8EVUMiFDok8', '2018-12-06 09:54:51')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-i18n-1.7.0/app/views/devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 222.0ms
+
+Sent mail to ueyamaza@mctv.ne.jp (1669.1ms)
+Date: Thu, 06 Dec 2018 09:54:51 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ueyamaza@mctv.ne.jp
+Message-ID: <5c08f1eb3e562_248f2f2cd741749@ip-172-31-11-171.mail>
+Subject: =?UTF-8?Q?=E3=82=A2=E3=82=AB=E3=82=A6=E3=83=B3=E3=83=88=E3=81=AE=E6=9C=89=E5=8A=B9=E5=8C=96=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+dWV5YW1hemFAbWN0di5uZS5qcOanmDwvcD4NCg0KPHA+5Lul5LiL44Gu
+44Oq44Oz44Kv44KS44Kv44Oq44OD44Kv44GX44CB44Oh44O844Or44Ki44OJ
+44Os44K544Gu56K66KqN5omL57aa44KS5a6M5LqG44GV44Gb44Gm44GP44Gg
+44GV44GE44CCPC9wPg0KDQo8cD48YSBocmVmPSJodHRwczovLzZjNzVhMTUz
+YzA4OTQxYzRhZTY5OTUxYmE2ZWM3ZjMyLnZmcy5jbG91ZDkudXMtZWFzdC0y
+LmFtYXpvbmF3cy5jb206ODA4MC91c2Vycy9jb25maXJtYXRpb24/Y29uZmly
+bWF0aW9uX3Rva2VuPTNSX3lFRFJndjhFVlVNaUZEb2s4Ij7jg6Hjg7zjg6vj
+gqLjg4njg6zjgrnjga7norroqo08L2E+PC9wPg0K
+
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 2068ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 61.245.214.147 at 2018-12-06 09:54:53 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=3R_yEDRgv8EVUMiFDok8" for 61.245.214.147 at 2018-12-06 09:55:06 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"3R_yEDRgv8EVUMiFDok8"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = '3R_yEDRgv8EVUMiFDok8'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `confirmed_at` = '2018-12-06 09:55:06', `updated_at` = '2018-12-06 09:55:06' WHERE `users`.`id` = 53
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com:8080/users/sign_in
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 09:55:06 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 61.245.214.147 at 2018-12-06 10:21:00 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (142.3ms)
+Completed 200 OK in 2293ms (Views: 2278.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application-6ee4922afabb9ab75725fc790f30e8db.css?body=1" for 61.245.214.147 at 2018-12-06 10:21:02 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-0c8060deea9e6249198ae3688e60d465.js?body=1" for 61.245.214.147 at 2018-12-06 10:21:03 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 61.245.214.147 at 2018-12-06 10:21:13 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W57MhIQpWsQcOAEEGiL7pHx9MuAD8/jsbBFDdAwKWPt1GFBInbRdNuoyZjGWQXwj4WFR3dTvMr9uYW6I22ADug==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/53/indices
+Completed 302 Found in 166ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/53/indices" for 61.245.214.147 at 2018-12-06 10:21:13 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndicesController#index as HTML
+  Parameters: {"user_id"=>"53"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 53  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mIndex Load (0.2ms)[0m  SELECT `indices`.* FROM `indices` WHERE (user_id=53)
+  Rendered indices/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 62ms (Views: 49.3ms | ActiveRecord: 1.3ms)
