@@ -1842,3 +1842,125 @@ Processing by IndicesController#index as HTML
   [1m[35mIndex Load (0.2ms)[0m  SELECT `indices`.* FROM `indices` WHERE (user_id=53)
   Rendered indices/index.html.erb within layouts/application (5.7ms)
 Completed 200 OK in 62ms (Views: 49.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users" for 61.245.214.147 at 2018-12-06 11:31:51 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J1nEZMFEKx3g/+t2d8+AryW4rMaUIVhsek3fPKmelZjh6t6Dj6g0ppg3BMxwOtvSFjJIckt6SpLW1JDuO8Izmw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 53  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/53/indices" for 61.245.214.147 at 2018-12-06 11:31:51 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndicesController#index as HTML
+  Parameters: {"user_id"=>"53"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 11:31:51 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon-b5e07fa7552b722ab2abbf1d295b4f11.ico" for 61.245.214.147 at 2018-12-06 11:31:53 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 61.245.214.147 at 2018-12-06 11:32:06 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LBq71J1HjxbmhTi/f7UWAohjkzYO3kGa8AUMC+Mbnx8viEMCc7tAWhEkFyqoJIXsfrsLK5o6UK+4IojF5cHsSQ==", "user"=>{"email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ueyamaza@mctv.ne.jp'  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/53/indices
+Completed 302 Found in 156ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/53/indices" for 61.245.214.147 at 2018-12-06 11:32:07 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndicesController#index as HTML
+  Parameters: {"user_id"=>"53"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 53  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mIndex Load (0.9ms)[0m  SELECT `indices`.* FROM `indices` WHERE (user_id=53)
+  Rendered indices/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/users" for 61.245.214.147 at 2018-12-06 11:32:12 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UMqAlABUlR30d3H8arz5Mw853R36defwpzQXRcEVbIn35r8KYXGrYQCau8+/vRClcCVCSfnDt04TsCdCU0NXqg=="}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 53  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `indices` WHERE `indices`.`user_id` = 53[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 53
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/sign_in
+Completed 302 Found in 23ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/sign_in" for 61.245.214.147 at 2018-12-06 11:32:12 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 61.245.214.147 at 2018-12-06 11:32:17 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 61.245.214.147 at 2018-12-06 11:32:29 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yQ0X+wROz7F1jF+JmJCqL8Bj8tc7qoQNClQi0u/CuD516pTJTLP3cxin9PnHd3yIhHWfCowwwtrrxHvKz+K35g==", "user"=>{"username"=>"masa", "email"=>"ueyamaza@mctv.ne.jp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ueyamaza@mctv.ne.jp' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `username`, `created_at`, `updated_at`, `confirmation_token`, `confirmation_sent_at`) VALUES ('ueyamaza@mctv.ne.jp', '$2a$11$P2uoc9N6BsjQQ2cNXwkjf./9OrVlhP5hR9IJLHSbT5Z2b7UaoOz1a', 'masa', '2018-12-06 11:32:29', '2018-12-06 11:32:29', 'XjoUcpB9WPGxiQMKNqMC', '2018-12-06 11:32:29')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-i18n-1.7.0/app/views/devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 300.1ms
+
+Sent mail to ueyamaza@mctv.ne.jp (2187.0ms)
+Date: Thu, 06 Dec 2018 11:32:30 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ueyamaza@mctv.ne.jp
+Message-ID: <5c0908cecff9_29fe2e41fa42424@ip-172-31-11-171.mail>
+Subject: =?UTF-8?Q?=E3=82=A2=E3=82=AB=E3=82=A6=E3=83=B3=E3=83=88=E3=81=AE=E6=9C=89=E5=8A=B9=E5=8C=96=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+dWV5YW1hemFAbWN0di5uZS5qcOanmDwvcD4NCg0KPHA+5Lul5LiL44Gu
+44Oq44Oz44Kv44KS44Kv44Oq44OD44Kv44GX44CB44Oh44O844Or44Ki44OJ
+44Os44K544Gu56K66KqN5omL57aa44KS5a6M5LqG44GV44Gb44Gm44GP44Gg
+44GV44GE44CCPC9wPg0KDQo8cD48YSBocmVmPSJodHRwczovLzZjNzVhMTUz
+YzA4OTQxYzRhZTY5OTUxYmE2ZWM3ZjMyLnZmcy5jbG91ZDkudXMtZWFzdC0y
+LmFtYXpvbmF3cy5jb206ODA4MC91c2Vycy9jb25maXJtYXRpb24/Y29uZmly
+bWF0aW9uX3Rva2VuPVhqb1VjcEI5V1BHeGlRTUtOcU1DIj7jg6Hjg7zjg6vj
+gqLjg4njg6zjgrnjga7norroqo08L2E+PC9wPg0K
+
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 2680ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 61.245.214.147 at 2018-12-06 11:32:32 +0000
+Cannot render console from 61.245.214.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
