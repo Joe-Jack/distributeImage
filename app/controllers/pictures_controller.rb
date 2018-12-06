@@ -120,7 +120,7 @@ class PicturesController < ApplicationController
     end
     File.unlink("#{Rails.root}/tmp/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png")
     Dir.rmdir("#{Rails.root}/tmp/downloads/user#{@user}")
-    render nothing: true
+    render body: nill
   end
   
   def imagecopy

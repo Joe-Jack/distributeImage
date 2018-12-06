@@ -1964,3 +1964,889 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/shared/_links.html.erb (0.6ms)
   Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 39.110.211.37 at 2018-12-06 12:10:41 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (145.2ms)
+Completed 200 OK in 776ms (Views: 761.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides-594a4d0ff8345d216858cdac32cb1c8c.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/indices-a66b836d95f0e7f97e1a7985c80bf467.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pictures-539b1b2d248fcacaf845c897cae976a6.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds-8f0d8cf177b34d0dce9f4d59c404b312.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-6ee4922afabb9ab75725fc790f30e8db.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/theme-66f7b1da28df56f2afe607b42b8a3d3f.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/core-2e3c23ec47dd4990362924235dd05415.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/accordion-283f6066268dfb97dd6487c8ce6cd723.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/autocomplete-4912b460774db8091cad6fa12c53d064.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:43 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/button-f1e555f715785f892c34f3a7406a1396.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/checkboxradio-abdde1134098e5edc85dd1c8e63874a4.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/controlgroup-4b24bf0d5a48a2dd0615d61882a236da.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/datepicker-d37a2a07bdbe037c1e2915855796ce6a.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/dialog-379c69850c48c72fec5c908f66a88ef3.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/draggable-c1b35fa7d015b4139165af8aa9a4d0fc.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/menu-4117f6723c7238d95e5f786bf6cf5068.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/progressbar-304b1614fc5f0427bc4de2dc2168f3ff.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/selectable-747056711a02e43a7e2138315a2c873f.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/resizable-a18d112087fc9083d87507e22ecc7a80.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/selectmenu-a6900a08312971c8f605b628ec5d08b1.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/sortable-6c51b59a16b577b25b43ade628a2fa0a.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/slider-3cc7c2a67ac63949098f7888dfa973cd.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/spinner-bfca363b54275c95d4d8308f6f01f035.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tabs-d823446fb3255ce9269faeeda677e3b6.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tooltip-6e7788d5ed200c4766672296e734a2bf.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/base-54da48578b2918672b730151cc717040.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/all-6412efa40463fb63ac80d22562dd49b2.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui-6412efa40463fb63ac80d22562dd49b2.css?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-24e9e31ece1989ef3791bcd53ea38cab.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs-e9c99e4aa7db66a7f23b948d7d043bd8.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition-5e5603d19c7c58a11a261978aea40d65.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert-9099afc3af20c1fbd0fb0728891f4f35.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal-e4d69caf358211e35e544832d710fe0e.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown-a0ebeec7eff01b4550c724082e6eab0e.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy-a99944d8b77f06dcdb5c7c1bb74aba54.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab-dbf946c459e9b04b4d078f5818c49b39.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:44 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip-3a98b895c8dc2105ef8831ffc706f5af.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover-4e84f196e1d78eee627de8895006193e.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button-5d42eea38322262cbc7c3d31e21e2bbc.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse-1697d0d5abc21e59402b7c610fd591a1.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel-03c4bf9ff43072c5487639287f73f1da.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix-364a7452e9f961663d50ce1493dcf08b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap-dfb73c81ed7f10d8d3d137a34aedc3ff.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/version-0ac12f42a45beeeaa925c31aaf6f0c6c.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/data-d1b4d032a3c60256e6edc1ae691f8281.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/disable-selection-ba5ca217aaae21832a20b7f10c116c5b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/focusable-2ac1893a44b45bcf3341361ba0cf6d17.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/form-0d967bf688e493073ded9c71a023f22b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/ie-8d8eb1d0bdbd16e10f937972c0a76911.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/keycode-21c38f0d17be63acd38c79a57fd72644.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/escape-selector-ea0b7614ded6da21a84e144a4d0ffada.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/labels-3794926f578324774fda28dd887958d4.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/jquery-1-7-c31bf2599ebd009c82d73b191ac58374.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/safe-active-element-b7411998ee08f0f4e2226b865c2e2dcc.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/plugin-286ba8e9b3122d166ac941afc275cc7e.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/safe-blur-b80f94f2c8b22c348a175107fe8f20a1.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/scroll-parent-748527bba306f16cc8b874cfe9f9ac9a.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/tabbable-409dcb72ada6dbe179a2b6429d889cfd.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/unique-id-2f1f1c97b4adf0268253f467e9c103d4.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effect-0109eb44ba6a14eae05ec4fa36bd127a.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/core-97a4eeabfaaa49aad70befe52aa8ddbf.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/form-reset-mixin-4f507c55e339856d35502b3c6e6f6d6b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/position-1a8927a0bd177ebb6747ab22594100af.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:45 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widget-b48b07f7f0ead1e7253b13400e9c36b9.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-blind-9bbeb99222382ce2d3cc1f72713d83f9.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-bounce-44518a8adc48a55df30b2dd8f5168543.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-clip-58942c97a24f154666fe2904493cd43a.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-drop-e1143fcf500da747ab0ab058efc5d1b4.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-explode-c076f415d955dea21db260cfd58104da.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-fade-1fa0a549e37521283edcc6e7f7fb214e.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-fold-4be6d5ddb455ff849ec8b00f1102636e.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-highlight-d1b7e2d7e582604abd713fa9f48bc827.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-size-99fd35175bfbe47ae9a7ad9fae216b80.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-scale-b73fb846e3aaa505f9468e0f6ebd3d25.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-puff-32934a409854511bfdc64a9834c69b64.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-pulsate-8b44dd3e26778ce83f164bc395830ae5.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-shake-9432e5dd982d364923c0b6a7f629f70b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-slide-0e9db87d32e6a5b6b75ab726b9fba31b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/effects/effect-transfer-852d6c6588688415188eb65d2779edd3.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/accordion-a3730f5e0dfadc356f27405dc7b885c4.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/menu-3b0c026456f6fa5cbf3f1fb6ea15d4e4.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/autocomplete-8b7276939ff01576527ce76c2608ef65.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/controlgroup-c6b1bb9d173ea7d07a4d9be3b0e2c97b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/checkboxradio-2607147cafd8aaab1735666c863a99b8.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/button-93adddba7da20d1c14c405508d799099.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/datepicker-2dc033e4895915d77a972bd4f9357c75.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/mouse-1b11838eb2d568ab1584f67205be8749.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/draggable-50f0f18d2b6887c3503decb5778e306c.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/resizable-2b8df67fc2538cf70f5122e1f0bcf24f.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/dialog-3917389a5fdd6b17953ce14ac70a6da3.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/droppable-5ec0393e828a56dd1e09ac9f172da4df.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/progressbar-60e472a93963798961fcd3d57d020c1c.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/selectable-37cf87155f0e39387e873848293fb7a3.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:46 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/selectmenu-5e638cd20eb16867b1bfffcad5fd2033.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/slider-deb2540a067ea0a967cb5266e351f00b.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/sortable-c05ef04265e61d1fe42c7e0248da3acd.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/spinner-6827eec0ba6fd65704ddeaddb4b074e1.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/tabs-a8ec30df46a739b57a2b3ab50cafbff5.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui/widgets/tooltip-00f513b786f598587fe56c9c7693a9af.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui-4181df2ad845cdd5c56a35980eacfba2.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks-196df15d152615a6be5cffafd523cab3.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-60186bd8bafe590733d2ef1913de0221.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/indices-5cc63ba59ca823b1f4d71cd6950547b3.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pictures-1e5436f4e6c181b7bed2018341abfa1f.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application-0c8060deea9e6249198ae3688e60d465.js?body=1" for 39.110.211.37 at 2018-12-06 12:10:47 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/favicon-b5e07fa7552b722ab2abbf1d295b4f11.ico" for 39.110.211.37 at 2018-12-06 12:10:48 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/sign_up" for 39.110.211.37 at 2018-12-06 12:12:15 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 39.110.211.37 at 2018-12-06 12:12:27 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CXC5qfrVe7wuuKQ3PMe9407rE+H0VZLBe7BuzFtfKWP8IPT4ufOSgue9Pl2/sBoZf1mCbEnRXNvBgGyIuxdmZg==", "user"=>{"username"=>"test", "email"=>"m9161590469@dea-love.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'm9161590469@dea-love.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `username`, `created_at`, `updated_at`, `confirmation_token`, `confirmation_sent_at`) VALUES ('m9161590469@dea-love.net', '$2a$11$t4NN7Nl6a1q1xMxqLSexOeVclWsqtOYtTXW6s50a0YQgukctHsLBu', 'test', '2018-12-06 12:12:27', '2018-12-06 12:12:27', 'khF-RBQ7X-33tUGV1GaR', '2018-12-06 12:12:27')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-i18n-1.7.0/app/views/devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 279.6ms
+
+Sent mail to m9161590469@dea-love.net (2530.9ms)
+Date: Thu, 06 Dec 2018 12:12:28 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: m9161590469@dea-love.net
+Message-ID: <5c09122c36262_573a272419070893@ip-172-31-11-171.mail>
+Subject: =?UTF-8?Q?=E3=82=A2=E3=82=AB=E3=82=A6=E3=83=B3=E3=83=88=E3=81=AE=E6=9C=89=E5=8A=B9=E5=8C=96=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+bTkxNjE1OTA0NjlAZGVhLWxvdmUubmV05qeYPC9wPg0KDQo8cD7ku6Xk
+uIvjga7jg6rjg7Pjgq/jgpLjgq/jg6rjg4Pjgq/jgZfjgIHjg6Hjg7zjg6vj
+gqLjg4njg6zjgrnjga7norroqo3miYvntprjgpLlrozkuobjgZXjgZvjgabj
+gY/jgaDjgZXjgYTjgII8L3A+DQoNCjxwPjxhIGhyZWY9Imh0dHBzOi8vNmM3
+NWExNTNjMDg5NDFjNGFlNjk5NTFiYTZlYzdmMzIudmZzLmNsb3VkOS51cy1l
+YXN0LTIuYW1hem9uYXdzLmNvbTo4MDgwL3VzZXJzL2NvbmZpcm1hdGlvbj9j
+b25maXJtYXRpb25fdG9rZW49a2hGLVJCUTdYLTMzdFVHVjFHYVIiPuODoeOD
+vOODq+OCouODieODrOOCueOBrueiuuiqjTwvYT48L3A+DQo=
+
+Redirected to https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 2999ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 39.110.211.37 at 2018-12-06 12:12:30 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 39.110.211.37 at 2018-12-06 12:25:37 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (149.8ms)
+Completed 200 OK in 779ms (Views: 764.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/favicon-b5e07fa7552b722ab2abbf1d295b4f11.ico" for 39.110.211.37 at 2018-12-06 12:25:40 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 39.110.211.37 at 2018-12-06 12:32:58 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (145.5ms)
+Completed 200 OK in 778ms (Views: 763.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 39.110.211.37 at 2018-12-06 12:33:02 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 39.110.211.37 at 2018-12-06 12:33:14 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5rEqc+aqnWrt2wtiBPaGQZHW5FWueFy0Gxw92ZLhztxlhpNzKtXXaX0iEbMa3oFYfahr+S4Y6D3cRC8JLh2POA==", "user"=>{"username"=>"deam", "email"=>"m9165591293@dea-love.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'm9165591293@dea-love.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `username`, `created_at`, `updated_at`, `confirmation_token`, `confirmation_sent_at`) VALUES ('m9165591293@dea-love.net', '$2a$11$HSBbFZ6xIzy0IMQM8Lv.TO5tSUu3v6e7Ip5sxaAiqa6z5TElA4e6e', 'deam', '2018-12-06 12:33:14', '2018-12-06 12:33:14', 'eEWTpEYK25v3YvyzwaQu', '2018-12-06 12:33:14')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-i18n-1.7.0/app/views/devise/mailer/confirmation_instructions.html.erb (4.3ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 17.5ms
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p><%= t('.instruction') %></p>
+    4: 
+    5: <p><%= link_to t('.action'), confirmation_url(@resource, confirmation_token: @token) %></p>
+  actionpack (4.2.10) lib/action_dispatch/http/url.rb:45:in `full_url_for'
+  actionpack (4.2.10) lib/action_dispatch/http/url.rb:35:in `url_for'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:354:in `block in <class:RouteSet>'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:811:in `url_for'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:280:in `call'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:223:in `call'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:345:in `block (2 levels) in define_url_helper'
+  actionpack (4.2.10) lib/action_dispatch/routing/routes_proxy.rb:32:in `user_confirmation_url'
+  actionpack (4.2.10) lib/action_dispatch/routing/routes_proxy.rb:35:in `method_missing'
+  devise (4.5.0) lib/devise/controllers/url_helpers.rb:53:in `block (4 levels) in generate_helpers!'
+  devise-i18n (1.7.0) app/views/devise/mailer/confirmation_instructions.html.erb:5:in `__usr_local_rvm_gems_ruby_______gems_devise_i__n_______app_views_devise_mailer_confirmation_instructions_html_erb__394403517977584030_29220400'
+  actionview (4.2.10) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.10) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.10) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.10) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:904:in `block in collect_responses'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:918:in `each'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:918:in `each_template'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:900:in `collect_responses'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:829:in `mail'
+  devise (4.5.0) lib/devise/mailers/helpers.rb:19:in `devise_mail'
+  devise (4.5.0) app/mailers/devise/mailer.rb:9:in `confirmation_instructions'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:596:in `block in process'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:593:in `process'
+  actionmailer (4.2.10) lib/action_mailer/base.rb:584:in `initialize'
+  actionmailer (4.2.10) lib/action_mailer/message_delivery.rb:25:in `new'
+  actionmailer (4.2.10) lib/action_mailer/message_delivery.rb:25:in `__getobj__'
+  actionmailer (4.2.10) lib/action_mailer/message_delivery.rb:34:in `message'
+  actionmailer (4.2.10) lib/action_mailer/message_delivery.rb:85:in `deliver_now'
+  devise (4.5.0) lib/devise/models/authenticatable.rb:200:in `send_devise_notification'
+  devise (4.5.0) lib/devise/models/confirmable.rb:121:in `send_confirmation_instructions'
+  devise (4.5.0) lib/devise/models/confirmable.rb:183:in `send_on_create_confirmation_instructions'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:253:in `block in conditional'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:506:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:506:in `each'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:506:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_commit_callbacks'
+  activerecord (4.2.10) lib/active_record/transactions.rb:314:in `committed!'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/transaction.rb:89:in `commit_records'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/transaction.rb:153:in `commit'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/transaction.rb:175:in `commit_transaction'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `within_new_transaction'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+  activerecord (4.2.10) lib/active_record/transactions.rb:220:in `transaction'
+  activerecord (4.2.10) lib/active_record/transactions.rb:348:in `with_transaction_returning_status'
+  activerecord (4.2.10) lib/active_record/transactions.rb:286:in `block in save'
+  activerecord (4.2.10) lib/active_record/transactions.rb:301:in `rollback_active_record_state!'
+  activerecord (4.2.10) lib/active_record/transactions.rb:285:in `save'
+  devise (4.5.0) app/controllers/devise/registrations_controller.rb:19:in `create'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+D, [2018-12-06T12:40:32.209414 #23942] DEBUG -- : 
+D, [2018-12-06T12:40:32.209790 #23942] DEBUG -- : 
+I, [2018-12-06T12:40:32.210710 #23942]  INFO -- : Started GET "/" for 39.110.211.37 at 2018-12-06 12:40:32 +0000
+I, [2018-12-06T12:40:32.211798 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2018-12-06T12:40:32.233883 #23942]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2018-12-06T12:40:32.377435 #23942]  INFO -- :   Rendered devise/shared/_links.html.erb (1.8ms)
+I, [2018-12-06T12:40:32.377851 #23942]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (123.0ms)
+I, [2018-12-06T12:40:32.380659 #23942]  INFO -- : Completed 200 OK in 146ms (Views: 131.1ms | ActiveRecord: 0.9ms)
+D, [2018-12-06T12:40:32.704747 #23942] DEBUG -- : 
+D, [2018-12-06T12:40:32.705057 #23942] DEBUG -- : 
+I, [2018-12-06T12:40:32.705498 #23942]  INFO -- : Started GET "/stylesheets/application.css" for 39.110.211.37 at 2018-12-06 12:40:32 +0000
+I, [2018-12-06T12:40:32.706406 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+F, [2018-12-06T12:40:32.708345 #23942] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+D, [2018-12-06T12:40:32.710733 #23942] DEBUG -- : 
+D, [2018-12-06T12:40:32.711035 #23942] DEBUG -- : 
+I, [2018-12-06T12:40:32.711413 #23942]  INFO -- : Started GET "/javascripts/application.js" for 39.110.211.37 at 2018-12-06 12:40:32 +0000
+I, [2018-12-06T12:40:32.712213 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+F, [2018-12-06T12:40:32.714294 #23942] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+D, [2018-12-06T12:40:34.195255 #23942] DEBUG -- : 
+D, [2018-12-06T12:40:34.195551 #23942] DEBUG -- : 
+I, [2018-12-06T12:40:34.195943 #23942]  INFO -- : Started GET "/javascripts/application.js" for 39.110.211.37 at 2018-12-06 12:40:34 +0000
+I, [2018-12-06T12:40:34.196855 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+F, [2018-12-06T12:40:34.198670 #23942] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+D, [2018-12-06T12:41:01.995668 #23942] DEBUG -- : 
+D, [2018-12-06T12:41:01.995952 #23942] DEBUG -- : 
+I, [2018-12-06T12:41:01.996355 #23942]  INFO -- : Started GET "/users/sign_up" for 39.110.211.37 at 2018-12-06 12:41:01 +0000
+I, [2018-12-06T12:41:01.997305 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2018-12-06T12:41:01.999391 #23942]  INFO -- : Processing by Devise::RegistrationsController#new as HTML
+I, [2018-12-06T12:41:02.008889 #23942]  INFO -- :   Rendered devise/shared/_links.html.erb (0.7ms)
+I, [2018-12-06T12:41:02.009297 #23942]  INFO -- :   Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+I, [2018-12-06T12:41:02.010905 #23942]  INFO -- : Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+D, [2018-12-06T12:41:02.281599 #23942] DEBUG -- : 
+D, [2018-12-06T12:41:02.281888 #23942] DEBUG -- : 
+I, [2018-12-06T12:41:02.282287 #23942]  INFO -- : Started GET "/stylesheets/application.css" for 39.110.211.37 at 2018-12-06 12:41:02 +0000
+I, [2018-12-06T12:41:02.283186 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+F, [2018-12-06T12:41:02.285304 #23942] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+D, [2018-12-06T12:41:02.289132 #23942] DEBUG -- : 
+D, [2018-12-06T12:41:02.289437 #23942] DEBUG -- : 
+I, [2018-12-06T12:41:02.289966 #23942]  INFO -- : Started GET "/javascripts/application.js" for 39.110.211.37 at 2018-12-06 12:41:02 +0000
+I, [2018-12-06T12:41:02.290726 #23942]  INFO -- : Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+F, [2018-12-06T12:41:02.292573 #23942] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+
+Started GET "/users/sign_up" for 39.110.211.37 at 2018-12-06 12:42:06 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (143.9ms)
+Completed 200 OK in 790ms (Views: 763.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/favicon-b5e07fa7552b722ab2abbf1d295b4f11.ico" for 39.110.211.37 at 2018-12-06 12:42:09 +0000
+Cannot render console from 39.110.211.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
