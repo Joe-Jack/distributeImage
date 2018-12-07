@@ -94,13 +94,13 @@ class PicturesController < ApplicationController
     image_data = Base64.decode64(@canvasurl['data:image/png;base64,'.length .. -1])
     p image_data.slice(1..10)
     # ダウンロード
-    if Dir::exist?("#{Rails.root}/tmp/downloads/user#{@user}")
-      File.open("#{Rails.root}/tmp/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png", 'wb') do |f|
+    if Dir::exist?("#{Rails.root}/downloads/user#{@user}")
+      File.open("#{Rails.root}/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png", 'wb') do |f|
         f.write(image_data)
       end
     else
-      Dir::mkdir("#{Rails.root}/tmp/downloads/user#{@user}")
-        File.open("#{Rails.root}/tmp/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png", 'wb') do |f|
+      Dir::mkdir("#{Rails.root}/downloads/user#{@user}")
+        File.open("#{Rails.root}/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png", 'wb') do |f|
         f.write(image_data)
       end
     end
@@ -113,14 +113,14 @@ class PicturesController < ApplicationController
     myKey = "user#{@user}_namenum#{@index}_#{@time}"
     obj = s3.bucket(myBacket).object(myKey)
     unless obj.exists?
-      obj.upload_file("#{Rails.root}/tmp/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png")
+      obj.upload_file("#{Rails.root}/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png")
     # else
     #   s3.buckets.create(myKey)
-    #   obj.upload_file("#{Rails.root}/tmp/downloads/name_no#{@index}/#{@index}_#{@time}.png")
+    #   obj.upload_file("#{Rails.root}/downloads/name_no#{@index}/#{@index}_#{@time}.png")
     end
-    File.unlink("#{Rails.root}/tmp/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png")
-    Dir.rmdir("#{Rails.root}/tmp/downloads/user#{@user}")
-    render body: nill
+    File.unlink("#{Rails.root}/downloads/user#{@user}/user#{@user}_namenum#{@index}_#{@time}.png")
+    Dir.rmdir("#{Rails.root}/downloads/user#{@user}")
+    render nothing: true
   end
   
   def imagecopy

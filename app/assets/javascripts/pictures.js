@@ -97,7 +97,7 @@ $(function() {
 		    },
 		    datatype: "text",
 		    success: function(data){
-		      //alert('success');
+		      alert('success');
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
     		  alert(textStatus);
