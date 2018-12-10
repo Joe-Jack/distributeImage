@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   # before_action :set_current_user
   before_action :authenticate_user!
   
-  helper_method :refer_to_s3
+  # helper_method :refer_to_s3
   
   def after_sign_in_path_for(resource)
     user_indices_path(resource)
