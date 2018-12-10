@@ -47,15 +47,15 @@ class PicturesController < ApplicationController
     else
       render :index
     end
-    respond_to do |format|
-      if @picture.save
-        # format.html { redirect_to user_indices_path(@user), notice: 'Picture was successfully created.' }
-        format.json { render :show, status: :created, location: @picture }
-      else
-        # format.html { render :new }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @picture.save
+    #     # format.html { redirect_to user_indices_path(@user), notice: 'Picture was successfully created.' }
+    #     format.json { render :show, status: :created, location: @picture }
+    #   else
+    #     # format.html { render :new }
+    #     format.json { render json: @picture.errors, status: :unprocessable_entity }
+    #   end
+    # end
     
     
     # データベースpicを要らない文字列を除外してデコード

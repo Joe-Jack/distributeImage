@@ -1,12 +1,10 @@
-
-
 $(function() {
 	navigator.mediaDevices = navigator.mediaDevices || ((navigator.mozGetUserMedia || navigator.webkitGetUserMedia) ? {
    getUserMedia: function(c) {
-     return new Promise(function(y, n) {
+    return new Promise(function(y, n) {
        (navigator.mozGetUserMedia ||
         navigator.webkitGetUserMedia).call(navigator, c, y, n);
-     });
+    });
 	}
 	} : null);
 
@@ -77,60 +75,40 @@ $(function() {
 			
 		}
 	});
-	$('#save-button').click(function(){
-		var bucketName = 'ueyamamasashi-bucket1';
-		var regionName = 'ap-northeast-1';
-		AWS.config.update({
-		    accessKeyId: '',
-		    secretAccessKey: '',
-		});
-		var bucket = new AWS.S3({
-		    params: {
-		        Bucket: bucketName,
-		        Region: regionName,
-		    },
-		});
-		// var canvas =$("#canvas");
+	$('#save-butto').click(function(){
+		
+		// var ctx = canvas.getContext('2d');
 		var canvas = document.getElementById('canvas');
 		var url = canvas.toDataURL('image/png');
-		console.log(url.length)
+		// console.log(url.length)
 		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
-		console.log(urlToThumb.length)
-		var blob1 = Base64toBlob(url);
-		 bucket.putObject(
-            {
-                'ACL': 'public-read',
-                'Key': 'aaaaaa.png',
-                'ContentType': 'image/png',
-                'Body': blob1,
-            },
-            function (error, data) {
-                if (error === null) {
-                } else {
-                }
-            }
-        );
+		// console.log(urlToThumb.length)
+		// var blob1 = Base64toBlob(url);
 		// var blob2 = window.URL.createObjectURL(blob1);
-		// $("#picture_pic").val(""); 
-		// $("#picture_pic").val(urlToThumb);
-		// $("#new_picture").submit();
-		// $.ajax({
-		//     url: "canvasurl",
-		//     type: "post",
-		//     data: {content: url
-		//     },
-		//     datatype: "text",
-		//     success: function(data){
-		//       alert('success');
-		//     },
-		//     error: function(jqXHR, textStatus, errorThrown){
-  //  		  alert(textStatus);
-  //  		  alert(errorThrown.message);
-  //  		  alert(jqXHR.status);
-  //  		  alert(jqXHR.responseText);
-  //  		},
-		// });
-		
+		// console.log(blob2);
+		// console.log(urlToThumb.length)
+		$("#picture_pic").val(""); 
+		console.log(url.length)
+		$("#picture_pic").val(urlToThumb);
+		$("#new_picture").submit();
+		console.log(urlToThumb.length)
+		$.ajax({
+		    url: "canvasurl",
+		    type: "post",
+		    data: {content: url
+		    },
+		    datatype: "text",
+		    success: function(data){
+		      alert('success');
+		    },
+		    error: function(jqXHR, textStatus, errorThrown){
+    		  alert(textStatus);
+    		  alert(errorThrown.message);
+    		  alert(jqXHR.status);
+    		  alert(jqXHR.responseText);
+    		},
+		});
+		// ctx.clearRect(0, 0, 800, 600);
 	});
 	
 });
@@ -156,5 +134,4 @@ function Base64toBlob(base64)
 		var blob = new Blob([buf], { type: mime });
 	    return blob;
 }		
-
 
