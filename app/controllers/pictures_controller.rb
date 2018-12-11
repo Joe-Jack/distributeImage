@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
   require 'tempfile'
   require 'mysql2.rb'
   require 'mysql2'
- 
+  
   
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   # GET /pictures
@@ -22,7 +22,12 @@ class PicturesController < ApplicationController
     @index = params[:index_id]
     @data = params[:content]
     @user = params[:user_id]
-    
+    @time = Time.now.strftime("%Y-%m-%d_%H:%M:%S")
+    gon.aws_access_key_id = Rails.application.secrets.aws_access_key_id
+    gon.aws_secret_key = Rails.application.secrets.aws_secret_key
+    gon.index = @index
+    gon.user = @user
+    gon.time = @time
   end
 
   # GET /pictures/1/edit
