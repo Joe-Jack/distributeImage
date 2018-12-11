@@ -133,7 +133,7 @@ class PicturesController < ApplicationController
     @index = params[:index_id]
     @origin_id = params[:origin_id]
     @image_number = params[:image_number]
-    @time = Time.now.strftime("%Y-%m-%d:%H:%M:%S")
+    @time = Time.now.strftime("%Y-%m-%d_%H:%M:%S")
     s3 = Aws::S3::Client.new(
       :region => 'ap-northeast-1',
       :access_key_id => Rails.application.secrets.aws_access_key_id,
