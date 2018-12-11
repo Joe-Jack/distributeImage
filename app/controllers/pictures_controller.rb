@@ -114,7 +114,7 @@ class PicturesController < ApplicationController
       :access_key_id => Rails.application.secrets.aws_access_key_id,
       :secret_access_key => Rails.application.secrets.aws_secret_key
       )
-    myBacket = 'ueyamamasashi-bucket1'
+    myBacket = 'distributeimage'
     myKey = "user#{@user}_namenum#{@index}_#{@time}"
     obj = s3.bucket(myBacket).object(myKey)
     unless obj.exists?
@@ -139,7 +139,7 @@ class PicturesController < ApplicationController
       :access_key_id => Rails.application.secrets.aws_access_key_id,
       :secret_access_key => Rails.application.secrets.aws_secret_key
       )
-    myBacket = 'ueyamamasashi-bucket1'
+    myBacket = 'distributeimage'
     
     lists = s3.list_objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@origin_id}").contents.to_a.reverse
     list = lists[@image_number.to_i].key
