@@ -4,55 +4,76 @@
   
   <h1>画像撮影一覧</h1>
   
-  <table class="table-responsive">
-    <thead>
-      <tr>
-        <th class="t-1" scope="col">番号</th>
-        <th class="t-2" scope="col">名前・項目</th>
-        <th class="t-1" scope="col">総数</th>
-        <th class="t-3" scope="col">撮影</th>
-        <th class="t-4" scope="col">画像</th>
-        <!--<th class="t-4" scope="col">アクション</th>-->
+  <table class="table">
+    <!--<thead class="thread">-->
+      <tr class="thread">
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">番号</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">名前・項目</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">総数</th>
+        <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2" scope="col">撮影</th>
+        <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4" scope="col">画像</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">download</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">編集</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">削除</th>
       </tr>
-    </thead>
+    <!--</thead>-->
   
     <tbody>
       <% @indices.each_with_index do |index, id| %>
       
         <tr>
-          <td class="t-1"><%= id+1 %></td>
-          <td class="t-2"><%= index.name.to_s %></td>
-          
-          <td class="t-1">
-            <% if index.pictures.count != 0 %>
-              <%= index.pictures.count %>
-            <% else %>
-              <%= "0" %>
-            <% end %>
-          </td>
-          <!--今turbolink停止中-->
-          <td class="t-3"><%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %></td>
-          <td class="t-4 dropbox" id="dp<%=index.id%>">
-            
-            <details>
+          <td><%= id+1 %></td>
+            <td data-label="名前・項目"><%= index.name.to_s %></td>
+            <td data-label="総数">
+              <% if index.pictures.count != 0 %>
+                <%= index.pictures.count %>
+              <% else %>
+                <%= "0" %>
+              <% end %>
+            </td>
+            <td data-label="撮影">
+              <%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %>
+            </td>
+            <td data-label="画像" class="dropboxed" id="dp<%=index.id%>">
+              <details>
               <summary>個別サムネイル（解析度は落ちています。）</summary>
               <% index.pictures.reverse_order.each_with_index do |ip, inx| %>
-                <%= image_tag ip.pic.to_s, class:"draganddrop", title: inx.to_s, draggable:"true" %>
+                <%= image_tag ip.pic.to_s, class:"dragedanddroped", title: inx.to_s, draggable:"true" %>
               <% end %>
             </details>
-          </td>
+            </td>
+            
+          <!--<td><%= index.name.to_s %></td>-->
+          <!--<td>-->
+          <!--  <% if index.pictures.count != 0 %>-->
+          <!--    <%= index.pictures.count %>-->
+          <!--  <% else %>-->
+          <!--    <%= "0" %>-->
+          <!--  <% end %>-->
+          <!--</td>-->
+          <!--今turbolink停止中-->
+          <!--<td><%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %></td>-->
+          <!--<td class="dropboxs" id="dp<%=index.id%>">-->
+            
+          <!--  <details>-->
+          <!--    <summary>個別サムネイル（解析度は落ちています。）</summary>-->
+          <!--    <% index.pictures.reverse_order.each_with_index do |ip, inx| %>-->
+          <!--      <%= image_tag ip.pic.to_s, class:"draganddroped", title: inx.to_s, draggable:"true" %>-->
+          <!--    <% end %>-->
+          <!--  </details>-->
+          <!--</td>-->
           
           
-          <td><%= link_to 'download', download_user_index_path(@user, index.id), download:"",  class:"btn btn-default waku1" %></td>
-          <td><%= link_to '編集',  edit_user_index_path(@user, index.id), class:"btn btn-default waku" %></td>
-          <td><%= link_to '削除', user_index_path(@user, index.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class:"btn btn-default waku" %></td>
+          <td data-label="download"><%= link_to 'download', download_user_index_path(@user, index.id), download:"",  class:"btn btn-default waku1" %></td>
+          <td data-label="編集"><%= link_to '編集',  edit_user_index_path(@user, index.id), class:"btn btn-default waku" %></td>
+          <td data-label="削除"><%= link_to '削除', user_index_path(@user, index.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class:"btn btn-default waku" %></td>
         </tr>
       
       <% end %>
       
     </tbody>
   </table>
-  
+  <!--</div>-->
   <br>
   
   <%= link_to '名前・項目の追加', new_user_index_path(@user), class:"btn btn-default" %>

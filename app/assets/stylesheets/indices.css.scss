@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.draganddrop {
+.dragedanddroped {
     width: 100px;
     height: 75px;
     float: left;
@@ -53,7 +53,7 @@
     background-color: #fff;
 }
 
-.dropbox {
+.dropboxed {
     height: 25px;
     width: 100px;
     background-color: #fff;
@@ -78,4 +78,37 @@
 .waku1 {
     width: 90px;
    
+}
+
+
+.table td:first-child {
+  background: #fbf5f5;
+}
+@media screen and (max-width: 640px) {
+  .table {
+    width: 100%;
+  }
+  .thread {
+    display: none;
+  }
+  .table tr {
+    width: 100%;
+  }
+  .table td {
+    display: block;
+    text-align: right;
+    width: 100%;
+  }
+  .table td:first-child {
+    background: #e9727e;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  .table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+  }
 }

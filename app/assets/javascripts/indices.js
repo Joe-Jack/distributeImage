@@ -1,6 +1,6 @@
 $(function(){
-	// var elm = document.getElementsByClassName('draganddrop');
-	var elm = document.getElementsByTagName("img");
+	var elm = document.getElementsByClassName('dragedanddroped');
+	// var elm = document.getElementsByTagName("img");
 	
 	for ( var i=0 ; i < elm.length ; i++ )
 	    {
@@ -14,14 +14,15 @@ $(function(){
 	      },false);
 	    }
 	    
-	var droparea = document.getElementsByClassName("dropbox");
+	var droparea = document.getElementsByClassName("dropboxed");
 
 	for ( var i=0; i < droparea.length ; i++ ){
 	    droparea[i].addEventListener("drop", function(evt){
 		    data = evt.dataTransfer.getData( "text/plain" );
 		    var obj = document.getElementById(evt.target.id);
+		    console.log(evt);
 		    id = obj.id.slice(2);
-		    console.log(id);
+		    
 		 
 		    // セレクターを作成
 		    var newselecter = document.createElement("img");
@@ -43,7 +44,7 @@ $(function(){
 					    },
 					    datatype: "text",
 					    success: function(data){
-					      //alert('success');
+					      alert('success');
 					    },
 					    error: function(jqXHR, textStatus, errorThrown){
 			  			　alert(textStatus);
@@ -61,7 +62,7 @@ $(function(){
 					    },
 					    datatype: "text",
 					    success: function(data){
-					      //alert('success');
+					      alert('success');
 					    },
 					    error: function(jqXHR, textStatus, errorThrown){
 					  	　alert(textStatus);
