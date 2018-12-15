@@ -78,7 +78,7 @@ $(function() {
 		}
 	});
 	$('#save-buttonn').click(function(){
-		var bucketName = 'ueyamamasashi-bucket1';
+		var bucketName = 'distributeimage';
 		var regionName = 'ap-northeast-1';
 		AWS.config.update({
 		    accessKeyId: gon.aws_access_key_id,

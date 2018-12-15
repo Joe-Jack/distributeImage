@@ -77,7 +77,7 @@ class IndicesController < ApplicationController
     @user = params['user_id']
     @user_account = User.find(@user)
     @user_name = @user_account.username
-    myBacket = 'ueyamamasashi-bucket1'
+    myBacket = 'distributeimage'
     bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
              :access_key_id => Rails.application.secrets.aws_access_key_id,
@@ -198,7 +198,7 @@ class IndicesController < ApplicationController
       # @user = params[:user_id]
       # @index = params[:id]
       # binding.pry
-      myBacket = 'ueyamamasashi-bucket1'
+      myBacket = 'distributeimage'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
              :access_key_id => Rails.application.secrets.aws_access_key_id,
@@ -218,7 +218,7 @@ class IndicesController < ApplicationController
     def s3all
       # @user = params[:user_id]
       # binding.pry
-      myBacket = 'ueyamamasashi-bucket1'
+      myBacket = 'distributeimage'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
              :access_key_id => Rails.application.secrets.aws_access_key_id,
@@ -249,7 +249,7 @@ class IndicesController < ApplicationController
     end
     
     def refer_to_s3
-      myBacket = 'ueyamamasashi-bucket1'
+      myBacket = 'distributeimage'
       bucket = Aws::S3::Client.new(
              :region => 'ap-northeast-1',
              :access_key_id => Rails.application.secrets.aws_access_key_id,
