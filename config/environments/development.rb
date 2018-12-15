@@ -50,5 +50,5 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :authentication => "plain",
     }
-  
+  config.serve_static_assets = false
 end
