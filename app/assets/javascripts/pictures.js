@@ -100,7 +100,7 @@ $(function() {
 		 bucket.putObject(
             {
                 'ACL': 'public-read',
-                'Key': 'user'+gon.user+'_namenum'+gon.index+'_'+gon.time+'.png',
+                'Key': 'user'+gon.user+'_namenum'+gon.index+'_'+gon.time,
                 'ContentType': 'image/png',
                 'Body': blob1,
             },
