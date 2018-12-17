@@ -1,5 +1,4 @@
 
-
 $(function() {
 	navigator.mediaDevices = navigator.mediaDevices || ((navigator.mozGetUserMedia || navigator.webkitGetUserMedia) ? {
    getUserMedia: function(c) {
@@ -9,27 +8,37 @@ $(function() {
      });
 	}
 	} : null);
-
 	if (!navigator.mediaDevices) {
 	  console.log("getUserMedia() not supported.");
 	  return;
 	}
 
 	// Prefer camera resolution nearest to 1280x720.
-
-	var constraints = { audio: false, video: { width: 400, height: 300 } };
-
-	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
-	  video = document.getElementById('camera');
-	  //var video = document.querySelector('video');
-	  //video.src = window.URL.createObjectURL(stream);
-	  video.srcObject = stream;
-	  localMediaStream = stream;
-	  //console.log(video);
-	}).catch(function(err) {
-	  console.log(err.name + ": " + err.message);
-	});
 	
+	// var constraints = { audio: false, video: { width: 400, height: 300 } };
+
+	// navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+	//   video = document.getElementById('camera');
+	//   //var video = document.querySelector('video');
+	//   //video.src = window.URL.createObjectURL(stream);
+	//   video.srcObject = stream;
+	//   localMediaStream = stream;
+	//   //console.log(video);
+	// }).catch(function(err) {
+	//   console.log(err.name + ": " + err.message);
+	// });
+	const medias = {audio : false, video : true},
+    video  = document.getElementById("camera");
+	navigator.getUserMedia(medias, successCallback, errorCallback);
+	
+	function successCallback(stream) {
+	  video.srcObject = stream;
+	};
+	
+	function errorCallback(err) {
+	  alert(err);
+	};
+		
 	$("#start").click(function() {
 		if (localMediaStream) {
 			var canvas = document.getElementById('canvas');
