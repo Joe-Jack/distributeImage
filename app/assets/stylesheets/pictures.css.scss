@@ -10,8 +10,10 @@
 //     position: relative;
 // }
 
-// #canvas {
-//     position: absolute;
-//     top: 0px;
-//     left: 0px;
-// }
+#canvas {
+    object-fit: contain;
+}
+
+.video {
+      object-fit: contain;
+}
