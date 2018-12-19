@@ -18,7 +18,7 @@ $(function() {
 	var constraints = { audio: false, video: { 
 						// width: 1280, 
 						// height: 720,
-						facingMode: 'environment' 
+						facingMode: 'user' 
 							}
 					};
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
