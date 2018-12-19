@@ -16,12 +16,11 @@ $(function() {
 	// Prefer camera resolution nearest to 1280x720.
 	
 	var constraints = { audio: false, video: { 
-						width: 400, 
-						height: 300,
-						facingMode : {
-    					exact : "environment"}} 
+						// width: 400, 
+						// height: 300,
+						facingMode : "user" 
+							}
 					};
-
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 	  video = document.getElementById('camera');
 	  //var video = document.querySelector('video');
