@@ -12,7 +12,7 @@ $(function() {
 	  alert("getUserMedia() not supported.");
 	  return;
 	} else {
-		alert("success")
+		console.log("success")
 	}
 
 	// Prefer camera resolution nearest to 1280x720.
@@ -24,14 +24,14 @@ $(function() {
 							}
 					};
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
-	  var video = document.getElementById('camera');
+	  video = document.getElementById('camera');
 	  //var video = document.querySelector('video');
 	  //video.src = window.URL.createObjectURL(stream);
 	  video.srcObject = stream;
 	  localMediaStream = stream;
-	  alert(video);
+	  //alert(video);
 	}).catch(function(err) {
-	  alert(err.name + ": " + err.message);
+	  console.log(err.name + ": " + err.message);
 	});
 	
 	// document.getElementById('button').onclick = function () {
@@ -49,7 +49,7 @@ $(function() {
 	// };
 		
 	$("#start").click(function() {
-		if (localMediaStream) {
+		if (video.srcObject) {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
