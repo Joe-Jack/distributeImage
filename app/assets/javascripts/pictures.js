@@ -9,8 +9,10 @@ $(function() {
 	}
 	} : null);
 	if (!navigator.mediaDevices) {
-	  console.log("getUserMedia() not supported.");
+	  alert("getUserMedia() not supported.");
 	  return;
+	} else {
+		alert("success")
 	}
 
 	// Prefer camera resolution nearest to 1280x720.
@@ -29,7 +31,7 @@ $(function() {
 	  localMediaStream = stream;
 	  //console.log(video);
 	}).catch(function(err) {
-	  console.log(err.name + ": " + err.message);
+	  alert(err.name + ": " + err.message);
 	});
 	
 	// document.getElementById('button').onclick = function () {
