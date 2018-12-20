@@ -24,7 +24,7 @@ $(function() {
 							}
 					};
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
-	  video = document.getElementById('camera');
+	  var video = document.getElementById('camera');
 	  //var video = document.querySelector('video');
 	  //video.src = window.URL.createObjectURL(stream);
 	  video.srcObject = stream;
