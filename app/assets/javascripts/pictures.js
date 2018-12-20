@@ -29,7 +29,7 @@ $(function() {
 	  //video.src = window.URL.createObjectURL(stream);
 	  video.srcObject = stream;
 	  localMediaStream = stream;
-	  //console.log(video);
+	  alert(video.srcObject);
 	}).catch(function(err) {
 	  alert(err.name + ": " + err.message);
 	});
