@@ -18,8 +18,8 @@ $(function() {
 	// Prefer camera resolution nearest to 1280x720.
 	
 	var constraints = { audio: false, video: { 
-						width: 1280, 
-						height: 720,
+						width: 400, 
+						height: 300,
 						facingMode: 'environment' 
 							}
 					};
@@ -35,10 +35,10 @@ $(function() {
 	});
 	
 	//videoの縦幅横幅を取得
-	video.width = 400;
-	w = video.width;
-	video.height = 300;
-	h = video.height;
+	// video.width = 400;
+	// w = video.width;
+	// video.height = 300;
+	// h = video.height;
 	
 	$("#start").click(function() {
 		if (video.srcObject) {
@@ -47,11 +47,11 @@ $(function() {
 			var ctx = canvas.getContext('2d');
 
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", w);
-			canvas.setAttribute("height", h);
+			canvas.setAttribute("width", 400);
+			canvas.setAttribute("height", 300);
 			// console.log(video);
 			//canvasにコピー
-			ctx.drawImage(video, 0, 100, 300, 300, 0, 0, w, h);
+			ctx.drawImage(video, 0, 0, 400, 300);
 			
 			//imgにpng形式で書き出し
 			// img.src = canvas.toDataURL('image/jpeg');
