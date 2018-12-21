@@ -18,8 +18,8 @@ $(function() {
 	// Prefer camera resolution nearest to 1280x720.
 	
 	var constraints = { audio: false, video: { 
-						// width: { min: 1024, ideal: 1280, max: 1920 },
-      //  				height: { min: 776, ideal: 720, max: 1080 }, 
+						width: 640,
+        				height: 360, 
 						facingMode: 'environment' 
 							}
 					};
