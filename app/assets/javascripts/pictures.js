@@ -34,19 +34,6 @@ $(function() {
 	  console.log(err.name + ": " + err.message);
 	});
 	
-	// document.getElementById('button').onclick = function () {
- //       document.getElementById('camera').play();
-	// const medias = {audio : false, video : true},
- //   video  = document.getElementById("camera");
-	// navigator.getUserMedia(medias, successCallback, errorCallback);
-	
-	// function successCallback(stream) {
-	//   video.srcObject = stream;
-	// };
-	
-	// function errorCallback(err) {
-	//   alert(err);
-	// };
 		
 	$("#start").click(function() {
 		if (video.srcObject) {
@@ -56,17 +43,17 @@ $(function() {
 			// var img = document.getElementById('img');
 
 			//videoの縦幅横幅を取得
-			video.width = 400;
-			var w = video.width;
-			video.height = 300;
-			var h = video.height;
+			// video.width = 400;
+			// var w = video.width;
+			// video.height = 300;
+			// var h = video.height;
 
 			//同じサイズをcanvasに指定
 			canvas.setAttribute("width", 400);
 			canvas.setAttribute("height", 300);
 			// console.log(video);
 			//canvasにコピー
-			ctx.drawImage(video, 0, 0, 400, 300);
+			ctx.drawImage(video, 0, 100, 300, 300, 0, 0, 400, 300);
 			
 			//imgにpng形式で書き出し
 			// img.src = canvas.toDataURL('image/jpeg');
