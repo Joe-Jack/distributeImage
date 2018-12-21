@@ -47,11 +47,11 @@ $(function() {
 			var ctx = canvas.getContext('2d');
 
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", 400);
-			canvas.setAttribute("height", 300);
+			canvas.setAttribute("width", w);
+			canvas.setAttribute("height", h);
 			// console.log(video);
 			//canvasにコピー
-			ctx.drawImage(video, 0, 100, 300, 300, 0, 0, 400, 300);
+			ctx.drawImage(video, 0, 100, 300, 300, 0, 0, w, h);
 			
 			//imgにpng形式で書き出し
 			// img.src = canvas.toDataURL('image/jpeg');
