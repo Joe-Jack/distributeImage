@@ -34,11 +34,11 @@ $(function() {
 	  console.log(err.name + ": " + err.message);
 	});
 	
-	//videoの縦幅横幅を取得
-	// video.width = 400;
-	// w = video.width;
-	// video.height = 300;
-	// h = video.height;
+	videoの縦幅横幅を取得
+	video.width = 400;
+	w = video.width;
+	video.height = 300;
+	h = video.height;
 	
 	$("#start").click(function() {
 		if (video.srcObject) {
