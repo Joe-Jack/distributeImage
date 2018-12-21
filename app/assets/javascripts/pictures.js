@@ -34,19 +34,17 @@ $(function() {
 	  console.log(err.name + ": " + err.message);
 	});
 	
+	//videoの縦幅横幅を取得
+	video.width = 400;
+	var w = video.width;
+	video.height = 300;
+	var h = video.height;
 		
 	$("#start").click(function() {
 		if (video.srcObject) {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			// var img = document.getElementById('img');
-
-			//videoの縦幅横幅を取得
-			// video.width = 400;
-			// var w = video.width;
-			// video.height = 300;
-			// var h = video.height;
 
 			//同じサイズをcanvasに指定
 			canvas.setAttribute("width", 400);
