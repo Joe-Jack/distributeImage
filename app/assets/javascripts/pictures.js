@@ -18,8 +18,8 @@ $(function() {
 	// Prefer camera resolution nearest to 1280x720.
 	
 	var constraints = { audio: false, video: { 
-						// width: 1280, 
-						// height: 720,
+						width: 1280, 
+						height: 720,
 						facingMode: 'environment' 
 							}
 					};
@@ -36,10 +36,10 @@ $(function() {
 	
 	//videoの縦幅横幅を取得
 	video.width = 400;
-	var w = video.width;
+	w = video.width;
 	video.height = 300;
-	var h = video.height;
-		
+	h = video.height;
+	
 	$("#start").click(function() {
 		if (video.srcObject) {
 			var canvas = document.getElementById('canvas');
