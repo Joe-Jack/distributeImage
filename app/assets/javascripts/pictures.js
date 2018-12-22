@@ -18,9 +18,9 @@ $(function() {
 	// Prefer camera resolution nearest to 1280x720.
 	
 	var constraints = { audio: false, video: { 
+						width: 320,
+						height:240,
 						advanced: [
-							{ width: 320 },
-							{ height:240 },
 							{ aspectRatio: 1.33 },
 							{ facingMode: 'environment' } 
 							]}
