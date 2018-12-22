@@ -19,8 +19,10 @@ $(function() {
 	
 	var constraints = { audio: false, video: { 
 						advanced: [
-						{ aspectRatio: 1.7777 },
-						{facingMode: 'environment'} 
+							{ width: 960 },
+							{ height:720 },
+							{ aspectRatio: 1.33 },
+							{ facingMode: 'environment' } 
 							]}
 					};
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
