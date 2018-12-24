@@ -19,7 +19,9 @@ $(function() {
 	
 	var constraints = { audio: false, video: { 
 						advanced: [
-							{ aspectRatio: 1.33 },
+							// { width: 1280 },
+							// { height: 720 },
+							// { aspectRatio: 1.5 },
 							{ facingMode: 'environment' } 
 							]}
 					};
@@ -29,14 +31,15 @@ $(function() {
 	  //video.src = window.URL.createObjectURL(stream);
 	  video.srcObject = stream;
 	  localMediaStream = stream;
-	  //alert(video);
+	  //alert(video.width);
+	  //console.log(video.srcObject)
 	}).catch(function(err) {
 	  console.log(err.name + ": " + err.message);
 	});
 	
 	// videoの縦幅横幅を取得
-	// video.width = 400;
-	// w = video.width;
+	// video.width = 450;
+	// w = video;
 	// video.height = 300;
 	// h = video.height;
 	
@@ -45,16 +48,17 @@ $(function() {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-
+			var w = 450;
+			var h = 300;
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", 400);
-			canvas.setAttribute("height", 300);
+			canvas.setAttribute("width", w);
+			canvas.setAttribute("height", h);
 			// console.log(video);
+			ctx.translate(w, h);;
+			ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
-			ctx.drawImage(video,100, 300, 400, 300, 0, 0, 400, 300);
-			
-			//imgにpng形式で書き出し
-			// img.src = canvas.toDataURL('image/jpeg');
+			ctx.drawImage(video, -w, h/4);
+			// ctx.drawImage(video, 50, 50, h, w, 0, 0, w, h)
 			
 		}
 	});
