@@ -25,6 +25,7 @@ $(function() {
 							{ facingMode: 'environment' } 
 							]}
 					};
+	alert(constraints.video)
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 	  video = document.getElementById('camera');
 	  //var video = document.querySelector('video');
@@ -54,11 +55,11 @@ $(function() {
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
 			// console.log(video);
-			ctx.translate(w, h);;
-			ctx.rotate(90/180*Math.PI);
+			// ctx.translate(w, h);;
+			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
-			ctx.drawImage(video, -w, h/4);
-			// ctx.drawImage(video, 50, 50, h, w, 0, 0, w, h)
+			// ctx.drawImage(video, -w, h/4);
+			ctx.drawImage(video, 75, 50, h, w/1.5, 0, 0, w, h)
 			
 		}
 	});
