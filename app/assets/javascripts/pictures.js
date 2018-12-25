@@ -30,6 +30,10 @@ $(function() {
 	  video = document.getElementById('camera');
 	  //var video = document.querySelector('video');
 	  //video.src = window.URL.createObjectURL(stream);
+	  // videoの縦幅横幅を取得
+	  video.width = 540;
+	  video.height = 360;
+	  alert(video.width)
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
@@ -38,7 +42,7 @@ $(function() {
 	  console.log(err.name + ": " + err.message);
 	});
 	
-	// videoの縦幅横幅を取得
+	
 	// video.width = 450;
 	// w = video;
 	// video.height = 300;
