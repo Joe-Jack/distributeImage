@@ -32,9 +32,9 @@ $(function() {
 	  //video.src = window.URL.createObjectURL(stream);
 	  // videoの縦幅横幅を取得
 	  video.width = 540;
-	  //video.height = 360;
+	  video.height = 360;
 	  alert(video.width)
-	  //alert(video.height)
+	  alert(video.height)
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
@@ -42,12 +42,6 @@ $(function() {
 	}).catch(function(err) {
 	  console.log(err.name + ": " + err.message);
 	});
-	
-	
-	// video.width = 450;
-	// w = video;
-	// video.height = 300;
-	// h = video.height;
 	
 	$("#start").click(function() {
 		if (video.srcObject) {
@@ -64,7 +58,7 @@ $(function() {
 			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, w, h, 0, 0, 540, 360)
+			ctx.drawImage(video, 0, 0, 540, 360)
 			
 		}
 	});
