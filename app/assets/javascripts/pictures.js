@@ -19,8 +19,8 @@ $(function() {
 	
 	var constraints = { audio: false, video: { 
 						advanced: [
-							{ width: 1280 },
-							{ height: 720 },
+							{ width: 640 },
+							{ height: 360 },
 							{ aspectRatio: 1.5 },
 							{ facingMode: 'environment' } 
 							]}
@@ -49,8 +49,8 @@ $(function() {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			var w = 1280;
-			var h = 720;
+			var w = 640;
+			var h = 360;
 			//同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
@@ -59,7 +59,7 @@ $(function() {
 			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, w, h)
+			ctx.drawImage(video, 0, 0, 640, 360, 0, 0, w, h)
 			
 		}
 	});
