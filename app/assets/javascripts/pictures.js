@@ -49,8 +49,8 @@ $(function() {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			var w = 540;
-			var h = 360;
+			var w = 530;
+			var h = 350;
 			//同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
@@ -59,7 +59,7 @@ $(function() {
 			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, w, h, 0, 0, w, h)
+			ctx.drawImage(video, 0, 0, w, h, 0, 0, 540, 360)
 			
 		}
 	});
