@@ -50,7 +50,7 @@ $(function() {
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
 			var w = 490;
-			var h = 330;
+			var h = 326;
 			//同じサイズをcanvasに指定
 			canvas.setAttribute("width", 540);
 			canvas.setAttribute("height", 360);
@@ -59,7 +59,7 @@ $(function() {
 			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, 540, 360)
+			ctx.drawImage(video, 0, 0, 540, 360, 0, 0, 540, 360)
 			
 		}
 	});
