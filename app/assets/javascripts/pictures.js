@@ -59,7 +59,7 @@ $(function() {
 			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピー
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, 640, 360, 0, 0, w, h)
+			ctx.drawImage(video, 0, 0, 360, 360, 0, 0, 360, 360)
 			
 		}
 	});
