@@ -19,7 +19,7 @@ $(function() {
 	
 	var constraints = { audio: false, video: { 
 						advanced: [
-							{ width: 540 },
+							{ width: 640 },
 							{ height: 360 },
 							{ aspectRatio: 1.5 },
 							{ facingMode: 'environment' } 
