@@ -49,8 +49,8 @@ $(function() {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			var w = 480;
-			var h = 320;
+			var w = 540;
+			var h = 360;
 			//同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
