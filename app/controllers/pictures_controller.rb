@@ -185,7 +185,12 @@ class PicturesController < ApplicationController
     # droppedToMysql(@content, @index)
     @time = Time.now.strftime("%Y-%m-%d %H:%M:%S")
     # mysqlを最新版にしてprepare statementが効いた
-    client = Mysql2::Client.new(:host => 'localhost', :username => 'root', :database => 'distributeImage_development', :socket => "/var/lib/mysql/mysql.sock")
+    client = Mysql2::Client.new(:host => Rails.application.secrets.mysql2_host, 
+                                :username => 'b91ec100ce5738', 
+                                :database => 'heroku_62e005e56ca517c', 
+                                :socket => "/var/lib/mysql/mysql.sock",
+                                :password => Rails.application.secrets.mysql2_password
+                                )
     statement = client.prepare('INSERT INTO pictures (pic, index_id, created_at, updated_at) VALUES(?,?,?,?)')
     statement.execute(@content, @index, @time, @time)
     render nothing: true
