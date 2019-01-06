@@ -30,8 +30,8 @@ $(function() {
 	  //var video = document.querySelector('video');
 	  //video.src = window.URL.createObjectURL(stream);
 	  // videoの縦幅横幅を取得
-	  //video.width = 640;
-	  //video.height = 360;
+	  video.width = 640;
+	  video.height = 360;
 	  //alert(video.width)
 	  //alert(video.height)
 	  video.srcObject = stream;
@@ -57,7 +57,7 @@ $(function() {
 			// ctx.rotate(90/180*Math.PI);
 			//canvasにコピーS
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, 360, 540)
+			ctx.drawImage(video, 0, 0, 640, 360)
 			
 		}
 	});
