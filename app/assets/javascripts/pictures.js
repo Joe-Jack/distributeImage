@@ -32,8 +32,8 @@ $(function() {
 	  // videoの縦幅横幅を取得
 	  //video.width = 640;
 	  //video.height = 360;
-	  alert(video.width)
-	  alert(video.height)
+	  //alert(video.width)
+	  //alert(video.height)
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
@@ -47,17 +47,17 @@ $(function() {
 			var canvas = document.getElementById('canvas');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			var w = 490;
-			var h = 326;
+			// var w = 490;
+			// var h = 326;
 			//同じサイズをcanvasに指定
-			canvas.setAttribute("width", 540);
-			canvas.setAttribute("height", 360);
+			// canvas.setAttribute("width", 540);
+			// canvas.setAttribute("height", 360);
 			// console.log(video);
 			// ctx.translate(w, h);;
 			// ctx.rotate(90/180*Math.PI);
-			//canvasにコピー
+			//canvasにコピーS
 			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, 490, 326, 0, 0, 540, 360)
+			ctx.drawImage(video, 0, 0, 540, 360)
 			
 		}
 	});
