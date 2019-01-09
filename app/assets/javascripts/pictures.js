@@ -18,8 +18,8 @@ $(function() {
 	// Prefer camera resolution nearest to 1280x720.
 	var constraints = { audio: false, video: { 
 						advanced: [
-							{ width: 1280 },
-							{ height: 720 },
+							{ width: 640 },
+							{ height: 360 },
 							{ aspectRatio: 1.5 },
 							{ facingMode: 'environment' } 
 							]}
@@ -37,7 +37,7 @@ $(function() {
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
-	  //console.log(video.srcObject)
+	  console.log(video.srcbject)
 	}).catch(function(err) {
 	  console.log(err.name + ": " + err.message);
 	});
@@ -49,15 +49,15 @@ $(function() {
 			var ctx = canvas.getContext('2d');
 			var w = 490;
 			var h = 326;
-			//同じサイズをcanvasに指定
-			// canvas.setAttribute("width", 540);
-			// canvas.setAttribute("height", 360);
-			// console.log(video);
-			// ctx.translate(w, h);;
-			// ctx.rotate(90/180*Math.PI);
-			//canvasにコピーS
-			// ctx.drawImage(video, -w, h/4);
-			ctx.drawImage(video, 0, 0, 490, 326, 0, 0, 640, 360)
+			// 同じサイズをcanvasに指定
+			canvas.setAttribute("width", 640);
+			canvas.setAttribute("height", 360);
+			console.log(video);
+			ctx.translate(w, h);;
+			ctx.rotate(90/180*Math.PI);
+			// canvasにコピーS
+			ctx.drawImage(video, -w, h/4);
+			// ctx.drawImage(video, 0, 0,490, 326, 0, 0, 640, 360)
 			
 		}
 	});
