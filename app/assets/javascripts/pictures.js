@@ -54,9 +54,9 @@ $(function() {
 			canvas.setAttribute("height", 360);
 			console.log(video);
 			ctx.translate(w, h);;
-			ctx.rotate(90/180*Math.PI);
+			ctx.rotate(270/180*Math.PI);
 			// canvasにコピーS
-			ctx.drawImage(video, -w/2, -h/2);
+			ctx.drawImage(video, -w, -h);
 			// ctx.drawImage(video, 0, 0,490, 326, 0, 0, 640, 360)
 			
 		}
