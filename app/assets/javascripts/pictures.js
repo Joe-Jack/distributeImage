@@ -55,13 +55,13 @@ $(function() {
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
-			console.log(video);
+			// console.log(video);
 			// ctx.strokeRect(0, 0, 0, 0);
-			ctx.translate(w/2, h/2);
-			ctx.rotate(90/180*Math.PI);
-			// canvasにコピーS
-			ctx.drawImage(video, 0, 0, -w/2, h/2);
-			// ctx.drawImage(video, 0, 0,490, 326, 0, 0, 640, 360)
+			// ctx.translate(w/2, h/2);
+			// ctx.rotate(90/180*Math.PI);
+			// canvasにコピー
+			// ctx.drawImage(video, 0, 0, -w/2, h/2);
+			ctx.drawImage(video, 0, 0,360, 200, 0, 0, 640, 360)
 			
 		}
 	});
