@@ -33,10 +33,10 @@ $(function() {
 	  var settings = stream.getVideoTracks()[0].getSettings();
 	  var width = settings.width;
       var height = settings.height;
-	  //video.width = 360;
-	  //video.height = 640;
-	  alert(width);
-	  alert(height);
+	  video.width = 360;
+	  video.height = 640;
+	  //alert(width);
+	  //alert(height);
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
