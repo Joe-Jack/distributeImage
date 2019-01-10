@@ -24,16 +24,19 @@ $(function() {
 							{ facingMode: 'environment' } 
 							]}
 					};
-	// alert(constraints)
+
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 	  video = document.getElementById('camera');
 	  //var video = document.querySelector('video');
 	  //video.src = window.URL.createObjectURL(stream);
 	  // videoの縦幅横幅を取得
-	  video.width = 360;
-	  video.height = 640;
-	  //alert(video.width)
-	  //alert(video.height)
+	  var settings = stream.getVideoTracks()[0].getSettings();
+	  var width = settings.width;
+      var height = settings.height;
+	  //video.width = 360;
+	  //video.height = 640;
+	  alert(width);
+	  alert(height);
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
