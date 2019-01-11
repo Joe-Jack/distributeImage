@@ -57,7 +57,7 @@ $(function() {
 			canvas.setAttribute("height", h);
 			// console.log(video);
 			// ctx.strokeRect(0, 0, 0, 0);
-			ctx.translate(w/2, h/2);
+			ctx.translate(w/2, h/4);
 			ctx.rotate(90/180*Math.PI);
 			// canvasにコピー
 			ctx.translate(-w/2, -h/2);
