@@ -62,7 +62,7 @@ $(function() {
 			// canvasにコピー
 			ctx.translate(-w/2, -h/2);
 			ctx.drawImage(video, 0, 0, 640, 360);
-			canvas.setAttribute("height", 360);
+			// canvas.setAttribute("height", 360);
 			// ctx.drawImage(video, 0, 0,360, 200, 0, 0, 640, 360)
 			
 		}
