@@ -51,7 +51,7 @@ $(function() {
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
 			var w = 640;
-			var h = 360;
+			var h = 640;
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
@@ -62,6 +62,7 @@ $(function() {
 			// canvasにコピー
 			ctx.translate(-w/2, -h/2);
 			ctx.drawImage(video, 0, 0, 640, 360);
+			canvas.setAttribute("height", 360);
 			// ctx.drawImage(video, 0, 0,360, 200, 0, 0, 640, 360)
 			
 		}
