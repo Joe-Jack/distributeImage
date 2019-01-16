@@ -57,22 +57,16 @@ $(function() {
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
-			ctx.translate(320, 0);
+			ctx.translate(360, 0);
 			ctx.rotate(90/180*Math.PI);
 			// canvasにコピー
 			// ctx.translate(-320, 0);
 			// canvas.setAttribute("height", h/2);
-			ctx.drawImage(video, 0, 0, 640, 320);
-			imagedata = ctx.getImageData(0, 0, 320, 640);
-			// ctx2.biginPath();
-			// ctx2.moveTo(0, 0);
-			// ctx2.lineTo(320, 0);
-			// ctx2.lineTo(320, 640);
-			// ctx2.lineTo(0, 640);
-			// ctx2.closePath();
-			// ctx2.fill();
-			ctx2.createImageData(320, 640);
-			ctx2.putImageData(imagedata, 0, 0);
+			ctx.drawImage(video, 0, 0, 640, 360);
+			// imagedata = ctx.getImageData(0, 0, 320, 640);
+			
+			// ctx2.createImageData(320, 640);
+			// ctx2.putImageData(imagedata, 0, 0);
 			// alert(canvas.getAttribute("width"))
 			// canvas.width = 640;
 			// canvas.height = 360;
