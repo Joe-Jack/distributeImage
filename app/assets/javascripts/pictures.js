@@ -57,7 +57,7 @@ $(function() {
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
-			ctx.translate(360, 0);
+			ctx.translate(640, 0);
 			ctx.rotate(90/180*Math.PI);
 			// canvasにコピー
 			// ctx.translate(-320, 0);
