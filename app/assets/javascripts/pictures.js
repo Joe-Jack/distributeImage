@@ -40,7 +40,7 @@ $(function() {
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	  //alert(video.width);
-	  console.log(video.srcbject)
+	  //console.log(video.srcbject)
 	}).catch(function(err) {
 	  console.log(err.name + ": " + err.message);
 	});
@@ -48,21 +48,34 @@ $(function() {
 	$("#start").click(function() {
 		if (video.srcObject) {
 			var canvas = document.getElementById('canvas');
+			var canvas2 = document.getElementById('canvas2');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			var w = 640;
+			var ctx2 = canvas2.getContext('2d');
+			var w = 1000;
 			var h = 640;
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
-			// console.log(video);
-			// ctx.strokeRect(0, 0, 0, 0);
-			ctx.translate(w/2, h/4);
+			ctx.translate(320, 0);
 			ctx.rotate(90/180*Math.PI);
 			// canvasにコピー
-			ctx.translate(-w/2, -h/2);
-			ctx.drawImage(video, 0, 0, 640, 360);
-			// canvas.setAttribute("height", 360);
+			// ctx.translate(-320, 0);
+			// canvas.setAttribute("height", h/2);
+			ctx.drawImage(video, 0, 0, 640, 320);
+			imagedata = ctx.getImageData(0, 0, 320, 640);
+			// ctx2.biginPath();
+			// ctx2.moveTo(0, 0);
+			// ctx2.lineTo(320, 0);
+			// ctx2.lineTo(320, 640);
+			// ctx2.lineTo(0, 640);
+			// ctx2.closePath();
+			// ctx2.fill();
+			ctx2.createImageData(320, 640);
+			ctx2.putImageData(imagedata, 0, 0);
+			// alert(canvas.getAttribute("width"))
+			// canvas.width = 640;
+			// canvas.height = 360;
 			// ctx.drawImage(video, 0, 0,360, 200, 0, 0, 640, 360)
 			
 		}

@@ -13,9 +13,9 @@
     	<video id="camera" autoplay playsinline="true"></video>
     	<button id="start", class="btn btn-default">撮影する</button>
     	<h2>写真(canvas)</h2>
-    	<canvas id="canvas"></canvas>
+    	<canvas id="canvas" class='canvas'></canvas>
       
-  	  <!--<canvas id="canvas"></canvas>-->
+  	  <canvas id="canvas2"></canvas>
 	  </div>
     <%= form_for(@picture, url: user_index_pictures_path(@user, @index), remote: true) do |f| %>
       <% if @picture.errors.any? %>

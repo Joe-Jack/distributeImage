@@ -2,16 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .canvas {
+.canvas {
 //     visibility: hidden;
-// }
+      width: 1000px;
+      height: 640px;
+}
 
 // .takepic {
 //     position: relative;
 // }
 
-#canvas {
-//     object-fit: contain;
+#canvas2 {
+
+      width: 320px;
+      height: 640px;
 }
 
 #camera {
