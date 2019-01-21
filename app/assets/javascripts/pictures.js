@@ -1,6 +1,6 @@
 
 $(function() {
-	navigator.mediaDevices = navigator.mediaDevices || ((navigator.mozGetUserMedia || navigator.webkitGetUserMedia) ? {
+   vn = navigator.mediaDevices = navigator.mediaDevices || ((navigator.mozGetUserMedia || navigator.webkitGetUserMedia) ? {
    getUserMedia: function(c) {
      return new Promise(function(y, n) {
        (navigator.mozGetUserMedia ||
@@ -31,49 +31,75 @@ $(function() {
 	  //video.src = window.URL.createObjectURL(stream);
 	  // videoの縦幅横幅を取得
 	  var settings = stream.getVideoTracks()[0].getSettings();
-	  var width = settings.width;
-      var height = settings.height;
+	  width = settings.width;
+      height = settings.height;
 	  video.width = 360;
 	  video.height = 640;
-	  //alert(width);
-	  //alert(height);
 	  video.srcObject = stream;
 	  localMediaStream = stream;
-	  //alert(video.width);
-	  //console.log(video.srcbject)
 	}).catch(function(err) {
 	  console.log(err.name + ": " + err.message);
 	});
 	
+	
 	$("#start").click(function() {
 		if (video.srcObject) {
 			var canvas = document.getElementById('canvas');
-			var canvas2 = document.getElementById('canvas2');
+			var canvass = document.getElementById('canvass');
+			// diplay:inlineでnoneから回復（９４行目）
+			canvass.style.display = "inline";
+			var back = document.getElementById('back');
+			var start = document.getElementById('start');
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
-			var ctx2 = canvas2.getContext('2d');
-			var w = 1000;
-			var h = 640;
+			var ctxs = canvass.getContext('2d');
+			var w = 1280;
+			var h = 720;
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
-			ctx.translate(640, 0);
-			ctx.rotate(90/180*Math.PI);
-			// canvasにコピー
-			// ctx.translate(-320, 0);
-			// canvas.setAttribute("height", h/2);
-			ctx.drawImage(video, 0, 0, 360, 640);
-			// imagedata = ctx.getImageData(0, 0, 320, 640);
+			// setAttributeを設定しないと上手く貼り付けられない(teratail、29番目質問)
+			canvass.setAttribute("width", 640);
+			canvass.setAttribute("height", 360);
+			// 撮影した画像が横長ならそのまま、縦長なら９０度回転させて表示
+			if (width > height) {
+				ctxs.drawImage(video, 0, 0, 640, 360);
+			} else {
+				// 回転前に左上重心移動
+				ctx.translate(360, 0);
+				// 回転（左から右に）setAttributeの幅・高さを超えると画像がその分消えてしまう
+				ctx.rotate(90/180*Math.PI);
+				// canvasにコピー
+				// ctx.translate(-320, 0);
+				// canvas.setAttribute("height", h/2);
+				ctx.drawImage(video, 0, 0, 640, 360);
+				// ctxを切り取り
+				var imagedata = ctx.getImageData(0, 0, 360, 640);
+				// console.log(imagedata.height);
+				// ctx2.createImageData(360, 640);
+				// ctx.putImageData(imagedata, 30, 10);
+				// ctxs.drawImage(video, 0, 0, 640, 360);
+				// 切り取ったimgadataを貼り付け
+				ctxs.putImageData(imagedata, 0, 0);
+				// alert(canvas.getAttribute("width"))
+				// canvas.width = 640;
+				// canvas.height = 360;
+				// ctx.drawImage(video, 0, 0,360, 200, 0, 0, 640, 360)
+			}
+		// 撮影後に画面を切り替える
+		video.style.display = "none";
+		back.style.display = "inline";
+		start.style.display = "none";
+		$("#back").click(function() {
+			canvass.style.display = "none";
+			back.style.display = "none";
+			video.style.display = "inline";
+			start.style.display = "inline";
 			
-			// ctx2.createImageData(320, 640);
-			// ctx2.putImageData(imagedata, 0, 0);
-			// alert(canvas.getAttribute("width"))
-			// canvas.width = 640;
-			// canvas.height = 360;
-			// ctx.drawImage(video, 0, 0,360, 200, 0, 0, 640, 360)
-			
+		});
 		}
 	});
+	
 	$("#actions").click(function(){
 		if (localMediaStream) {
 			var canvas = document.getElementById('canvas');
