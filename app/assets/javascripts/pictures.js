@@ -137,7 +137,7 @@ $(function() {
 		    },
 		});
 		
-		var canvas = document.getElementById('canvas');
+		var canvas = document.getElementById('canvass');
 		var url = canvas.toDataURL('image/png');
 		// console.log(url.length)
 		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
