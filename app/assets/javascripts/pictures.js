@@ -53,8 +53,8 @@ $(function() {
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
 			var ctxs = canvass.getContext('2d');
-			var w = 1280;
-			var h = 720;
+			var w = 1000;
+			var h = 1000;
 			// 同じサイズをcanvasに指定
 			canvas.setAttribute("width", w);
 			canvas.setAttribute("height", h);
@@ -65,8 +65,8 @@ $(function() {
 			if (width > height) {
 				ctxs.drawImage(video, 0, 0, 640, 360);
 			} else {
-				// 回転前に左上重心移動
-				ctx.translate(360, 0);
+				// 回転前に左上重心移動(height640x分)
+				ctx.translate(640, 0);
 				// 回転（左から右に）setAttributeの幅・高さを超えると画像がその分消えてしまう
 				ctx.rotate(90/180*Math.PI);
 				// canvasにコピー
