@@ -72,7 +72,8 @@ $(function() {
 				// canvasにコピー
 				// ctx.translate(-320, 0);
 				// canvas.setAttribute("height", h/2);
-				ctx.drawImage(video, 0, 0, 640, 360);
+				// 回転させると同時にwidth,heightも回転するので気をつける
+				ctx.drawImage(video, 0, 0, 360, 640);
 				// ctxを切り取り
 				var imagedata = ctx.getImageData(0, 0, 360, 640);
 				// console.log(imagedata.height);
