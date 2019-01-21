@@ -81,7 +81,7 @@ $(function() {
 				// ctx.putImageData(imagedata, 30, 10);
 				// ctxs.drawImage(video, 0, 0, 640, 360);
 				// 切り取ったimgadataを貼り付け
-				ctxs.putImageData(imagedata, 0, 0);
+				ctxs.putImageData(imagedata, 0, 0, 0, 0, 640, 360);
 				// alert(canvas.getAttribute("width"))
 				// canvas.width = 640;
 				// canvas.height = 360;
