@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181125014513) do
+ActiveRecord::Schema.define(version: 20190128020539) do
 
   create_table "indices", force: :cascade do |t|
     t.string   "name",           limit: 255
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20181125014513) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.integer  "user_id",        limit: 4
+    t.string   "parkname",       limit: 255
+    t.string   "playground",     limit: 255
+    t.string   "explanation",    limit: 255
+    t.string   "judge",          limit: 255
+    t.string   "remark",         limit: 255
   end
 
   create_table "pictures", force: :cascade do |t|

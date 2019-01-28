@@ -33,8 +33,14 @@ $(function() {
 	  var settings = stream.getVideoTracks()[0].getSettings();
 	  width = settings.width;
       height = settings.height;
-	  video.width = 360;
-	  video.height = 640;
+      //width:height比で枠サイズを変更
+      if (width > height) {
+		  video.width = 640;
+		  video.height = 360;
+      } else {
+      	video.width = 360;
+      	video.height = 640;
+      }
 	  video.srcObject = stream;
 	  localMediaStream = stream;
 	}).catch(function(err) {
@@ -50,6 +56,7 @@ $(function() {
 			canvass.style.display = "inline";
 			var back = document.getElementById('back');
 			var start = document.getElementById('start');
+			var takepic = document.getElementById('takepic')
 			//canvasの描画モードを2dに
 			var ctx = canvas.getContext('2d');
 			var ctxs = canvass.getContext('2d');
@@ -64,6 +71,7 @@ $(function() {
 			// 撮影した画像が横長ならそのまま、縦長なら９０度回転させて表示
 			if (width > height) {
 				ctxs.drawImage(video, 0, 0, 640, 360);
+				// ここでtakepicのwidthサイ��を変更してstartボタンがcanvass直下になるようにしたい
 			} else {
 				// 回転前に左上重心移動(height640x分)
 				ctx.translate(640, 0);

@@ -2,10 +2,13 @@
   
   <!--<%= notice %>-->
   
-  <h1>画像撮影一覧</h1>
+  <!--csv用の切替ボタン追加 20190125-->
+  <button id="switch" class="btn btn-default">CSV~ノーマル</button>
   
+  <h1 id="midashi">画像撮影一覧</h1>
+  
+  <div id="normalmode">
   <table class="table">
-    <!--<thead class="thread">-->
       <tr class="thread">
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">番号</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">名前・項目</th>
@@ -16,7 +19,6 @@
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">編集</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">削除</th>
       </tr>
-    <!--</thead>-->
   
     <tbody>
       <% @indices.each_with_index do |index, id| %>
@@ -43,25 +45,6 @@
             </details>
             </td>
             
-          <!--<td><%= index.name.to_s %></td>-->
-          <!--<td>-->
-          <!--  <% if index.pictures.count != 0 %>-->
-          <!--    <%= index.pictures.count %>-->
-          <!--  <% else %>-->
-          <!--    <%= "0" %>-->
-          <!--  <% end %>-->
-          <!--</td>-->
-          <!--今turbolink停止中-->
-          <!--<td><%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %></td>-->
-          <!--<td class="dropboxs" id="dp<%=index.id%>">-->
-            
-          <!--  <details>-->
-          <!--    <summary>個別サムネイル（解析度は落ちています。）</summary>-->
-          <!--    <% index.pictures.reverse_order.each_with_index do |ip, inx| %>-->
-          <!--      <%= image_tag ip.pic.to_s, class:"draganddroped", title: inx.to_s, draggable:"true" %>-->
-          <!--    <% end %>-->
-          <!--  </details>-->
-          <!--</td>-->
           
           
           <td data-label="download"><%= link_to 'download', download_user_index_path(@user, index.id), download:"",  class:"btn btn-default waku1" %></td>
@@ -77,32 +60,27 @@
   <br>
   
   <%= link_to '名前・項目の追加', new_user_index_path(@user), class:"btn btn-default" %>
+  </div>
   
+  <div id="csvmode" style="display:none">
+  <!--csvファイルをインポートするフォームを追加20190125-->
+  <table class="table">
+      <tr class="thread">
+        <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2" scope="col">公園名</th>
+        <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2" scope="col">遊具名</th>
+        <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6" scope="col">説明文</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">判定</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">備考</th>
+      </tr>
+  
+  <%= form_tag import_user_indices_path(@user), multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "csvファイルインポート" %>
+  <% end %>
+  </div>
   
 
 
-<!--<%= form_for(@picture, :url => {:action => 'index'}, remote: true) do |f| %>-->
-<!--      <% if @picture.errors.any? %>-->
-<!--        <div id="error_explanation">-->
-<!--          <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>-->
-<!--          <ul>-->
-<!--          <% @picture.errors.full_messages.each do |message| %>-->
-<!--            <li><%= message %></li>-->
-<!--          <% end %>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--      <% end %>-->
-    
-<!--      <div class="field">-->
-<!--        <%= f.hidden_field :pic, :value => "" %>-->
-<!--      </div>-->
-      
-<!--      <div class="field">-->
-<!--        <%= f.hidden_field :index_id, :value => "" %>-->
-<!--      </div>-->
-      
-<!--    <% end %>-->
-<!--    <button id="new_picture", class="btn btn-default">保存</button>-->
-    
+
     
 </div>

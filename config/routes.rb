@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       post 'pictures/imagecopy' => 'pictures#imagecopy'
       get 'downloads' => 'indices#downloads', on: :collection
       get 'download' => 'indices#download', on: :member
+      # importルートを追加20190125
+      collection {post :import}
+      # post 'import' => 'indices#import', on: :member
       resources :pictures, only: [:create, :new]
       post 'dropnew' => 'pictures#dropnew'
   end

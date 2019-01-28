@@ -124,62 +124,23 @@ $(function(){
 	}  
 });
 
+$(function() {
+	$("#switch").click(function() {
+		var normalmode = document.getElementById('normalmode');
+		var csvmode = document.getElementById('csvmode');
+		var midashi = document.getElementById('midashi');
+		if (normalmode.style.display == "block") {
+			normalmode.style.display = "none";
+			csvmode.style.display = "inline";
+			midashi.style.display = "none";
+		} else {
+			normalmode.style.display = "block";
+			csvmode.style.display = "none";
+			midashi.style.display = "block";
+		}
+	});	
+});
 
-// $(function() {
-// 	$(document).on('dblclick','.draganddrop',function(){
-//     $(this).after($(this).clone());
-// 	});
-//     $('.draganddrop').draggable( {
-//     	"opacity": 0.5,
-// 	    start : function (event , ui){
-// 			console.log("start event start" );
-// 			console.log(event , ui);
-// 		},
-// 		// ドラッグ中に呼ばれる
-// 		drag : function (event , ui) {
-// 			console.log("drag event start" );
-// 			console.log(event , ui);
-			
-				
-// 		},
-// 		// ドラッグ終了時に呼ばれる
-// 		stop : function (event , ui){
-// 			console.log("stop event start" );
-// 			console.log(event , ui);
-// 			$(this).clone()
-// 				.css({opacity: 1});
-		
-// 		}
-// 	});
+
 	
-// 	$('td.t-4').droppable({
-// 	    accept: '.draganddrop',
-// 	    drop: function(event, ui) {
-// 	        ui.draggable.appendTo('td.t-4');
-// 	        ui.draggable.css({
-// 	        	position:"absolute",
-// 	        	opacity: 1
-// 	        });
-// 	    },
-// });
-// });
-
-// $.ajax({
-//     url: "indices/" + id + "/dropnew",
-//     type: "post",
-//     data: {
-//     	content: data,
-//     	index_id: id,
-//     },
-//     datatype: "text",
-//     success: function(data){
-//       alert('success');
-//     },
-//     error: function(jqXHR, textStatus, errorThrown){
-//   	　alert(textStatus);
-// 	  alert(errorThrown.message);
-// 	  alert(jqXHR.status);
-// 	  alert(jqXHR.responseText);
-// 	},
-// });	
 

@@ -4,6 +4,8 @@ class IndicesController < ApplicationController
   require 'open-uri'
   require 'zipline'
   require 'mysql2'
+  # csvライブラリを要求20190125
+  require 'csv' 
   
   include ActionController::Streaming
   include Zipline
@@ -179,7 +181,16 @@ class IndicesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  # import 追加　20190125
+  def import
+    @user = params[:user_id]
+    # fileはtmpに自動で一時保存される?
+    Index.import(params[:file])
+    redirect_to user_indices_path(@user), notice: "点検項目を追加"
+  end
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_index

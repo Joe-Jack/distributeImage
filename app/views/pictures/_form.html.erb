@@ -8,14 +8,12 @@
 </head>
 
   <body>
-    <div class="takepic">
-    	<video id="camera" autoplay playsinline="true"></video>
-    	<button id="start", class="btn btn-lg btn-block btn-primary">撮影する</button>
-    	<button id="back", class="btn btn-lg", style="display:none">撮影に戻る</button>
-    	<!--<h2>写真(canvas)</h2>-->
+    <div id="takepic">
+    	<video id="camera" autoplay playsinline="true", style="float:left"></video>
+    	<button id="start", class="btn btn-lg btn-primary", style="margin:5px">撮影する</button>
     	<canvas id="canvas" class='canvas'></canvas>
-      
-  	  <canvas id="canvass"></canvas>
+  	  <canvas id="canvass",style="float:left"></canvas>
+  	  <button id="back", class="btn btn-lg btn-primary", style="display:none">撮影に戻る</button>
 	  </div>
     <%= form_for(@picture, url: user_index_pictures_path(@user, @index), remote: true) do |f| %>
       <% if @picture.errors.any? %>
