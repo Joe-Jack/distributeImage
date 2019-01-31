@@ -132,6 +132,7 @@ $(function() {
 		}
 	});
 	$('#save-buttonn').click(function(){
+	
 		var bucketName = 'distributeimage';
 		var regionName = 'ap-northeast-1';
 		AWS.config.update({

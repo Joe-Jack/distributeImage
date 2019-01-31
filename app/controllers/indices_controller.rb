@@ -186,7 +186,8 @@ class IndicesController < ApplicationController
   def import
     @user = params[:user_id]
     # fileはtmpに自動で一時保存される?
-    Index.import(params[:file])
+    Index.import(params[:file], @user)
+    
     redirect_to user_indices_path(@user), notice: "点検項目を追加"
   end
   
@@ -204,6 +205,13 @@ class IndicesController < ApplicationController
     def index_params
       params.require(:index).permit(:name, :num, :pictures_count, :user_id)
     end
+  
+    
+    # user_idのみのindex_params追加　20190125
+    def index_user_params
+      params.require(:index).permit(:user_id)
+    end
+    
     
     def s3lists
       # @user = params[:user_id]

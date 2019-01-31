@@ -125,18 +125,19 @@ $(function(){
 });
 
 $(function() {
-	$("#switch").click(function() {
+	$("#switch").click('turbolinks:load', function() {
+		// alert("a");
 		var normalmode = document.getElementById('normalmode');
 		var csvmode = document.getElementById('csvmode');
 		var midashi = document.getElementById('midashi');
-		if (normalmode.style.display == "block") {
-			normalmode.style.display = "none";
-			csvmode.style.display = "inline";
-			midashi.style.display = "none";
-		} else {
+		if (normalmode.style.display == "none") {
 			normalmode.style.display = "block";
 			csvmode.style.display = "none";
 			midashi.style.display = "block";
+		} else {
+			normalmode.style.display = "none";
+			csvmode.style.display = "inline";
+			midashi.style.display = "none";
 		}
 	});	
 });

@@ -3,7 +3,7 @@ class Index < ActiveRecord::Base
     belongs_to :user
     
     # coding: utf-8
-    def self.import(file)
+    def self.import(file, user_id)
         # spreadsheet = open_spreadsheet(file)
         # header = spreadsheet.row(1)
         # (2..spreadsheet.last_row).each do |i|
@@ -17,13 +17,15 @@ class Index < ActiveRecord::Base
         #   product.attributes = row.to_hash.slice(*updatable_attributes)
         #   # 保存する
         #   product.save!
+        
         # 以下csvファイルのみインポートする追加 20190125
         CSV.foreach(file.path, headers: true, encoding: "SJIS:UTF-8") do |row|
-          csv = Index.new
-          # puts csv
+          csv = Index.create('user_id': user_id)
           csv.attributes = row.to_hash.slice(*updatable_attributes)
+          
           csv.save!
         end
+
     end
 
   def self.open_spreadsheet(file)
@@ -40,4 +42,6 @@ class Index < ActiveRecord::Base
   def self.updatable_attributes
     ["parkname", "playground", "explanation", "judge", "remark"]
   end
+  
+  
 end

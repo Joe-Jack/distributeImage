@@ -39,16 +39,16 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     @picture.pic = params['picture']['pic']
-    @picture.index_id = params['index_id']
+    @index_id = params['index_id']
+    # binding.pry
     @picture.id = params['id']
     @user = params[:user_id]
     # @index = params[:index_id]
     # 日本語の場合、画像でエラーが出る20181009
     @indexname = @picture.index.name
-    # @picture.save
     if @picture.save
-      return redirect_to user_indices_path(@user), notice: '保存しました'
-      # binding.pry
+        return redirect_to user_indices_path(@user), notice: '保存しました'
+        # binding.pry
     else
       render :index
     end
