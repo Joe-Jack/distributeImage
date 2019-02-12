@@ -28,6 +28,7 @@ class PicturesController < ApplicationController
     gon.index = @index
     gon.user = @user
     gon.time = @time
+    
   end
 
   # GET /pictures/1/edit
@@ -38,26 +39,32 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
-    @picture.pic = params['picture']['pic']
-    @index_id = params['index_id']
+    # @picture.pic = params['picture']['pic']
+    # @index_id = params['index_id']
     # binding.pry
-    @picture.id = params['id']
+    # @picture_id = params['id']
     @user = params[:user_id]
+    # @users = Index.find_by(@user)
     # @index = params[:index_id]
     # 日本語の場合、画像でエラーが出る20181009
-    @indexname = @picture.index.name
+    # @indexname = @picture.index.name
+    # if @users.parkname.blank? == false && @user.playground.blank? == false
     if @picture.save
-        return redirect_to user_indices_path(@user), notice: '保存しました'
-        # binding.pry
+      return redirect_to :controller => 'indices', :action => 'index', :user_id => @user, notice: '保存しました' 
     else
       render :index
     end
+    # @picture.save
+    # redirect_to "https://6c75a153c08941c4ae69951ba6ec7f32.vfs.cloud9.us-east-2.amazonaws.com/users/47/indices/"
+    # redirect_to _path(@user), notice: "wahaha"
+    # render :action => "new"
+    
     # respond_to do |format|
     #   if @picture.save
-    #     # format.html { redirect_to user_indices_path(@user), notice: 'Picture was successfully created.' }
+    #     format.html { redirect_to user_indices_path(@user), notice: 'Picture was successfully created.' }
     #     format.json { render :show, status: :created, location: @picture }
     #   else
-    #     # format.html { render :new }
+    #     format.html { render :new }
     #     format.json { render json: @picture.errors, status: :unprocessable_entity }
     #   end
     # end

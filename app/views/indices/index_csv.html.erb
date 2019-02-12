@@ -1,0 +1,49 @@
+<%= notice %>
+
+<%= link_to '=>ノーマルバージョン', user_indices_path(@user), class: 'btn btn-default' %>
+  <h1>画像撮影一覧</h1>
+
+<%= select_tag 'parkname', options_for_select(@arrayPN), id: 'selectPN', :include_blank => false, class: 'btn btn-default' %>
+<%= select_tag 'playground', options_for_select(@arrayPG), id:"selectPG", :include_blank => true, class: 'btn btn-default' %>
+
+<div id="selectEX">
+  <table class="table">
+      <tr class="thread">
+        <!--<th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">公園名</th>-->
+        <!--<th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">遊具名</th>-->
+        <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4" scope="col">説明文</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">撮影</th>
+        <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5" scope="col">画像</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">判定</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">備考</th>
+      </tr>
+      <tbody>
+      
+      <% @indices_csv.each_with_index do |index, id| %>
+          <tr>
+            <!--<td data-label="公園名"><%#= index.parkname.to_s %></td>-->
+            <!--<td data-label="遊具名"><%#= index.playground.to_s %></td>-->
+            <td data-label="説明文"><%= index.explanation.to_s %></td>
+            <td data-label="撮影">
+              <%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %>
+            </td>
+            <td data-label="画像" class="dropboxed" id="dp<%=index.id%>">
+              <details>
+                <summary>個別サムネイル（解析度は落ちています。）</summary>
+                <% index.pictures.reverse_order.each_with_index do |ip, inx| %>
+                  <%= image_tag ip.pic.to_s, class:"dragedanddroped", title: inx.to_s, draggable:"true" %>
+                <% end %>
+              </details>
+            </td>
+            <td data-label="判定"><%= index.judge.to_s %></td>
+            <td data-label="備考"><%= index.remark.to_s %></td>
+          </tr>
+      <% end %>
+      </tbody>
+  </table>
+</div>
+
+<%= form_tag import_user_indices_path(@user), multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "csvファイルインポート", class: "btn btn-default"%>
+<% end %>

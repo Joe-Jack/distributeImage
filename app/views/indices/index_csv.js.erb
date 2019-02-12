@@ -1,0 +1,8 @@
+
+$("#selectPG").html("<%= escape_javascript(select_tag 'playground', options_for_select(@arrayPG), :include_blank => true) %>");
+
+
+<!--$(".selectEX").html("<%# escape_javascript(if index.playground == @playground) %>");-->
+
+
+$("#selectEX").html("<%= escape_javascript(render :partial => 'explanation'); %>");

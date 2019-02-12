@@ -20,7 +20,7 @@ $(function(){
 	    droparea[i].addEventListener("drop", function(evt){
 		    data = evt.dataTransfer.getData( "text/plain" );
 		    var obj = document.getElementById(evt.target.id);
-		    console.log(evt);
+		    //console.log(evt);
 		    id = obj.id.slice(2);
 		    
 		 
@@ -124,24 +124,68 @@ $(function(){
 	}  
 });
 
+// $(function() {
+// 	$("#switch").click('turbolinks:load', function() {
+// 		var normalmode = document.getElementById('normalmode');
+// 		var csvmode = document.getElementById('csvmode');
+// 		var midashi = document.getElementById('midashi');
+// 		if (normalmode.style.display == "none") {
+// 			normalmode.style.display = "block";
+// 			csvmode.style.display = "none";
+// 			midashi.style.display = "block";
+// 		} else {
+// 			normalmode.style.display = "none";
+// 			csvmode.style.display = "inline";
+// 			midashi.style.display = "none";
+// 		}
+// 	});	
+// });
 $(function() {
-	$("#switch").click('turbolinks:load', function() {
-		// alert("a");
-		var normalmode = document.getElementById('normalmode');
-		var csvmode = document.getElementById('csvmode');
-		var midashi = document.getElementById('midashi');
-		if (normalmode.style.display == "none") {
-			normalmode.style.display = "block";
-			csvmode.style.display = "none";
-			midashi.style.display = "block";
-		} else {
-			normalmode.style.display = "none";
-			csvmode.style.display = "inline";
-			midashi.style.display = "none";
-		}
-	});	
+ $('#selectPN').change(function() {
+       
+        var parkname = $(this).val();
+    
+        $.ajax({
+            url: "/users/" + gon.user_id + "/indices/index_csv",
+		    type: "get",
+		    contentType: "text/javascript",
+		    data: {parkname: parkname},
+		    success: function(data){
+		       //console.log(parkname);
+		    },
+		    error: function(jqXHR, textStatus, errorThrown){
+  			　alert(textStatus);
+    		  alert(errorThrown.message);
+    		  alert(jqXHR.status);
+    		  alert(jqXHR.responseText);
+    		},
+		});
+    });
 });
 
-
-	
+$(function() {
+  $('#selectPG').change(function() {
+       
+        var playground = $(this).val();
+    	var parkname = $("#selectPN").val();
+        $.ajax({
+            url: "/users/" + gon.user_id + "/indices/index_csv",
+		    type: "get",
+		    contentType: "text/javascript",
+		    data: {
+		    	playground: playground,
+		    	parkname: parkname},
+		    success: function(data){
+		    	// console.log(playground)
+		    },
+		    error: function(jqXHR, textStatus, errorThrown){
+  			　alert(textStatus);
+    		  alert(errorThrown.message);
+    		  alert(jqXHR.status);
+    		  alert(jqXHR.responseText);
+    		},
+		});
+    });  
+   
+});
 

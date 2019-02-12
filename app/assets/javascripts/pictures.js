@@ -131,6 +131,7 @@ $(function() {
 			
 		}
 	});
+	
 	$('#save-buttonn').click(function(){
 	
 		var bucketName = 'distributeimage';
@@ -169,25 +170,47 @@ $(function() {
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
 		$("#new_picture").submit();
-		// $.ajax({
-		//     url: "canvasurl",
-		//     type: "post",
-		//     data: {content: url
-		//     },
-		//     datatype: "text",
-		//     success: function(data){
-		//       alert('success');
-		//     },
-		//     error: function(jqXHR, textStatus, errorThrown){
-  //  		  alert(textStatus);
-  //  		  alert(errorThrown.message);
-  //  		  alert(jqXHR.status);
-  //  		  alert(jqXHR.responseText);
-  //  		},
-		// });
-		
 	});
 	
+	$('#save-button').click(function(){
+	
+		var bucketName = 'distributeimage';
+		var regionName = 'ap-northeast-1';
+		AWS.config.update({
+		    accessKeyId: gon.aws_access_key_id,
+		    secretAccessKey: gon.aws_secret_key,
+		});
+		var bucket = new AWS.S3({
+		    params: {
+		        Bucket: bucketName,
+		        Region: regionName,
+		    },
+		});
+		
+		var canvas = document.getElementById('canvass');
+		var url = canvas.toDataURL('image/png');
+		// console.log(url.length)
+		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
+		// console.log(urlToThumb.length)
+		var blob1 = Base64toBlob(url);
+		 bucket.putObject(
+            {
+                'ACL': 'public-read',
+                'Key': 'user'+gon.user+'_namenum'+gon.index+'_'+gon.time,
+                'ContentType': 'image/png',
+                'Body': blob1,
+            },
+            function (error, data) {
+                if (error === null) {
+                } else {
+                }
+            }
+        );
+		// var blob2 = window.URL.createObjectURL(blob1);
+		$("#picture_pic").val(""); 
+		$("#picture_pic").val(urlToThumb);
+		$("#new_picture").submit();
+	});
 });
 
 

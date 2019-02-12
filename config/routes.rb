@@ -22,9 +22,10 @@ Rails.application.routes.draw do
       get 'download' => 'indices#download', on: :member
       # importルートを追加20190125
       collection {post :import}
+      collection {get :index_csv}
       # post 'import' => 'indices#import', on: :member
-      resources :pictures, only: [:create, :new]
-      post 'dropnew' => 'pictures#dropnew'
+        resources :pictures, only: [:create, :new, :edit]
+        post 'dropnew' => 'pictures#dropnew'
   end
   
   end

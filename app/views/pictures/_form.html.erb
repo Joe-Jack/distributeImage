@@ -30,17 +30,15 @@
       <div class="field">
         <%= f.hidden_field :pic, :value => "" %>
       </div>
-      <!--<div class="field">-->
-      <!--  <%= f.hidden_field :id, id:"pictureid" %>-->
-      <!--</div>-->
+      
       <div class="field">
         <%= f.hidden_field :index_id, :value => @index, id: "indexid" %>
       </div>
-      <!--<div class="actions">-->
-      <!--  <%= f.submit '送信' %>-->
-      <!--</div>-->
+      
     <% end %>
-    <button id="save-buttonn", class="btn btn-default">保存</button>
+    <!--<button id="save-buttonn", class="btn btn-default">保存</button>-->
+    <%= link_to "保存してノーマルへ",user_indices_path(@user), id: "save-buttonn", class: 'btn btn-success' %>
+    <%= link_to "保存してCSVへ", index_csv_user_indices_path(@user), id: "save-button", class: 'btn btn-success' %>
   </body>
 
 </html>

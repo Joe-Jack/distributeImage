@@ -191,6 +191,65 @@ class IndicesController < ApplicationController
     redirect_to user_indices_path(@user), notice: "点検項目を追加"
   end
   
+  # csvインポート用のindex20190201
+  def index_csv
+    @playground = params[:playground]
+    @parkname = params[:parkname]
+    @user = params[:user_id]
+    gon.user_id = @user # jsにuser_idを渡す
+    @indices_csv = Index.includes(user: :pictures).where("user_id=?", @user.to_i)
+    
+    # parknameセレクトフォーム用の配列を準備
+    @arrayPN = Array.new
+    @indices_csv.each do |csv|
+      @arrayPN.push(csv.parkname)
+    end
+    if @arrayPN.nil? == false
+      @arrayPN = @arrayPN.uniq
+    end
+    
+    # playgroundセレクトフォーム用の配列を準備
+    if @parkname.nil? && @playground.nil?
+      @arrayPG = Array.new
+      puts "error: 公園名が指定されていません"
+    elsif @parkname.nil? == false && @playground.nil?
+      @arrayPG = Array.new
+      @indices_csv.each do |csv|
+        if csv.parkname == @parkname
+          @arrayPG.push(csv.playground)
+        end
+      end
+      @arrayPG = @arrayPG.uniq
+    elsif @parkname.nil? == false && @playground.nil? == false
+      puts "playground"
+      @arrayPG = Array.new
+      @indices_csv.each do |csv|
+        if csv.parkname == @parkname
+          @arrayPG.push(csv.playground)
+        end
+      end
+      @arrayPG = @arrayPG.uniq
+    end
+    
+    # explanation以下を表示する配列を作る
+    # @arrayIndices = Array.new
+    # @indices_csv.each do |csv|
+    #   if csv.parkname == @parkname && csv.playground == @playground
+    #     @arrayIndices.push([csv.explanation, csv.judge, csv.remark])
+    #   end
+    # end
+    
+    
+  
+    respond_to do |format|
+      format.js
+      format.html
+    end 
+  end
+  
+  
+  
+  
   
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -205,13 +264,11 @@ class IndicesController < ApplicationController
     def index_params
       params.require(:index).permit(:name, :num, :pictures_count, :user_id)
     end
-  
     
-    # user_idのみのindex_params追加　20190125
-    def index_user_params
-      params.require(:index).permit(:user_id)
-    end
-    
+    # user_idのみのindex_params追加　20190125 使われていないか確認すべき
+    # def index_user_params
+    #   params.require(:index).permit(:user_id)
+    # end
     
     def s3lists
       # @user = params[:user_id]
