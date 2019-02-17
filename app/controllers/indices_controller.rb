@@ -331,12 +331,6 @@ class IndicesController < ApplicationController
              :access_key_id => Rails.application.secrets.aws_access_key_id,
              :secret_access_key => Rails.application.secrets.aws_secret_key
              )
-      # bucket.objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@index}", :max_key => 1).each do |object|
-      # bucket.get_object(:bucket => myBacket, :key => "").body.read
-      # pic_base = Base64.strict_encode64(b.body.read)
-      # pic = "data:image/png;base64,"+pic_base
-      # bucket.list_objects(:bucket => myBacket, :prefix => "user#{@user}_namenum#{@index}", :max_keys => 1).each do |b|
-        
-      # end
+      
     end
 end
