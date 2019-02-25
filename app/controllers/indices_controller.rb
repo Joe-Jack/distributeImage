@@ -193,10 +193,14 @@ class IndicesController < ApplicationController
   
   # csvインポート用のindex20190201
   def index_csv
+    @index_id = params[:index_id]
     @playground = params[:playground]
     @parkname = params[:parkname]
     @user = params[:user_id]
+    @parknameFromPic = params[:parknameFromPic]
+    @playgroundFromPic = params[:playgroundFromPic]
     gon.user_id = @user # jsにuser_idを渡す
+    gon.index_id = @index_id
     @indices_csv = Index.includes(user: :pictures).where("user_id=?", @user.to_i)
     
     # parknameセレクトフォーム用の配列を準備
@@ -231,16 +235,6 @@ class IndicesController < ApplicationController
       @arrayPG = @arrayPG.uniq
     end
     
-    # explanation以下を表示する配列を作る
-    # @arrayIndices = Array.new
-    # @indices_csv.each do |csv|
-    #   if csv.parkname == @parkname && csv.playground == @playground
-    #     @arrayIndices.push([csv.explanation, csv.judge, csv.remark])
-    #   end
-    # end
-    
-    
-  
     respond_to do |format|
       format.js
       format.html

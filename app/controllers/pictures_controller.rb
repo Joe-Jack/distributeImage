@@ -22,12 +22,17 @@ class PicturesController < ApplicationController
     @index = params[:index_id]
     @data = params[:content]
     @user = params[:user_id]
+    @parkname = params[:parkname]
+    @playground = params[:playground]
+    # binding.pry
     @time = Time.now.strftime("%Y-%m-%d_%H:%M:%S")
-    gon.aws_access_key_id = Rails.application.secrets.aws_access_key_id
-    gon.aws_secret_key = Rails.application.secrets.aws_secret_key
-    gon.index = @index
-    gon.user = @user
-    gon.time = @time
+    gon.index_id = @index
+    gon.user_id = @user
+    
+    respond_to do |format|
+      format.js
+      format.html
+    end
     
   end
 
@@ -38,10 +43,11 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
+    @parkname = params[:parkname]
+    @playground = params[:playground]
     @picture = Picture.new(picture_params)
     # @picture.pic = params['picture']['pic']
     # @index_id = params['index_id']
-    # binding.pry
     # @picture_id = params['id']
     @user = params[:user_id]
     # @users = Index.find_by(@user)
@@ -49,6 +55,7 @@ class PicturesController < ApplicationController
     # 日本語の場合、画像でエラーが出る20181009
     # @indexname = @picture.index.name
     # if @users.parkname.blank? == false && @user.playground.blank? == false
+    # binding.pry
     if @picture.save
       return redirect_to :controller => 'indices', :action => 'index', :user_id => @user, notice: '保存しました' 
     else
@@ -202,6 +209,28 @@ class PicturesController < ApplicationController
     statement.execute(@content, @index, @time, @time)
     render nothing: true
   end
+  
+  def uploadtoaws
+    @time = Time.now.strftime("%Y-%m-%d_%H:%M:%S")
+    @content = params[:content]
+    @user_id = params[:user_id]
+    @index_id = params[:index_id]
+    
+    s3 = Aws::S3::Client.new(
+      :region => 'ap-northeast-1',
+      :access_key_id => Rails.application.secrets.aws_access_key_id,
+      :secret_access_key => Rails.application.secrets.aws_secret_key
+      )
+    myBacket = 'distributeimage'
+    s3.put_object(
+        :bucket => myBacket,
+        :key    => 'user' + @user_id + '_namenum' + @index_id + '_' + @time + ".png",
+        :content_type => 'image/png',
+        :body => @content
+        )
+  render nothing: true
+  end
+
   
   private
     # Use callbacks to share common setup or constraints between actions.

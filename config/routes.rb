@@ -25,7 +25,8 @@ Rails.application.routes.draw do
       collection {get :index_csv}
       # post 'import' => 'indices#import', on: :member
         resources :pictures, only: [:create, :new, :edit]
-        post 'dropnew' => 'pictures#dropnew'
+          post 'dropnew' => 'pictures#dropnew'
+          post 'uploadtoaws' => 'pictures#uploadtoaws'
   end
   
   end

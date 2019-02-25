@@ -141,51 +141,57 @@ $(function(){
 // 	});	
 // });
 $(function() {
- $('#selectPN').change(function() {
-       
-        var parkname = $(this).val();
+  $('#selectPN').change(function() {
+      fromSelector.style.display = "block";
+      fromPic.style.display = "none";
+      
+      var parkname = $(this).val();
     
-        $.ajax({
-            url: "/users/" + gon.user_id + "/indices/index_csv",
-		    type: "get",
-		    contentType: "text/javascript",
-		    data: {parkname: parkname},
-		    success: function(data){
-		       //console.log(parkname);
-		    },
-		    error: function(jqXHR, textStatus, errorThrown){
-  			　alert(textStatus);
-    		  alert(errorThrown.message);
-    		  alert(jqXHR.status);
-    		  alert(jqXHR.responseText);
-    		},
-		});
-    });
+      $.ajax({
+          url: "/users/" + gon.user_id + "/indices/index_csv",
+	    type: "get",
+	    contentType: "text/javascript",
+	    data: {parkname: parkname},
+	    success: function(data){
+	       //console.log(parkname);
+	    },
+	    error: function(jqXHR, textStatus, errorThrown){
+  	    alert(textStatus);
+    	    alert(errorThrown.message);
+    	    alert(jqXHR.status);
+    	    alert(jqXHR.responseText);
+    	    },
+	});
+  });
 });
 
 $(function() {
   $('#selectPG').change(function() {
-       
-        var playground = $(this).val();
+      fromSelector.style.display = "block";
+      fromPic.style.display = "none";
+      
+      var playground = $(this).val();
     	var parkname = $("#selectPN").val();
-        $.ajax({
-            url: "/users/" + gon.user_id + "/indices/index_csv",
-		    type: "get",
-		    contentType: "text/javascript",
-		    data: {
-		    	playground: playground,
-		    	parkname: parkname},
-		    success: function(data){
-		    	// console.log(playground)
-		    },
-		    error: function(jqXHR, textStatus, errorThrown){
-  			　alert(textStatus);
-    		  alert(errorThrown.message);
-    		  alert(jqXHR.status);
-    		  alert(jqXHR.responseText);
-    		},
-		});
-    });  
+      $.ajax({
+          url: "/users/" + gon.user_id + "/indices/index_csv",
+	    type: "get",
+	    contentType: "text/javascript",
+	    data: {
+	    	playground: playground,
+	    	parkname: parkname},
+	    success: function(data){
+	    	// console.log(playground)
+	    },
+	    error: function(jqXHR, textStatus, errorThrown){
+  	    alert(textStatus);
+    	    alert(errorThrown.message);
+    	    alert(jqXHR.status);
+    	    alert(jqXHR.responseText);
+    	},
+	});
+	
+ });  
    
 });
+
 

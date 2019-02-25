@@ -133,83 +133,119 @@ $(function() {
 	});
 	
 	$('#save-buttonn').click(function(){
-	
-		var bucketName = 'distributeimage';
-		var regionName = 'ap-northeast-1';
-		AWS.config.update({
-		    accessKeyId: gon.aws_access_key_id,
-		    secretAccessKey: gon.aws_secret_key,
-		});
-		var bucket = new AWS.S3({
-		    params: {
-		        Bucket: bucketName,
-		        Region: regionName,
-		    },
-		});
-		
 		var canvas = document.getElementById('canvass');
-		var url = canvas.toDataURL('image/png');
-		// console.log(url.length)
+		var content = canvas.toDataURL('image/png');
+		var blob = Base64toBlob(content);
+		var fd = new FormData();
+		fd.append('content', blob);
+		$.ajax({
+		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/uploadtoaws",
+		    type: "post",
+		    data: fd,
+	    	processData: false,
+            contentType: false,
+		    datatype: "text",
+		    success: function(data){
+		      //alert('success');
+		    },
+		    error: function(jqXHR, textStatus, errorThrown){
+  			　alert(textStatus);
+    		    alert(errorThrown.message);
+    		    alert(jqXHR.status);
+    		    alert(jqXHR.responseText);
+    		},
+		});
+	
+		// var bucketName = 'distributeimage';
+		// var regionName = 'ap-northeast-1';
+		// AWS.config.update({
+		//     accessKeyId: gon.aws_access_key_id,
+		//     secretAccessKey: gon.aws_secret_key,
+		// });
+		// var bucket = new AWS.S3({
+		//     params: {
+		//         Bucket: bucketName,
+		//         Region: regionName,
+		//     },
+		// });
+		
+		
+		 //bucket.putObject(
+   //         {
+   //             'ACL': 'public-read',
+   //             'Key': 'user'+gon.user+'_namenum'+gon.index+'_'+gon.time,
+   //             'ContentType': 'image/png',
+   //             'Body': blob1,
+   //         },
+   //         function (error, data) {
+   //             if (error === null) {
+   //             } else {
+   //             }
+   //         }
+   //   	);
+	
 		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
-		// console.log(urlToThumb.length)
-		var blob1 = Base64toBlob(url);
-		 bucket.putObject(
-            {
-                'ACL': 'public-read',
-                'Key': 'user'+gon.user+'_namenum'+gon.index+'_'+gon.time,
-                'ContentType': 'image/png',
-                'Body': blob1,
-            },
-            function (error, data) {
-                if (error === null) {
-                } else {
-                }
-            }
-        );
-		// var blob2 = window.URL.createObjectURL(blob1);
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
 		$("#new_picture").submit();
 	});
 	
 	$('#save-button').click(function(){
-	
-		var bucketName = 'distributeimage';
-		var regionName = 'ap-northeast-1';
-		AWS.config.update({
-		    accessKeyId: gon.aws_access_key_id,
-		    secretAccessKey: gon.aws_secret_key,
-		});
-		var bucket = new AWS.S3({
-		    params: {
-		        Bucket: bucketName,
-		        Region: regionName,
-		    },
-		});
 		
 		var canvas = document.getElementById('canvass');
-		var url = canvas.toDataURL('image/png');
-		// console.log(url.length)
+		var content = canvas.toDataURL('image/png');
+		var blob = Base64toBlob(content);
+		var fd = new FormData();
+		fd.append('content', blob);
+		
+		$.ajax({
+		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/uploadtoaws",
+		    type: "post",
+		    data: fd,
+		    processData: false,
+                contentType: false,
+		    datatype: "text",
+		    success: function(data){
+		      //alert('success');
+		    },
+		    error: function(jqXHR, textStatus, errorThrown){
+  			　  alert(textStatus);
+	    		    alert(errorThrown.message);
+	    		    alert(jqXHR.status);
+	    		    alert(jqXHR.responseText);
+    		},
+		});
+		
 		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
-		// console.log(urlToThumb.length)
-		var blob1 = Base64toBlob(url);
-		 bucket.putObject(
-            {
-                'ACL': 'public-read',
-                'Key': 'user'+gon.user+'_namenum'+gon.index+'_'+gon.time,
-                'ContentType': 'image/png',
-                'Body': blob1,
-            },
-            function (error, data) {
-                if (error === null) {
-                } else {
-                }
-            }
-        );
-		// var blob2 = window.URL.createObjectURL(blob1);
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
 		$("#new_picture").submit();
+		
+		// ここから_explanationから受けたアンカーをコントローラー側に渡す
+		// playground_hash = decodeURIComponent(location.hash);
+		// hash_split = playground_hash.split("/");
+		// var parkname = hash_split[0];
+		// var playground = hash_split[1];
+		// $.ajax({
+		//     url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/pictures/new",
+		//     type: "get",
+		//     data: {
+		//     	   parkname: parkname,
+		//     	   playground: playground,
+		//     	  },
+		//     processData: false,
+  //          contentType: false,
+  //          datatype: "text",
+		//     success: function(data){
+		//       //alert(parkname + playground);
+		//     },
+		//     error: function(jqXHR, textStatus, errorThrown){
+  //			　  alert(textStatus);
+  //  		    alert(errorThrown.message);
+  //  		    alert(jqXHR.status);
+  //  		    alert(jqXHR.responseText);
+  //  		    },
+		// });	
 	});
 });
 

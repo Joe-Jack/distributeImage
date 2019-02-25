@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/ec2-user/environment/distributeImage/app/views/indices/_explanation.html.erb @ line 18 ActionView::CompiledTemplates#_app_views_indices__explanation_html_erb__1965829351865375113_69936613644980:
+
+    [1;34m13[0m:       <% @indices_csv.each_with_index do |index, id| %>
+    [1;34m14[0m:         <% if index.playground == @playground && index.parkname == @parkname %>
+    [1;34m15[0m:           <tr>
+    [1;34m16[0m:             <td data-label="説明文"><%= index.explanation.to_s %></td>
+    [1;34m17[0m:             <td data-label="撮影">
+ => [1;34m18[0m:               <% binding.pry %>
+    [1;34m19[0m:               <%= link_to '撮影', new_user_index_picture_path(@user, index.id),data: {"turbolinks" => false} %>
+    [1;34m20[0m:             </td>
+    [1;34m21[0m:             <td data-label="画像" class="dropboxed" id="dp<%=index.id%>">
+    [1;34m22[0m:               <details>
+    [1;34m23[0m:                 <summary>個別サムネイル（解析度は落ちています。）</summary>
+
