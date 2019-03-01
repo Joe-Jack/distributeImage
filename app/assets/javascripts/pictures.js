@@ -71,7 +71,7 @@ $(function() {
 			// 撮影した画像が横長ならそのまま、縦長なら９０度回転させて表示
 			if (width > height) {
 				ctxs.drawImage(video, 0, 0, 640, 360);
-				// ここでtakepicのwidthサイ��を変更してstartボタンがcanvass直下になるようにしたい
+				// ここでtakepicのwidthサイ���を変更してstartボタンがcanvass直下になるようにしたい
 			} else {
 				// 回転前に左上重心移動(height640x分)
 				ctx.translate(640, 0);
@@ -155,7 +155,8 @@ $(function() {
     		    alert(jqXHR.responseText);
     		},
 		});
-	
+		//jsでシークレットキーが露出する大失敗20190226 
+		// ⏬
 		// var bucketName = 'distributeimage';
 		// var regionName = 'ap-northeast-1';
 		// AWS.config.update({
@@ -168,8 +169,6 @@ $(function() {
 		//         Region: regionName,
 		//     },
 		// });
-		
-		
 		 //bucket.putObject(
    //         {
    //             'ACL': 'public-read',
@@ -209,7 +208,7 @@ $(function() {
 		      //alert('success');
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
-  			　  alert(textStatus);
+  			　  	alert(textStatus);
 	    		    alert(errorThrown.message);
 	    		    alert(jqXHR.status);
 	    		    alert(jqXHR.responseText);
@@ -221,31 +220,6 @@ $(function() {
 		$("#picture_pic").val(urlToThumb);
 		$("#new_picture").submit();
 		
-		// ここから_explanationから受けたアンカーをコントローラー側に渡す
-		// playground_hash = decodeURIComponent(location.hash);
-		// hash_split = playground_hash.split("/");
-		// var parkname = hash_split[0];
-		// var playground = hash_split[1];
-		// $.ajax({
-		//     url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/pictures/new",
-		//     type: "get",
-		//     data: {
-		//     	   parkname: parkname,
-		//     	   playground: playground,
-		//     	  },
-		//     processData: false,
-  //          contentType: false,
-  //          datatype: "text",
-		//     success: function(data){
-		//       //alert(parkname + playground);
-		//     },
-		//     error: function(jqXHR, textStatus, errorThrown){
-  //			　  alert(textStatus);
-  //  		    alert(errorThrown.message);
-  //  		    alert(jqXHR.status);
-  //  		    alert(jqXHR.responseText);
-  //  		    },
-		// });	
 	});
 });
 
@@ -261,7 +235,7 @@ function Base64toBlob(base64)
 	var data = atob(tmp[1]);
 	// tmp[0]の文字列（data:image/png;base64）からコンテンツタイプ（image/png）部分を取得
 	var mime = tmp[0].split(':')[1].split(';')[0];
-    //  1文字ごとにUTF-16コードを表す 0から65535 の整数���取得
+    //  1文字ごとにUTF-16コードを表�� 0から65535 の整数���取得
 	var buf = new Uint8Array(data.length);
 	for (var i = 0; i < data.length; i++) {
         buf[i] = data.charCodeAt(i);

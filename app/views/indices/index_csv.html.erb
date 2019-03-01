@@ -35,7 +35,10 @@
                 <% end %>
               </details>
             </td>
-            <td data-label="判定"><%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s , class: 'btn btn-default' %></td>
+          
+            <td data-label="判定">
+              <!--<%# form_for @indices_csv %>-->
+              <%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s , class: 'btn btn-default' %></td>
             <td data-label="備考"><%= index.remark.to_s %></td>
           </tr>
         <% end %>

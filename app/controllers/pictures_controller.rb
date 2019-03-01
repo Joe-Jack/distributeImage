@@ -22,9 +22,11 @@ class PicturesController < ApplicationController
     @index = params[:index_id]
     @data = params[:content]
     @user = params[:user_id]
-    @parkname = params[:parkname]
+    @parkname = params[:parkname] 
     @playground = params[:playground]
-    # binding.pry
+    @parknameFromPic = params[:parknameFromPic]
+    @playgroundFromPic = params[:playgroundFromPic]
+
     @time = Time.now.strftime("%Y-%m-%d_%H:%M:%S")
     gon.index_id = @index
     gon.user_id = @user
