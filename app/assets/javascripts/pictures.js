@@ -197,15 +197,29 @@ $(function() {
 		var fd = new FormData();
 		fd.append('content', blob);
 		
+		// 以下画像名前用の文字列取得 from location.search
+		locationSearch = decodeURIComponent(location.search);
+		searchSplit = locationSearch.split("&");
+		searchId = searchSplit[0].split("=");
+		searchParkName = searchSplit[1].split("=");
+		searchPlayGround = searchSplit[2].split("=");
+		id = searchId[1];
+		parkname = searchParkName[1];
+		playground = searchPlayGround[1];
+		fd.append('id', id);
+		fd.append('parkname', parkname);
+		fd.append('playground', playground);
+	
+		
 		$.ajax({
-		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/uploadtoaws",
+		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/uploadToAwsCsv",
 		    type: "post",
 		    data: fd,
 		    processData: false,
                 contentType: false,
 		    datatype: "text",
 		    success: function(data){
-		      //alert('success');
+		      alert('success');
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
   			　  	alert(textStatus);

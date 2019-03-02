@@ -53,9 +53,10 @@
        
         <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4" scope="col">説明文</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">撮影</th>
-        <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5" scope="col">画像</th>
+        <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4" scope="col">画像</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">判定</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">備考</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">枚数</th>
       </tr>
       <tbody>
       
@@ -64,7 +65,7 @@
           <tr>
             <td data-label="説明文"><%= index.explanation.to_s %></td>
             <td data-label="撮影">
-              <%= link_to '撮影', new_user_index_picture_path(@user, index.id, params: { playground: @playground, parkname: @parkname }), data: {"turbolinks" => false} %>
+              <%= link_to '撮影', new_user_index_picture_path(@user, index.id, params: { id: id, playground: @playgroundFromPic, parkname: @parknameFromPic }), data: {"turbolinks" => false} %>
             </td>
             <td data-label="画像" class="dropboxed" id="dp<%=index.id%>">
               <details>
@@ -76,6 +77,13 @@
             </td>
             <td data-label="判定"><%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s , class: 'btn btn-default' %></td>
             <td data-label="備考"><%= index.remark.to_s %></td>
+            <td data-label="枚数">
+              <% if index.pictures.count != 0 %>
+                <%= index.pictures.count %>
+              <% else %>
+                <%= "0" %>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       <% end %>
@@ -90,36 +98,3 @@
 <% end %>
 
 
-<!--</body>-->
-<!--<script type="text/javascript">-->
-<!--  function init() {-->
-<!--    if (location.hash) {-->
-<!--      	playground_hash = decodeURIComponent(location.hash);-->
-<!--    		hash_split = playground_hash.split("/");-->
-<!--    		var parkname = hash_split[0];-->
-<!--    		var playground = hash_split[1];-->
-    		
-<!--    		$.ajax({-->
-<!--  		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/index_csv",-->
-<!--  		    type: "get",-->
-<!--  		    data: {-->
-<!--  		         parkname: parkname,-->
-<!--  		    	   playground: playground,-->
-<!--  		    	  },-->
-<!--  		    processData: false,-->
-<!--          contentType: false,-->
-<!--          datatype: "text",-->
-<!--  		    success: function(data){-->
-  		      //alert(parkname + playground);
-<!--  		    },-->
-<!--  		    error: function(jqXHR, textStatus, errorThrown){-->
-<!--  			　  alert(textStatus);-->
-<!--    		    alert(errorThrown.message);-->
-<!--    		    alert(jqXHR.status);-->
-<!--    		    alert(jqXHR.responseText);-->
-<!--    		    },-->
-<!--		  });	  -->
-<!--    } else { -->
-<!--      ;-->
-<!--  }-->
-<!--</script>-->

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
         resources :pictures, only: [:create, :new, :edit]
           post 'dropnew' => 'pictures#dropnew'
           post 'uploadtoaws' => 'pictures#uploadtoaws'
+          post 'uploadToAwsCsv' => 'pictures#uploadToAwsCsv'
   end
   
   end

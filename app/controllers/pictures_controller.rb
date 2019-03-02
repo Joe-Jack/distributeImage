@@ -233,6 +233,30 @@ class PicturesController < ApplicationController
   render nothing: true
   end
 
+  def uploadToAwsCsv
+    @time = Time.now.strftime("%Y-%m-%d_%H:%M:%S")
+    @content = params[:content]
+    @parkname = params[:parkname]
+    @playground = params[:playground]
+    @id = params[:id]
+    @user_id = params[:user_id]
+    @index_id = params[:index_id]
+    
+    
+    s3 = Aws::S3::Client.new(
+      :region => 'ap-northeast-1',
+      :access_key_id => Rails.application.secrets.aws_access_key_id,
+      :secret_access_key => Rails.application.secrets.aws_secret_key
+      )
+    myBacket = 'distributeimage'
+    s3.put_object(
+        :bucket => myBacket,
+        :key    => @parkname + "_" + @playground + "_" + @id + "_" + @time + ".png",
+        :content_type => 'image/png',
+        :body => @content
+        )
+  render nothing: true
+  end
   
   private
     # Use callbacks to share common setup or constraints between actions.

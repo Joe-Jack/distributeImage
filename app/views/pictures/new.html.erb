@@ -5,8 +5,12 @@
 
 <%= link_to "保存してノーマルへ",user_indices_path(@user), id: "save-buttonn", class: 'btn btn-success' %>
 
-<%= link_to "保存してCSVへ", index_csv_user_indices_path(@user, params: { parknameFromPic: @parkname, playgroundFromPic: @playground }), id: "save-button", class: 'btn btn-success' %>
-
+<% if @parknameFromPic.nil? %>
+      <%= link_to "保存してCSVへ", index_csv_user_indices_path(@user, params: { parknameFromPic: @parkname, playgroundFromPic: @playground }), id: "save-button", class: 'btn btn-success' %>
+<% else %>
+      <%= link_to "保存してCSVへ", index_csv_user_indices_path(@user, params: { parknameFromPic: @parknameFromPic, playgroundFromPic: @playgroundFromPic }), id: "save-button", class: 'btn btn-success' %>
+<% end %>
+      
 <%= link_to 'ノーマル版に戻る', user_indices_path(@user), data: {"turbolinks" => false}, class: 'btn btn-info' %>
 <%= link_to 'CSV版に戻る', index_csv_user_indices_path(@user), data: {"turbolinks" => false}, class: 'btn btn-info' %>
 
