@@ -15,15 +15,29 @@
     <%= f.label "名前・項目", class:"name" %><br>
     <%= f.text_field :name, class:"form-control"%>
   </div>
-  <!--<div class="field">-->
-  <!--  <%= f.label :num %><br>-->
-  <!--  <%= f.number_field :num %>-->
-  <!--</div>-->
-  <!--<div class="field">-->
-  <!--  <%= f.label :pictures_count %><br>-->
-  <!--  <%= f.number_field :pictures_count %>-->
-  <!--</div>-->
+  <div class="field">
+    <%= f.label"判定の変更", class:"name" %><br>
+    <%#= f.select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => @judge  %>
+    <%= f.select :judge, ["A","B","C","D"], :prompt => @judge, class:'selectpicker' %>
+  </div>
+  <div class="field">
+    <%= f.label '備考の変更', class:'name' %><br>
+    <%= f.text_field :remark, class:'form-control', size:'30px' %>
+  </div>
   <div class="actions">
     <%= f.submit "編集する", class:"btn btn-default" %>
   </div>
 <% end %>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<script type="text/javascript">
+    $('.selectpicker').selectpicker({
+      });
+</script>
+
+

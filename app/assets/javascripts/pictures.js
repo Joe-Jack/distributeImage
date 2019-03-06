@@ -198,17 +198,22 @@ $(function() {
 		fd.append('content', blob);
 		
 		// 以下画像名前用の文字列取得 from location.search
-		locationSearch = decodeURIComponent(location.search);
-		searchSplit = locationSearch.split("&");
-		searchId = searchSplit[0].split("=");
-		searchParkName = searchSplit[1].split("=");
-		searchPlayGround = searchSplit[2].split("=");
-		id = searchId[1];
-		parkname = searchParkName[1];
-		playground = searchPlayGround[1];
-		fd.append('id', id);
-		fd.append('parkname', parkname);
-		fd.append('playground', playground);
+		emptyId = decodeURIComponent(location.search);
+		if (emptyId === "?id=0") {
+			alert("CSVの形式（公園名・遊具名）が違います。");
+			} else {
+			locationSearch = decodeURIComponent(location.search);
+			searchSplit = locationSearch.split("&");
+			searchId = searchSplit[0].split("=");
+			searchParkName = searchSplit[1].split("=");
+			searchPlayGround = searchSplit[2].split("=");
+			id = searchId[1];
+			parkname = searchParkName[1];
+			playground = searchPlayGround[1];
+			fd.append('id', id);
+			fd.append('parkname', parkname);
+			fd.append('playground', playground);
+			};
 	
 		
 		$.ajax({
@@ -219,7 +224,7 @@ $(function() {
                 contentType: false,
 		    datatype: "text",
 		    success: function(data){
-		      alert('success');
+		      // alert('success');
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
   			　  	alert(textStatus);

@@ -126,8 +126,8 @@ class IndicesController < ApplicationController
     @user = params[:user_id]
     @index_id = params[:id]
     @index = Index.find_by("id": @index_id)
-    
-    # binding.pry
+    @judge = @index.judge
+    #binding.pry
   end
 
   # POST /indices
@@ -256,7 +256,7 @@ class IndicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def index_params
-      params.require(:index).permit(:name, :num, :pictures_count, :user_id)
+      params.require(:index).permit(:name, :num, :pictures_count, :user_id, :judge, :remark)
     end
     
     # user_idのみのindex_params追加　20190125 使われていないか確認すべき

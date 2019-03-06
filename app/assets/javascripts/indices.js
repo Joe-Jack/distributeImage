@@ -171,7 +171,7 @@ $(function() {
       fromPic.style.display = "none";
       
       var playground = $(this).val();
-    	var parkname = $("#selectPN").val();
+      var parkname = $("#selectPN").val();
       $.ajax({
           url: "/users/" + gon.user_id + "/indices/index_csv",
 	    type: "get",
@@ -194,4 +194,21 @@ $(function() {
    
 });
 
+$(function() {
+	$('#edit_judge').change(function() {
+		alert("here")
+		var a = $(this).val(); 
+		console.log(a);
+		$("#edit_submit").submit();
+	});
+});
+
+$(function() {
+	$('#linkNoWhere').change(function() {
+		alert("here")
+		var a = $(this).val(); 
+		console.log(a);
+	
+	});
+});
 

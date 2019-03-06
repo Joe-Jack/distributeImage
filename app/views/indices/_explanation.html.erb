@@ -25,8 +25,17 @@
                 <% end %>
               </details>
             </td>
-            <td data-label="判定"><%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s , class: 'btn btn-default' %></td>
-            <td data-label="備考"><%= index.remark.to_s %></td>
+            <!--<td data-label="判定"><%#= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s  %>-->
+            <%# csv = Index.find_by("id": index.id) %>
+            <%#= form_for(csv, :url => user_index_path(@user, index.id)) do |f| %>
+            <!--<td data-label="判定"><%#= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s, id:"edit_judge" %></td>-->
+            <!--<div class="actions", style="display:none">-->
+                <%#= f.submit id="edit_submit" %>
+              <!--</div>-->
+            <%# end %>
+            <td data-label="判定"><%= link_to '['+index.judge.to_s+']', edit_user_index_path(@user, index.id) %>
+            <td data-label="備考"><%= link_to '['+index.remark.to_s+']', edit_user_index_path(@user, index.id) %>  
+            <!--<td data-label="備考"><%= text_field :remark, :placeholder => index.remark.to_s, class: 'btn btn-default' %></td>-->
             <td data-label="枚数">
               <% if index.pictures.count != 0 %>
                 <%= index.pictures.count %>
@@ -35,8 +44,9 @@
               <% end %>
             </td>
           </tr>
+        <%#= link_to 'button', edit_user_index_path(@user, index.id), id:"linkNoWhere" %>
         <% end %>
       <% end %>
       </tbody>
   </table>
-  
+

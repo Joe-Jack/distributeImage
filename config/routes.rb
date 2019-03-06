@@ -23,7 +23,7 @@ Rails.application.routes.draw do
       # importルートを追加20190125
       collection {post :import}
       collection {get :index_csv}
-      # post 'import' => 'indices#import', on: :member
+      # patch 'index_csv', on: :update
         resources :pictures, only: [:create, :new, :edit]
           post 'dropnew' => 'pictures#dropnew'
           post 'uploadtoaws' => 'pictures#uploadtoaws'

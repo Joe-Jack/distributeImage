@@ -4,7 +4,7 @@
 <%= link_to '=>ノーマルバージョン', user_indices_path(@user), class: 'btn btn-default' %>
   <h1>画像撮影一覧</h1>
 
-<%= select_tag 'parkname', options_for_select(@arrayPN), id: 'selectPN', :include_blank => false, class: 'btn btn-default' %>
+<%= select_tag 'parkname', options_for_select(@arrayPN), id: 'selectPN', :include_blank => true, class: 'btn btn-default' %>
 <%= select_tag 'playground', options_for_select(@arrayPG), id:"selectPG", :include_blank => true, class: 'btn btn-default' %>
 
 <div id="fromSelector", style="display: none">
@@ -19,9 +19,9 @@
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1" scope="col">備考</th>
       </tr>
       <tbody>
-      
       <% @indices_csv.each_with_index do |index, id| %>
-        <% if index.playground == @playground && index.parkname == @parkname %>
+      <%# playground,parknameはセレクターからおくられたもの %>
+        <% if index.playground == @playground && index.parkname == @parkname %>  
           <tr>
             <td data-label="説明文"><%= index.explanation.to_s %></td>
             <td data-label="撮影">
@@ -35,14 +35,15 @@
                 <% end %>
               </details>
             </td>
-          
-            <td data-label="判定">
-              <!--<%# form_for @indices_csv %>-->
-              <%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s , class: 'btn btn-default' %></td>
-            <td data-label="備考"><%= index.remark.to_s %></td>
+            <% csv = Index.find_by("id": index.id) %>
+            <%= form_for(csv, :url => user_index_path(@user, index.id)) do |f| %>
+              <td data-label="判定"><%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s, id:"edit_judge" %></td>
+              <td data-label="備考"><%= text_field :remark, :placeholder => index.remark.to_s, class: 'btn btn-default' %></td>
+            <% end %>
           </tr>
         <% end %>
       <% end %>
+      
       </tbody>
   </table>
 </div>
@@ -75,8 +76,11 @@
                 <% end %>
               </details>
             </td>
-            <td data-label="判定"><%= select_tag 'judge', options_for_select(["A","B","C","D"]), :prompt => index.judge.to_s , class: 'btn btn-default' %></td>
-            <td data-label="備考"><%= index.remark.to_s %></td>
+            <% csv = Index.find_by("id": index.id) %>
+            <%= form_for(csv, :url => user_index_path(@user, id)) do |f| %>
+              <td data-label="判定"><%= f.select :judge, ["A","B","C","D"], :prompt => index.judge.to_s %></td>
+              <td data-label="備考"><%= f.text_field :remark, :placeholder => index.remark.to_s, class: 'btn btn-default' %></td>
+            <% end %>
             <td data-label="枚数">
               <% if index.pictures.count != 0 %>
                 <%= index.pictures.count %>
@@ -97,4 +101,20 @@
   <%= submit_tag "csvファイルインポート", class: "btn btn-default"%>
 <% end %>
 
+<%# 以下selectpickerの導入に必要なコード（プルダウンが動かないのでコメントアウト) %>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>-->
 
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function(){-->
+<!--    $('.selectpicker').selectpicker({-->
+<!--      "A",-->
+<!--      "B",-->
+<!--      "C",-->
+<!--      "D",-->
+<!--    });-->
+<!--}-->
+<!--</script>-->
