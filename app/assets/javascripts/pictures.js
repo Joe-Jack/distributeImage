@@ -71,7 +71,7 @@ $(function() {
 			// 撮影した画像が横長ならそのまま、縦長なら９０度回転させて表示
 			if (width > height) {
 				ctxs.drawImage(video, 0, 0, 640, 360);
-				// ここでtakepicのwidthサイ���を変更してstartボタンがcanvass直下になるようにしたい
+				// ここでtakepicのwidthサイ����を変更してstartボタンがcanvass直下になるようにしたい
 			} else {
 				// 回転前に左上重心移動(height640x分)
 				ctx.translate(640, 0);
@@ -138,6 +138,12 @@ $(function() {
 		var blob = Base64toBlob(content);
 		var fd = new FormData();
 		fd.append('content', blob);
+		
+		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
+		$("#picture_pic").val(""); 
+		$("#picture_pic").val(urlToThumb);
+		$("#new_picture").submit();
+		
 		$.ajax({
 		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/uploadtoaws",
 		    type: "post",
@@ -149,7 +155,10 @@ $(function() {
 		      //alert('success');
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
-  			　alert(textStatus);
+		    	console.log(jqXHR);
+		    	console.log(textStatus);
+		    	console.log(errorThrown);
+  			　　alert(textStatus);
     		    alert(errorThrown.message);
     		    alert(jqXHR.status);
     		    alert(jqXHR.responseText);
@@ -183,10 +192,7 @@ $(function() {
    //         }
    //   	);
 	
-		var urlToThumb = canvas.toDataURL('image/jpeg', 0.1);
-		$("#picture_pic").val(""); 
-		$("#picture_pic").val(urlToThumb);
-		$("#new_picture").submit();
+		
 	});
 	
 	$('#save-button').click(function(){
