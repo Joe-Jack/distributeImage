@@ -151,8 +151,8 @@ $(function() {
 	    	processData: false,
             contentType: false,
 		    datatype: "text",
-		    success: function(data){
-		      //alert('success');
+		    success: function(data,jqXHR){
+		      console.log(jqXHR);
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
 		    	console.log(jqXHR);

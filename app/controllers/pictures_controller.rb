@@ -226,7 +226,7 @@ class PicturesController < ApplicationController
     myBacket = 'distributeimage'
     s3.put_object(
         :bucket => myBacket,
-        :key    => 'user' + @user_id + '_namenum' + @index_id + '_' + @time + ".png",
+        :key    => 'user' + @user_id + '_namenum' + @index_id + '_' + @time,
         :content_type => 'image/png',
         :body => @content
         )
@@ -251,7 +251,7 @@ class PicturesController < ApplicationController
     myBacket = 'distributeimage'
     s3.put_object(
         :bucket => myBacket,
-        :key    => @parkname + "_" + @playground + "_" + @id + "_" + @time + ".png",
+        :key    => @parkname + "_" + @playground + "_" + @id + "_" + @time,
         :content_type => 'image/png',
         :body => @content
         )
