@@ -3,8 +3,8 @@
 <%= render 'form' %>
 
 
-<%= link_to "保存してノーマルへ",user_indices_path(@user), id: "save-buttonn", class: 'btn btn-success' %>
-
+<%# link_to "保存してノーマルへ",user_indices_path(@user), id: "save-buttonn", class: 'btn btn-success' %>
+<input id="save-buttonn" type="button">
 <% if @parknameFromPic.nil? %>
       <%= link_to "保存してCSVへ", index_csv_user_indices_path(@user, params: { parknameFromPic: @parkname, playgroundFromPic: @playground }), id: "save-button", class: 'btn btn-success' %>
 <% else %>

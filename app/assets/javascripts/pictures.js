@@ -71,7 +71,7 @@ $(function() {
 			// 撮影した画像が横長ならそのまま、縦長なら９０度回転させて表示
 			if (width > height) {
 				ctxs.drawImage(video, 0, 0, 640, 360);
-				// ここでtakepicのwidthサイ����を変更してstartボタンがcanvass直下になるようにしたい
+				// ここでtakepicのwidthサイ������を変更してstartボタンがcanvass直下になるようにしたい
 			} else {
 				// 回転前に左上重心移動(height640x分)
 				ctx.translate(640, 0);
@@ -143,16 +143,17 @@ $(function() {
 		$("#picture_pic").val(""); 
 		$("#picture_pic").val(urlToThumb);
 		$("#new_picture").submit();
-		
 		$.ajax({
 		    url: "/users/" + gon.user_id + "/indices/" + gon.index_id + "/uploadtoaws",
 		    type: "post",
 		    data: fd,
-	    	processData: false,
-            contentType: false,
-		    datatype: "text",
-		    success: function(data,jqXHR){
-		      console.log(jqXHR);
+		    processData: false,
+	        // contentType: 'multipart/form-data',
+	        contentType: false,
+		    datatype: 'json',
+		    success: function(data){
+		    	// alert("success!!");
+		    	// console.log(data);
 		    },
 		    error: function(jqXHR, textStatus, errorThrown){
 		    	console.log(jqXHR);
@@ -163,7 +164,17 @@ $(function() {
     		    alert(jqXHR.status);
     		    alert(jqXHR.responseText);
     		},
-		});
+		}).done(function() {
+  	    alert( "success" );
+  	    location.href = "/users/" + gon.user_id + "/indices";
+	  })
+	  .fail(function() {
+	    alert( "error" );
+	  })
+	  .always(function(data) {
+	    console.log( data );
+	    // alert("always");
+	  });
 		//jsでシークレットキーが露出する大失敗20190226 
 		// ⏬
 		// var bucketName = 'distributeimage';
@@ -227,7 +238,7 @@ $(function() {
 		    type: "post",
 		    data: fd,
 		    processData: false,
-                contentType: false,
+            contentType: false,
 		    datatype: "text",
 		    success: function(data){
 		      // alert('success');

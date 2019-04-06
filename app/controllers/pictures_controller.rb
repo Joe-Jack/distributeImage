@@ -230,7 +230,7 @@ class PicturesController < ApplicationController
         :content_type => 'image/png',
         :body => @content
         )
-  render nothing: true
+    render json: { success: true }
   end
 
   def uploadToAwsCsv
